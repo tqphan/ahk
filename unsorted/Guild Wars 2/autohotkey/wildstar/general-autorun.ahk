@@ -1,0 +1,51 @@
+#Persistent
+CoordMode, mouse, screen
+SetTimer, WatchCursor, 100
+Testing :=  123
+
+WatchCursor: 
+DoWork()
+return 
+
+DoWork()
+{
+  static IsNumlockDown := false
+  static IsVDown := false
+
+  MouseGetPos, xpos, ypos
+
+  if (ypos = 0)
+  {
+    if (IsNumlockDown = false)
+    {
+      Send {Numlock down}
+      IsNumlockDown := true
+    }
+  }
+  else 
+  {
+    if (IsNumlockDown = true)
+    {
+      Send {Numlock up}
+      IsNumlockDown := false 
+    }
+  }
+
+  if (ypos = 1079)
+  {
+    if (IsVDown = false)
+    {
+      Send {f down}
+      IsVDown := true
+    }
+  }
+  else 
+  {
+    if (IsVDown = true)
+    {
+      Send {f up}
+      IsVDown := false 
+    }
+  }
+}
+return 

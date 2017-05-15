@@ -1,0 +1,1 @@
+^SPACE::  Winset, Alwaysontop, toggle, A

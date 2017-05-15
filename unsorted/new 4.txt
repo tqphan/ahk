@@ -1,0 +1,41 @@
+PixelGetColor, pc, 1919, 1079
+if(pc = 0xffffff)
+	isInMeleeRange := true
+else
+	isInMeleeRange := false
+
+PixelGetColor, pc, 1919, 1048
+if(pc = 0xffffff)
+	isFullRage := true
+else
+	isFullRage := false
+	
+PixelGetColor, pc, 1919, 1016
+if(pc = 0xffffff)
+	isExecutable := true
+else
+	isExecutable := false
+	
+PixelGetColor, pc, 1919, 984
+if(pc = 0xffffff)
+	isEnrage := true
+else
+	isEnrage := false
+	
+PixelGetColor, pc, 1919, 952
+if(pc = 0xffffff)
+	isMeatCleaverActive := true
+else
+	isMeatCleaverActive := false
+	
+PixelGetColor, pc, 1919, 920
+if(pc = 0xffffff)
+	isInPiercingHowlRange := true
+else
+	isInPiercingHowlRange := false
+
+PixelGetColor, pc, 1919, 888
+if(pc = 0xffffff)
+	isPiercingHowlActive := true
+else
+	isPiercingHowlActive := false

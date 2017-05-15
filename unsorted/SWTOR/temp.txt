@@ -1,0 +1,20 @@
+0x050200
+R: 0
+B: 2
+G: 5
+
+GetRageX(number)
+{
+
+}
+
+GetRageY(number)
+{
+  return 922
+}
+
+GetRage(number)
+{
+  if(
+
+}

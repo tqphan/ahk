@@ -1,0 +1,1344 @@
+*--> Crash <--*
+Exception: c0000005 
+Memory at address 0000000a could not be written
+App: Gw2.exe 
+Pid: 4220
+Cmdline: 
+BaseAddr: 00400000
+ProgramId: 101
+Build: 15289
+When: 2012-08-27T03:36:35Z 2012-08-26T20:36:35-07:00
+Uptime:   0 days  9:03:58
+Flags: 0
+
+*--> System <--*
+Name: QUOC-PC
+IpAddr: 192.168.1.122 169.254.146.79
+Processors: 4 [GenuineIntel:6:10:7]
+OSVersion: Windows 6.1 (64 bit)
+
+*--> System Memory <--*
+Physical:  3748MB/ 8160MB  45%
+Paged:     3498MB/ 8558MB  40%
+Virtual:   1327MB/ 4095MB  32%
+Load: 54%
+CommitTotal:   5059MB
+CommitLimit:   8558MB
+CommitPeak:    5238MB
+SystemCache:   4252MB
+HandleCount:  22557
+ProcessCount:    68
+ThreadCount:    864
+
+*--> Process Memory <--*
+Private:         2320MB
+WorkingSet:      2269MB
+PeakWorkingSet:  2348MB
+PageFaults:  67798956
+
+*--> Game Context <--*
+MapId: 32
+Flags: 0x241
+ElapsedTime: 00:06:40
+
+*--> World State <--*
+<WorldState BufferCapacity="66876084" BufferUsed="39229922" DrawCalls="1063" Fps="60" EffectLights="0" ImageMemory="11554144" Lights="4" Materials="198" OcclusionQueriesOccluded="0" OcclusionQueriesStalled="0" OcclusionQueriesUnoccluded="0" Particles="1025" Submodels="1063" TextureLoadsPending="0" TextureMemory="510217698" Triangles="673008" VerticesSoftwareTransformed="0" VideoMemoryTotal="120678608" CameraPos="4025.46, 15338.4, -1624.52" CameraFwd="-0.660358, -0.412412, 0.627569" MapName="wZY+N.+qGy5" MapNamespace="QJfZU" MapSector="IJwR+.5yna1" MapType="Public" MapFloor="1" MapId="32" PlayerFacing="-0.656051, -0.386417, 0.648289" PlayerPos="3651.94, 15106.5, -1206.72" PlayerVelocity="-253.125, -149.121, -12.5977" />
+
+[DbgHelp.dll is C:\Windows\system32\dbghelp.dll]
+[DbgHelp.dll version 6.1.7601.17514 (64/32-bit compatible)]
+
+*-->  Thread 0x1058 <--*
+
+*--> Trace <--*
+Pc:0063ee0b Fr:3733fb04 Rt:0063f255 Arg:0000000a 0000003c 015a7750 0000009c 
+Pc:0063f255 Fr:3733fb24 Rt:0063f3d7 Arg:00000022 00000000 00000083 013f8170 
+Pc:0063f3d7 Fr:3733fb50 Rt:0063e916 Arg:00000022 00000000 00000000 013f8170 
+Pc:0063e916 Fr:3733fb88 Rt:00a53aa5 Arg:00000000 00000000 013f8170 0000009c 
+Pc:00a53aa5 Fr:3733fbb0 Rt:00a53afc Arg:00000022 08852722 0d4cdb50 3733fbec 
+Pc:00a53afc Fr:3733fbc4 Rt:00a5eb1f Arg:00000022 0885276b 14b0ac4c 08852722 
+Pc:00a5eb1f Fr:3733fbec Rt:00a5a41f Arg:3f800000 14b0ac00 00a4832a 14b0ac00 
+Pc:00a5a41f Fr:3733fc50 Rt:00a48b38 Arg:3733fd30 3733fd94 11d4001b 235596eb 
+Pc:00a48b38 Fr:3733fd68 Rt:0040641f Arg:15a61c00 000000b7 3733fd94 01f7de40 
+Pc:0040641f Fr:3733fd9c Rt:00406669 Arg:15a61c00 3733fdc4 0040b8f1 000000b7 
+Pc:00406669 Fr:3733fda8 Rt:0040b8f1 Arg:000000b7 15a61c00 1166f4b0 3733fe08 
+Pc:0040b8f1 Fr:3733fdc4 Rt:0040bbbe Arg:15a61c00 000000b7 0000000c 00a8373f 
+Pc:0040bbbe Fr:3733fe14 Rt:00a7f294 Arg:06f3b070 06f3b2b4 08877020 000000c3 
+Pc:00a7f294 Fr:3733fe4c Rt:00a7f3cb Arg:00000021 000000c3 00000000 00000000 
+Pc:00a7f3cb Fr:3733fe94 Rt:00a7f8d9 Arg:00000001 02015743 00385648 00000000 
+Pc:00a7f8d9 Fr:3733feec Rt:00a7fd29 Arg:dcca804f 00000001 02015743 00385648 
+Pc:00a7fd29 Fr:3733ff24 Rt:00a7fdff Arg:00000000 06f43530 00646e3f 00000000 
+Pc:00a7fdff Fr:3733ff44 Rt:0089812d Arg:06f43530 dcca8017 00000000 00385648 
+Pc:0089812d Fr:3733ff7c Rt:008981d5 Arg:00000000 3733ff94 74d8339a 00385648 
+Pc:008981d5 Fr:3733ff88 Rt:74d8339a Arg:00385648 3733ffd4 77239ef2 00385648 
+Pc:74d8339a Fr:3733ff94 Rt:77239ef2 Arg:00385648 400c90e9 00000000 00000000 
+Pc:77239ef2 Fr:3733ffd4 Rt:77239ec5 Arg:00898153 00385648 00000000 00000000 
+Pc:77239ec5 Fr:3733ffec Rt:00000000 Arg:00898153 00385648 00000000 00000000 
+
+*--> Thread registers <--*
+eax=10928038 ebx=00000030 ecx=0000000a edx=03700000 esi=015a7750 edi=105a7bc8
+eip=0063ee0b esp=3733faf4 ebp=3733fb04
+cs=0023 ss=002b ds=002b es=002b fs=0053 gs=002b efl=00210217
+
+eax-32 10928018  12a9cee0 00000040 80000000 00000030 
+eax-16 10928028  262bec48 00000001 00000000 00000000 
+eax +0 10928038  00000031 10927fe8 fffffffe 1560ec98 
+eax+16 10928048  00000001 0000412c 105a7bd0 06c7e4e8 
+eax+32 10928058  00000001 00000000 7f7f0000 00000004 
+eax+48 10928068  000001d0 10928038 00000000 0f0819e8 
+edx-32 036FFFE0  0f1e02dd 03008dbe 00000000 00000000 
+edx-16 036FFFF0  036c0038 036c0038 03700000 00000000 
+edx +0 03700000  46534e41 122ffff8 03700c78 159fffe8 
+edx+16 03700010  000003ff fffffffe fffeffff ffffffff 
+edx+32 03700020  fffffdff fbeefbef 200bb6df 0401ed85 
+edx+48 03700030  f79041d4 803017a1 00000001 00000000 
+esi-32 015A7730  00000000 00000000 00000000 00000000 
+esi-16 015A7740  00000000 00000000 00000000 00000000 
+esi +0 015A7750  01267e20 00000005 ffffffff 10f53a28 
+esi+16 015A7760  122ffff8 0006e77d 03700000 122ffff8 
+esi+32 015A7770  12300000 00000000 00000000 00000000 
+esi+48 015A7780  00000000 00000000 00000000 00000000 
+edi-32 105A7BA8  00000000 c13bcd99 80000000 80000000 
+edi-16 105A7BB8  3b05ece5 40eb03bd 03000005 80010000 
+edi +0 105A7BC8  00000031 105a7a98 fffffffe 10928038 
+edi+16 105A7BD8  00000001 000048fc 00000000 06c7e4e8 
+edi+32 105A7BE8  00000001 00081019 219e8240 219e85c0 
+edi+48 105A7BF8  00000220 105a7bc8 c3433053 405786e4 
+
+*--> Code <--*
+0063EDEB  d621328b 470c8901 8327fe5f 5e5b8be5 .!2.G....'._^[..
+0063EDFB  5dc20400 83c00c89 45088b47 0c8b4d08 ].......E..G..M.
+0063EE0B  89018327 fe5f5e5b 8be55dc2 0400cccc ...'._^[..].....
+0063EE1B  cccccccc cc568bf1 817e1cb0 0c000057 .....V...~.....W
+0063EE2B  771de83e 3b420085 c0751468 55010000 w..>;B...u.hU...
+0063EE3B  ba607b26 01b9907d 2601e8d6 dc00008b .`{&...}&.......
+
+*--> Stack <--*
+3733FAF4  00000022 105a7bc8 00000030 00000000 "....{Z.0.......
+3733FB04  3733fb24 0063f255 0000000a 0000003c $.37U.c.....<...
+3733FB14  015a7750 0000009c 00000010 015a7750 PwZ.........PwZ.
+3733FB24  3733fb50 0063f3d7 00000022 00000000 P.37..c.".......
+3733FB34  00000083 013f8170 0000009c 00000001 ....p.?.........
+3733FB44  0000003c 00000022 00000000 3733fb88 <...".........37
+3733FB54  0063e916 00000022 00000000 00000000 ..c."...........
+3733FB64  013f8170 0000009c 00000083 00000001 p.?.............
+3733FB74  00000022 0d4cdb68 0ee0e2e7 015a8f20 "...h.L..... .Z.
+3733FB84  00000005 3733fbb0 00a53aa5 00000000 ......37.:......
+3733FB94  00000000 013f8170 0000009c 00000083 ....p.?.........
+3733FBA4  00000000 0d4cdb68 00000022 3733fbc4 ....h.L.".....37
+3733FBB4  00a53afc 00000022 08852722 0d4cdb50 .:.."..."'..P.L.
+3733FBC4  3733fbec 00a5eb1f 00000022 0885276b ..37...."...k'..
+3733FBD4  14b0ac4c 08852722 43698418 43a00840 L..."'....iC@..C
+3733FBE4  40bbc200 00000000 3733fc50 00a5a41f ...@....P.37....
+3733FBF4  3f800000 14b0ac00 00a4832a 14b0ac00 ...?....*.......
+3733FC04  3733fd7c 000000b7 00000001 00000007 |.37............
+3733FC14  00030402 14b0ac4c 0ee0e230 3733fc34 ....L...0...4.37
+3733FC24  006414be 0ee0e230 00000049 000000b7 ..d.0...I.......
+3733FC34  0ee0e275 00407ae8 000000b7 0ee0e2c6 u....z@.........
+3733FC44  00000000 08852722 0000000f 3733fd68 ...."'......h.37
+3733FC54  00a48b38 3733fd30 3733fd94 11d4001b 8...0.37..37....
+3733FC64  235596eb 81a797fc 01170208 42e621d0 ..U#.........!.B
+3733FC74  43ec513c 4216a740 3c480000 05200300 <Q.C@..B..H<.. .
+3733FC84  758fa2c1 2da723c0 0000003f 00000000 ...u.#.-?.......
+3733FC94  bf5c94be bf01ec51 00000000 95b21cbc ..\.Q...........
+3733FCA4  43000f00 5596eb1b 3b220080 63000000 ...C...U..";...c
+3733FCB4  b6000016 00000016 18000000 4045e984 ..............E@
+3733FCC4  00462008 0cc33bc2 00c00000 00000f00 . F..;..........
+3733FCD4  84180000 08404369 c20043a0 000040bb ....iC@..C...@..
+3733FCE4  00000000 00010000 003f8000 003f8000 ..........?...?.
+3733FCF4  01cf0000 4daf023b 45de2d27 462c5c39 ....;..M'-.E9\,F
+3733FD04  c318b554 fa000000 00000444 00000000 T.......D.......
+3733FD14  00000000 0000027f 01672418 00a48b06 .........$g.....
+3733FD24  0887702c 1166f490 3733fde8 00030402 ,p....f...37....
+3733FD34  00000200 00000003 03190757 006f3320 ........W... 3o.
+3733FD44  dcbaabcd 00000000 00000000 006f3320 ............ 3o.
+3733FD54  3733fd64 3733fd80 00000000 3733fc60 d.37..37....`.37
+3733FD64  dcca8203 3733fd9c 0040641f 15a61c00 ......37.d@.....
+3733FD74  000000b7 3733fd94 01f7de40 00000024 ......37@...$...
+3733FD84  00000001 00000000 00000000 00000070 ............p...
+3733FD94  00000000 00000000 3733fda8 00406669 ..........37if@.
+3733FDA4  15a61c00 3733fdc4 0040b8f1 000000b7 ......37..@.....
+3733FDB4  15a61c00 1166f4b0 3733fe08 0000001e ......f...37....
+3733FDC4  3733fe14 0040bbbe 15a61c00 000000b7 ..37..@.........
+3733FDD4  0000000c 00a8373f 00000021 06f3b070 ....?7..!...p...
+3733FDE4  15a61bf4 00000002 00000021 000000c3 ........!.......
+3733FDF4  3733fe10 00000000 00000001 00a8366a ..37........j6..
+3733FE04  3733fe30 0887702c 06f44100 00000000 0.37,p...A......
+3733FE14  3733fe4c 00a7f294 06f3b070 06f3b2b4 L.37....p.......
+3733FE24  08877020 000000c3 15a61bf4 00000000  p..............
+3733FE34  00000000 00000001 00a8259f 000097f3 .........%......
+3733FE44  00a825b5 00000000 3733fe94 00a7f3cb .%........37....
+3733FE54  00000021 000000c3 00000000 00000000 !...............
+3733FE64  00000001 06f3b070 06f3b394 00000000 ....p...........
+3733FE74  15a61bd0 15a61bd0 00000005 06f3b39c ................
+3733FE84  06f3b389 00000021 000000c3 00000001 ....!...........
+3733FE94  3733feec 00a7f8d9 00000001 02015743 ..37........CW..
+3733FEA4  00385648 00000000 766c31e7 dcc9d941 HV8......1lvA...
+3733FEB4  00000001 2fa7ec09 00000019 0000000f ......./........
+3733FEC4  00000000 00000000 00000001 00385648 ............HV8.
+3733FED4  02015743 00000001 6f48270c fe44d6b3 CW.......'Ho..D.
+3733FEE4  0000004b dcca8187 3733ff24 00a7fd29 K.......$.37)...
+
+*--> Error Logs <--*
+'t unlink child '0x00df9a' from parent bone 'root', there's no bone with that name.
+Model '0x00f197': Can't link child '0x00df9a' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x0070a3': Missing anim or fallbacks: wgtalrtwlkb
+Model '0x010293': UnlinkModel called on CModel without LinkComponent
+Model '0x00f4ed': UnlinkModel called on CModel without LinkComponent
+Model '0x00fac9': Can't link child '0x00ce40' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x00df95': Missing anim or fallbacks: castw
+Model '0x00fac9': Can't unlink child '0x00ce40' from parent bone 'root', there's no bone with that name.
+Model '0x010a48': Can't unlink child '0x00df68' from parent bone 'root', there's no bone with that name.
+Model '0x003790': Can't link child '0x00d4ec' to parent bone 'rgriphand', there's no bone with that name. Linking to root instead
+Model '0x010320': Can't link child '0x00df68' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x010320': Can't unlink child '0x00df68' from parent bone 'root', there's no bone with that name.
+Model '0x00fa25': Can't link child '0x00df68' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x00fa25': Can't unlink child '0x00df68' from parent bone 'root', there's no bone with that name.
+Model '0x0070a3': Can't unlink child '0x00ce66' from parent bone 'root', there's no bone with that name.
+Model '0x0106cb': UnlinkModel called on CModel without LinkComponent
+Model '0x010a48': Can't link child '0x00df68' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x019740': Missing anim or fallbacks: ggtalrtrunf
+Model '0x003790': Can't unlink child '0x00d4ec' from parent bone 'rgriphand', there's no bone with that name.
+Couldn't find projectile effect for skill 'Aw3PF.xcnwE'
+Model '0x010293': UnlinkModel called on CModel without LinkComponent
+Model '0x00dca2': Missing anim or fallbacks: zeropose
+
+*--> DirectX Device Info <--*
+VendorId    = 0x10de
+DeviceId    = 0x0e22
+Version     = 8.17.0012.9573
+Description = NVIDIA GeForce GTX 460
+Compat      = 0x00080800
+VidMem      = 768 MB
+
+
+*--> Crash <--*
+Assertion: startDistance <= stopDistance 
+File: ..\..\..\Game\WorldView\WvCamera.cpp(339)
+App: Gw2.exe 
+Pid: 5152
+Cmdline: 
+BaseAddr: 00400000
+ProgramId: 101
+Build: 16458
+When: 2013-01-21T20:15:35Z 2013-01-21T12:15:35-08:00
+Uptime:   0 days  0:48:22
+Flags: 0
+
+*--> System <--*
+Name: QUOC-PC
+IpAddr: 192.168.1.123 169.254.146.79
+Processors: 4 [GenuineIntel:6:10:7]
+OSVersion: Windows 6.1 (64 bit)
+
+*--> System Memory <--*
+Physical:  4327MB/ 8160MB  53%
+Paged:     3825MB/ 8558MB  44%
+Virtual:   1988MB/ 4095MB  48%
+Load: 46%
+CommitTotal:   4733MB
+CommitLimit:   8558MB
+CommitPeak:    5252MB
+SystemCache:   3688MB
+HandleCount:  21247
+ProcessCount:    76
+ThreadCount:    884
+
+*--> Process Memory <--*
+Private:         1531MB
+WorkingSet:      1311MB
+PeakWorkingSet:  1416MB
+PageFaults:   8085981
+
+*--> Game Context <--*
+MapId: 730
+Flags: 0x241
+ElapsedTime: 00:12:17
+
+*--> World State <--*
+<WorldState BufferCapacity="48805888" BufferUsed="11087004" DrawCalls="938" Fps="52" EffectLights="0" ImageMemory="3257208" Lights="20" Materials="206" OcclusionQueriesOccluded="0" OcclusionQueriesStalled="0" OcclusionQueriesUnoccluded="0" Particles="6933" Submodels="938" TextureLoadsPending="0" TextureMemory="307847224" Triangles="362023" VerticesSoftwareTransformed="0" VideoMemoryTotal="126596008" CameraPos="-13678.8, -10053.2, -464.276" CameraFwd="0.460947, 0.848847, 0.258819" MapName="0SpOW.qyDUY" MapNamespace="8AT2M" MapSector="IJwR+.3psy3" MapType="Instance" MapFloor="1" MapId="730" MapTimeOfDay="1.000000" PlayerFacing="0.567092, 0.816399, -0.109085" PlayerPos="-13586.6, -9883.44, -372.512" PlayerVelocity="0, 0, -0" />
+
+[DbgHelp.dll is C:\Windows\system32\dbghelp.dll]
+[DbgHelp.dll version 6.1.7601.17514 (64/32-bit compatible)]
+
+*--> ClientContextThreadProc Thread 0xe94 <--*
+
+*--> Trace <--*
+Pc:00422d82 Fr:373efd78 Rt:0042a438 Arg:4348000e 4348000e be860a92 4348000d 
+Pc:0042a438 Fr:373efdbc Rt:0042b13e Arg:3cb0861f 06e28f20 09f1ecf0 00000014 
+Pc:0042b13e Fr:373efdd4 Rt:0042b2ee Arg:3cb0861f 3cb0861f 373efdf8 0042c71b 
+Pc:0042b2ee Fr:373efde4 Rt:0042c71b Arg:3cb0861f 3cb0861f 09f37330 373efe0c 
+Pc:0042c71b Fr:373efdf8 Rt:0041ae36 Arg:3cb0861f 3cb0861f 00000014 373efe34 
+Pc:0041ae36 Fr:373efe0c Rt:00412bbd Arg:3cb0861f 3cb0861f 0966808c 373efe70 
+Pc:00412bbd Fr:373efe34 Rt:0041638f Arg:3cb0861f 00ab766f 06e29d38 06e29910 
+Pc:0041638f Fr:373efe7c Rt:00ab3a2d Arg:06e29910 06e29964 09668080 00000008 
+Pc:00ab3a2d Fr:373efeec Rt:00ab3d89 Arg:42cb2796 00000001 006c4bb4 03435648 
+Pc:00ab3d89 Fr:373eff24 Rt:00ab3e5f Arg:00000000 06e32950 0066c81f 00000000 
+Pc:00ab3e5f Fr:373eff44 Rt:008c6f3d Arg:06e32950 42cb27ce 00000000 03435648 
+Pc:008c6f3d Fr:373eff7c Rt:008c6fe5 Arg:00000000 373eff94 759333aa 03435648 
+Pc:008c6fe5 Fr:373eff88 Rt:759333aa Arg:03435648 373effd4 77ce9ef2 03435648 
+Pc:759333aa Fr:373eff94 Rt:77ce9ef2 Arg:03435648 40a5dddc 00000000 00000000 
+Pc:77ce9ef2 Fr:373effd4 Rt:77ce9ec5 Arg:008c6f63 03435648 00000000 00000000 
+Pc:77ce9ec5 Fr:373effec Rt:00000000 Arg:008c6f63 03435648 00000000 00000000 
+
+*--> Thread registers <--*
+eax=373ef958 ebx=00000000 ecx=00000000 edx=0000003c esi=00000000 edi=00000000
+eip=00422d82 esp=373efd6c ebp=373efd78
+cs=0023 ss=002b ds=002b es=002b fs=0053 gs=002b efl=00000246
+
+eax-32 373EF938  00400000 00672445 00000000 373ef9a8 
+eax-16 373EF948  760ac40d 373ef9a8 760ac41f 373ef958 
+eax +0 373EF958  80000003 00000000 00000000 760ac41f 
+eax+16 373EF968  00000002 00000002 0fe77cd0 00000280 
+eax+32 373EF978  00000000 0000003c 373efce0 373efa60 
+eax+48 373EF988  373ef9ac 008cab3f 373efa60 00000000 
+
+*--> Code <--*
+00422D62  ec51d945 0cd94514 ded9dfe0 f6c40174 .Q.E..E........t
+00422D72  14685301 0000baec db2101b9 f0df2101 .hS......!....!.
+00422D82  e879f824 00d9e8dd 05e8df21 01e86c1d .y.$.......!..l.
+00422D92  4a00d95d fcd945fc d95dfcd9 4508dc05 J..]..E..]..E...
+00422DA2  10782101 d8650cd9 5d08d945 08dd05e8 .x!..e..]..E....
+00422DB2  df2101e8 461d4a00 d95d08d9 4508d95d .!..F.J..]..E..]
+
+*--> Stack <--*
+373EFD6C  00422d87 00000153 11f60280 373efdbc .-B.S.........>7
+373EFD7C  0042a438 4348000e 4348000e be860a92 8.B...HC..HC....
+373EFD8C  4348000d bf490fdb 06e28f20 09f39c80 ..HC..I. .......
+373EFD9C  373efdac 00659d02 09f39f6c 3ed92479 ..>7..e.l...y$.>
+373EFDAC  373efdbc 4348000e 4348000e 4348000d ..>7..HC..HC..HC
+373EFDBC  373efdd4 0042b13e 3cb0861f 06e28f20 ..>7>.B....< ...
+373EFDCC  09f1ecf0 00000014 373efde4 0042b2ee ..........>7..B.
+373EFDDC  3cb0861f 3cb0861f 373efdf8 0042c71b ...<...<..>7..B.
+373EFDEC  3cb0861f 3cb0861f 09f37330 373efe0c ...<...<0s....>7
+373EFDFC  0041ae36 3cb0861f 3cb0861f 00000014 6.A....<...<....
+373EFE0C  373efe34 00412bbd 3cb0861f 3cb0861f 4.>7.+A....<...<
+373EFE1C  0966808c 373efe70 0000000c 3cb0861f ..f.p.>7.......<
+373EFE2C  3ca3d70a 3ca3d70a 373efe7c 0041638f ...<...<|.>7.cA.
+373EFE3C  3cb0861f 00ab766f 06e29d38 06e29910 ...<ov..8.......
+373EFE4C  06e29944 00000002 00000002 00000008 D...............
+373EFE5C  373efe78 06e29d38 00000001 06e29910 x.>78...........
+373EFE6C  06e29c34 0966808c 06e2995d 00000000 4.....f.].......
+373EFE7C  373efeec 00ab3a2d 06e29910 06e29964 ..>7-:......d...
+373EFE8C  09668080 00000008 373efec0 06e29d38 ..f.......>78...
+373EFE9C  00000001 006c4bb4 03435648 00000000 .....Kl.HVC.....
+373EFEAC  760b3bf4 42ca30e1 00000001 504c94ed .;.v.0.B......LP
+373EFEBC  00000005 00000014 00000000 00000000 ................
+373EFECC  00000001 03435648 006c4bb4 00000001 ....HVC..Kl.....
+373EFEDC  6e68270c c1e911af 00000006 42cb265e .'hn........^&.B
+373EFEEC  373eff24 00ab3d89 42cb2796 00000001 $.>7.=...'.B....
+373EFEFC  006c4bb4 03435648 00000001 80000003 .Kl.HVC.........
+373EFF0C  373efef4 373ef3a0 373eff6c 008c70a0 ..>7..>7l.>7.p..
+373EFF1C  74a2188a 00000000 373eff44 00ab3e5f ...t....D.>7_>..
+373EFF2C  00000000 06e32950 0066c81f 00000000 ....P)....f.....
+373EFF3C  03435648 00000000 373eff7c 008c6f3d HVC.....|.>7=o..
+373EFF4C  06e32950 42cb27ce 00000000 03435648 P)...'.B....HVC.
+373EFF5C  03435648 373eff50 373eff50 373effc4 HVC.P.>7P.>7..>7
+373EFF6C  373effc4 008c70a0 74a27202 00000000 ..>7.p...r.t....
+373EFF7C  373eff88 008c6fe5 00000000 373eff94 ..>7.o........>7
+373EFF8C  759333aa 03435648 373effd4 77ce9ef2 .3.uHVC...>7...w
+373EFF9C  03435648 40a5dddc 00000000 00000000 HVC....@........
+373EFFAC  03435648 00000000 00000000 00000000 HVC.............
+373EFFBC  373effa0 00000000 ffffffff 77d271d5 ..>7.........q.w
+373EFFCC  0056e738 00000000 373effec 77ce9ec5 8.V.......>7...w
+373EFFDC  008c6f63 03435648 00000000 00000000 co..HVC.........
+373EFFEC  00000000 00000000 008c6f63 03435648 ........co..HVC.
+
+*--> Error Logs <--*
+ing anim or fallbacks: lurk
+Model '0x005faf': Missing anim or fallbacks: ugmlurk   u
+Model '0x015c53': Missing anim or fallbacks: alert
+Model '0x005faf': Missing anim or fallbacks: ugmlurk   u
+Model '0x015c53': Missing anim or fallbacks: alert
+Model '0x005faf': Missing anim or fallbacks: ugmlurk   u
+Model '0x015c53': Missing anim or fallbacks: alert
+Model '0x015c53': Missing anim or fallbacks: alert
+Model '0x005faf': Missing anim or fallbacks: ugmlurk   u
+Model '0x005faf': Missing anim or fallbacks: ugmlurk   u
+Model '0x015c53': Missing anim or fallbacks: alert
+Model '0x005faf': Missing anim or fallbacks: ugmlurk   u
+Model '0x015c53': Missing anim or fallbacks: alert
+Model '0x01a193': Missing anim or fallbacks: hit
+Model '0x01a193': Can't link child '0x00ce16' to parent bone 'aura', there's no bone with that name. Linking to root instead
+Model '0x01a193': Can't unlink child '0x00ce16' from parent bone 'aura', there's no bone with that name.
+Model '0x00540c': Missing anim or fallbacks: wgurelease
+Model '0x005faf': Missing anim or fallbacks: ugmlurk   u
+Model '0x015c53': Missing anim or fallbacks: alert
+Model '0x005faf': Missing anim or fallbacks: ugmlurk   u
+Model '0x015c53': Missing anim or fallbacks: alert
+Model '0x01a193': Missing anim or fallbacks: hitdamage
+Model '0x01a193': Can't link child '0x00ce16' to parent bone 'aura', there's no bone with that name. Linking to root instead
+Model '0x005faf': Missing anim or fallbacks: ugmlurk   u
+Model '0x01a193': Can't unlink child '0x00ce57' from parent bone 'aura', there's no bone with that name.
+Model '0x01a193': Can't unlink child '0x00ce16' from parent bone 'aura', there's no bone with that name.
+Model '0x015c53': Missing anim or fallbacks: alert
+Model '0x00540c': Missing anim or fallbacks: udrthrow
+Model '0x005faf': Missing anim or fallbacks: ugmlurk   u
+Model '0x00540c': Can't link child '0x00cf79' to parent bone 'mouth', there's no bone with that name. Linking to root instead
+Model '0x00540c': Missing anim or fallbacks: udcaimed
+
+*--> DirectX Device Info <--*
+VendorId    = 0x10de
+DeviceId    = 0x0e22
+Version     = 9.18.0013.0697
+Description = NVIDIA GeForce GTX 460
+Compat      = 0x00100800
+VidMem      = 4051 MB
+
+
+*--> Crash <--*
+Assertion: activeBlock == MEM_BLOCK_NEXT(activeBlock->prevPhysicalBlock) 
+File: ..\..\..\Core\Platform\Common\MemAllocatorTLSF.cpp(461)
+App: Gw2.exe 
+Pid: 5840
+Cmdline: 
+BaseAddr: 00400000
+ProgramId: 101
+Build: 16541
+When: 2013-01-25T00:57:43Z 2013-01-24T16:57:43-08:00
+Uptime:   0 days  1:19:29
+Flags: 0
+
+*--> System <--*
+Name: QUOC-PC
+IpAddr: 192.168.1.122 169.254.146.79
+Processors: 4 [GenuineIntel:6:10:7]
+OSVersion: Windows 6.1 (64 bit)
+
+*--> System Memory <--*
+Physical:  5151MB/ 8160MB  63%
+Paged:     5345MB/ 8558MB  62%
+Virtual:   3086MB/ 4095MB  75%
+Load: 36%
+CommitTotal:   3212MB
+CommitLimit:   8558MB
+CommitPeak:    5550MB
+SystemCache:   4171MB
+HandleCount:  21721
+ProcessCount:    72
+ThreadCount:    902
+
+*--> Process Memory <--*
+Private:          832MB
+WorkingSet:       733MB
+PeakWorkingSet:  2098MB
+PageFaults:  19271091
+
+[DbgHelp.dll is C:\Windows\system32\dbghelp.dll]
+[DbgHelp.dll version 6.1.7601.17514 (64/32-bit compatible)]
+
+*-->  Thread 0x1428 <--*
+
+*--> Trace <--*
+Pc:00664467 Fr:0018fe54 Rt:0066499a Arg:11d8fa70 015fe7f8 015fe260 0018fe9c 
+Pc:0066499a Fr:0018fe68 Rt:00662034 Arg:11d8fa70 10284f30 0160b620 ffffffff 
+Pc:00662034 Fr:0018fe9c Rt:006eacbb Arg:00000001 011fd570 3c39dfd4 008c8763 
+Pc:006eacbb Fr:0018fef0 Rt:008c880c Arg:00000000 00000000 00000000 0018ff88 
+Pc:008c880c Fr:0018ff04 Rt:008c4472 Arg:00000000 18363be5 00000000 00000000 
+Pc:008c4472 Fr:0018ff88 Rt:756133aa Arg:fffde000 0018ffd4 77cc9ef2 fffde000 
+Pc:756133aa Fr:0018ff94 Rt:77cc9ef2 Arg:fffde000 7735d033 00000000 00000000 
+Pc:77cc9ef2 Fr:0018ffd4 Rt:77cc9ec5 Arg:008c44cf fffde000 00000000 00000000 
+Pc:77cc9ec5 Fr:0018ffec Rt:00000000 Arg:008c44cf fffde000 00000000 78746341 
+
+*--> Thread registers <--*
+eax=0018fa2c ebx=00000000 ecx=00000000 edx=00000040 esi=00000000 edi=00000000
+eip=00664467 esp=0018fe40 ebp=0018fe54
+cs=0023 ss=002b ds=002b es=002b fs=0053 gs=002b efl=00200246
+
+eax-32 0018FA0C  088a215d 00672445 00000000 0018fa7c 
+eax-16 0018FA1C  772fc40d 0018fa7c 772fc41f 0018fa2c 
+eax +0 0018FA2C  80000003 00000000 00000000 772fc41f 
+eax+16 0018FA3C  00000002 00000002 1040c550 00000280 
+eax+32 0018FA4C  0018fa64 00000040 0018fdb0 0018fb30 
+eax+48 0018FA5C  0018fa80 008cab2f 0018fb30 00000000 
+
+*--> Code <--*
+00664447  e2f003d0 3bf2741d e84c9280 0085c075 ....;.t..L.....u
+00664457  1468cd01 0000ba30 192b01b9 dc192b01 .h.....0.+....+.
+00664467  e894e100 003b7704 741de82a 92800085 .....;w.t..*....
+00664477  c0751468 ce010000 ba30192b 01b9b419 .u.h.....0.+....
+00664487  2b01e872 e10000f6 060f741d e8089280 +..r......t.....
+00664497  0085c075 1468cf01 0000ba30 192b01b9 ...u.h.....0.+..
+
+*--> Stack <--*
+0018FE40  0066446c 000001cd 11d8fa70 015fce20 lDf.....p... ._.
+0018FE50  11d8fa70 0018fe68 0066499a 11d8fa70 p...h....If.p...
+0018FE60  015fe7f8 015fe260 0018fe9c 00662034 .._.`._.....4 f.
+0018FE70  11d8fa70 10284f30 0160b620 ffffffff p...0O(. .`.....
+0018FE80  006ea5cd 3c39dfd4 0160b620 00000001 ..n...9< .`.....
+0018FE90  00000001 00000001 00000000 0018fef0 ................
+0018FEA0  006eacbb 00000001 011fd570 3c39dfd4 ..n.....p.....9<
+0018FEB0  008c8763 011fd570 18363a9d fffffffe c...p....:6.....
+0018FEC0  00000000 00000001 3c39dc90 3c39dfd4 ..........9<..9<
+0018FED0  3c39ecd8 3c39dc90 0018feb8 0018f474 ..9<..9<....t...
+0018FEE0  0018ff78 008c7090 19796fa5 00000000 x....p...oy.....
+0018FEF0  0018ff04 008c880c 00000000 00000000 ................
+0018FF00  00000000 0018ff88 008c4472 00000000 ........rD......
+0018FF10  18363be5 00000000 00000000 fffde000 .;6.............
+0018FF20  00000044 01c656c0 01c5c370 01c656d0 D....V..p....V..
+0018FF30  00000000 00000000 00000000 00000000 ................
+0018FF40  00000000 00000000 00000000 00000801 ................
+0018FF50  00000001 00000000 ffffffff ffffffff ................
+0018FF60  ffffffff 80000003 00000000 00000000 ................
+0018FF70  0018ff10 0018f474 0018ffc4 008c7090 ....t........p..
+0018FF80  19796e55 00000001 0018ff94 756133aa Uny..........3au
+0018FF90  fffde000 0018ffd4 77cc9ef2 fffde000 ...........w....
+0018FFA0  7735d033 00000000 00000000 fffde000 3.5w............
+0018FFB0  80000003 75637717 75637717 0018ffa0 .....wcu.wcu....
+0018FFC0  0018f478 ffffffff 77d071d5 00e6ead7 x........q.w....
+0018FFD0  00000000 0018ffec 77cc9ec5 008c44cf ...........w.D..
+0018FFE0  fffde000 00000000 00000000 00000000 ................
+0018FFF0  00000000 008c44cf fffde000 00000000 .....D..........
+00190000  78746341 00000020 00000001 0000330c Actx ........3..
+00190010  000000dc 00000000 00000020 00000000 ........ .......
+00190020  00000014 00000001 00000007 00000034 ............4...
+00190030  0000017c 00000001 00000000 00000000 |...............
+00190040  00000000 00000000 00000000 00000002 ................
+00190050  1a26ef4e 00000298 00000044 000002e0 N.&.....D.......
+00190060  00000260 00000000 f33271ba 00000540 `........q2.@...
+00190070  0000004a 0000058c 0000031e 00000000 J...............
+00190080  2d59495b 000008ac 00000032 000008e0 [IY-....2.......
+00190090  00000300 00000000 32ceeacd 00000be0 ...........2....
+001900A0  00000042 00000c24 00000336 00000000 B...$...6.......
+001900B0  38505fc8 00000f5c 0000005e 00000fbc ._P8\...^.......
+001900C0  00000368 00000000 b1280544 00001324 h.......D.(.$...
+001900D0  00000056 0000137c 00000398 00000010 V...|...........
+001900E0  00000009 000000ec 00000002 00000001 ................
+001900F0  0000017c 000015d0 00000001 00000002 |...............
+00190100  0000174c 000007a0 00000001 00000003 L...............
+00190110  00001eec 00000e8c 00000001 00000004 ................
+00190120  00002d78 00000314 00000002 00000005 x-..............
+00190130  0000308c 00000098 00000002 00000006 .0..............
+00190140  00003124 000000cc 00000002 00000007 $1..............
+00190150  000031f0 000000f0 00000001 00000009 .1..............
+00190160  000032e0 00000028 00000002 0000000b .2..(...........
+00190170  00003308 00000004 00000001 64487353 .3..........SsHd
+00190180  0000002c 00000001 00000001 00000001 ,...............
+00190190  00000006 0000008c 00000001 00001598 ................
+001901A0  0000002c 0000005e 0000005e 00000000 ,...^...^.......
+001901B0  00000000 00000000 00000000 00000000 ................
+001901C0  00000000 00000000 00000000 00000000 ................
+001901D0  00000002 00000024 00000038 00000000 ....$...8.......
+001901E0  003a0043 0057005c 006e0069 006f0064 C.:.\.W.i.n.d.o.
+001901F0  00730077 0057005c 006e0069 00780053 w.s.\.W.i.n.S.x.
+00190200  005c0073 00000000 1a26ef4e 0000011c s.\.....N.&.....
+00190210  00000044 00000164 00000260 00000001 D...d...`.......
+00190220  f33271ba 000003c4 0000004a 00000410 .q2.....J.......
+00190230  0000031e 00000002 2d59495b 00000730 ........[IY-0...
+
+*--> Error Logs <--*
+l '0x00eceb': Can't link child '0x00df13' to parent bone 'aura', there's no bone with that name. Linking to root instead
+Model '0x00eceb': Can't unlink child '0x00df13' from parent bone 'aura', there's no bone with that name.
+Model '0x00eceb': Can't unlink child '0x00d0e3' from parent bone 'aura', there's no bone with that name.
+Model '0x0071f7': Missing anim or fallbacks: ggtalrtrunr
+Model '0x00eceb': Can't unlink child '0x00ce57' from parent bone 'aura', there's no bone with that name.
+Model '0x0360b8': Can't link child '0x00df9a' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x0360b8': Can't unlink child '0x00df9a' from parent bone 'root', there's no bone with that name.
+Model '0x00ed79': Missing anim or fallbacks: teambupdown
+Model '0x00eceb': UnlinkModel called on CModel without LinkComponent
+Content is referencing a propID that doesn't exist propId='1604462206305468939'
+Content is referencing a propID that doesn't exist propId='1438296409473293886'
+Content is referencing a propID that doesn't exist propId='1593715318635634200'
+Content is referencing a propID that doesn't exist propId='1593721941475204624'
+Content is referencing a propID that doesn't exist propId='1593706861845028365'
+Content is referencing a propID that doesn't exist propId='1593729157020261900'
+Content is referencing a propID that doesn't exist propId='1593720270732926492'
+Content is referencing a propID that doesn't exist propId='1600446424768610873'
+Content is referencing a propID that doesn't exist propId='1600446291624624696'
+Content is referencing a propID that doesn't exist propId='1600446871445209663'
+Model '0x0121ec': Missing anim or fallbacks: zeropose
+Model '0x007209': Can't unlink child '0x00d156' from parent bone 'shield', there's no bone with that name.
+Model '0x0070a3': Can't unlink child '0x00e886' from parent bone 'aura', there's no bone with that name.
+Model '0x007925': Can't unlink child '0x00e611' from parent bone 'lefthand', there's no bone with that name.
+
+*--> DirectX Device Info <--*
+VendorId    = 0x10de
+DeviceId    = 0x0e22
+Version     = 9.18.0013.0697
+Description = NVIDIA GeForce GTX 460
+Compat      = 0x00100800
+VidMem      = 4051 MB
+
+
+*--> Crash <--*
+Exception: c0000005  
+Memory at address 67a06a2b could not be written
+App: Gw2.exe 
+Pid: 3156
+Cmdline: 
+BaseAddr: 00400000
+ProgramId: 101
+Build: 16597
+When: 2013-02-07T04:32:44Z 2013-02-06T20:32:44-08:00
+Uptime:   0 days  9:38:08
+Flags: 0
+
+*--> System <--*
+Name: QUOC-PC
+IpAddr: 192.168.1.123 169.254.146.79
+Processors: 4 [GenuineIntel:6:10:7]
+OSVersion: Windows 6.1 (64 bit)
+
+*--> System Memory <--*
+Physical:  4416MB/ 8160MB  54%
+Paged:     4543MB/ 8558MB  53%
+Virtual:   2112MB/ 4095MB  51%
+Load: 45%
+CommitTotal:   4014MB
+CommitLimit:   8558MB
+CommitPeak:    6100MB
+SystemCache:   3469MB
+HandleCount:  21384
+ProcessCount:    70
+ThreadCount:    883
+
+*--> Process Memory <--*
+Private:         1314MB
+WorkingSet:      1281MB
+PeakWorkingSet:  2830MB
+PageFaults:  92397681
+
+[DbgHelp.dll is C:\Windows\system32\dbghelp.dll]
+[DbgHelp.dll version 6.1.7601.17514 (64/32-bit compatible)]
+
+*-->  Thread 0x4a8 <--*
+
+*--> Trace <--*
+Pc:67a06a2b Fr:3667ee88 Rt:663806bd Arg:37711e48 3667eec8 60387f80 01d1ae88 
+Pc:663806bd Fr:3667eeac Rt:66106c4e Arg:3667eec8 60387f80 60387f80 37d22040 
+Pc:66106c4e Fr:3667eed0 Rt:6610c5e9 Arg:60387f88 6610be67 60388480 00000001 
+Pc:6610c5e9 Fr:3667f31c Rt:6610be2e Arg:3667f368 00000001 00000001 00000001 
+Pc:6610be2e Fr:3667f774 Rt:66111f5b Arg:3667f7b4 00000001 00000001 00000001 
+Pc:66111f5b Fr:3667f7a8 Rt:6610cdef Arg:01d8c9c0 60388480 5d370db0 00800000 
+Pc:6610cdef Fr:3667f7e4 Rt:661094a0 Arg:60388480 5d370db0 00800000 00440000 
+Pc:661094a0 Fr:3667f814 Rt:661f91f1 Arg:00000000 37f9c3c0 37f9c3c0 00000000 
+Pc:661f91f1 Fr:3667f834 Rt:661f927a Arg:00000000 37f9c3c0 00000000 660dc692 
+Pc:661f927a Fr:3667f888 Rt:662a2f31 Arg:00000001 4d03d740 00000000 37e72440 
+Pc:662a2f31 Fr:3667ff2c Rt:662a0449 Arg:37ea2400 662b8459 00000000 00000000 
+Pc:662a0449 Fr:3667ff44 Rt:664f0ccb Arg:37e72440 96d054f6 00000000 00000000 
+Pc:664f0ccb Fr:3667ff7c Rt:664f0d55 Arg:00000000 3667ff94 753433aa 37ea3ff0 
+Pc:664f0d55 Fr:3667ff88 Rt:753433aa Arg:37ea3ff0 3667ffd4 776f9ef2 37ea3ff0 
+Pc:753433aa Fr:3667ff94 Rt:776f9ef2 Arg:37ea3ff0 413f52d3 00000000 00000000 
+Pc:776f9ef2 Fr:3667ffd4 Rt:776f9ec5 Arg:664f0cf1 37ea3ff0 00000000 00000000 
+Pc:776f9ec5 Fr:3667ffec Rt:00000000 Arg:664f0cf1 37ea3ff0 00000000 00000000 
+
+*--> Thread registers <--*
+eax=37d1f000 ebx=3667eec8 ecx=37711e48 edx=67a06a2b esi=37d17000 edi=60387f80
+eip=67a06a2b esp=3667ee8c ebp=3667eeac
+cs=0023 ss=002b ds=002b es=002b fs=0053 gs=002b efl=00010297
+
+eax-32 37D1EFE0  00000000 00000000 00000000 00000000 
+eax-16 37D1EFF0  00000000 0002c480 00000800 37d1eda0 
+eax +0 37D1F000  00000000 00000000 2ffdffff 00000000 
+eax+16 37D1F010  2ffb0000 00000000 00050000 00000000 
+eax+32 37D1F020  59565955 32595559 32315659 3231564e 
+eax+48 37D1F030  3432564e 5343564e 38504941 46464c50 
+ebx-32 3667EEA8  00000000 3667eed0 66106c4e 3667eec8 
+ebx-16 3667EEB8  60387f80 60387f80 37d22040 37d22040 
+ebx +0 3667EEC8  00000001 60387f88 3667f31c 6610c5e9 
+ebx+16 3667EED8  60387f88 6610be67 60388480 00000001 
+ebx+32 3667EEE8  37d22040 37b3a2e8 00000000 ffffffff 
+ebx+48 3667EEF8  00000000 00000000 00000000 00000000 
+esi-32 37D16FE0  00000000 00000000 00000000 00000000 
+esi-16 37D16FF0  00000000 000076c0 00000800 37d16830 
+esi +0 37D17000  37d1f000 58544e43 aa812ca8 37d1e740 
+esi+16 37D17010  00000191 00000140 00000000 00000000 
+esi+32 37D17020  3f800000 3f800000 3f800000 3f4cccce 
+esi+48 37D17030  3f800000 3d314a95 00000000 00000000 
+edi-32 60387F60  02000001 e00f0004 80e40008 03000009 
+edi-16 60387F70  80040008 00000488 00000040 60387f38 
+edi +0 60387F80  00000000 39bf2000 c0000e80 00000000 
+edi+16 60387F90  68fc0000 00000000 00000000 00000000 
+edi+32 60387FA0  00000000 00000000 00000000 00000000 
+edi+48 60387FB0  00000000 00000000 00001000 00000040 
+
+*--> Code <--*
+
+*--> Stack <--*
+3667EE8C  663806bd 37711e48 3667eec8 60387f80 ..8fH.q7..g6..8`
+3667EE9C  01d1ae88 00000000 00000000 00000000 ................
+3667EEAC  3667eed0 66106c4e 3667eec8 60387f80 ..g6Nl.f..g6..8`
+3667EEBC  60387f80 37d22040 37d22040 00000001 ..8`@ .7@ .7....
+3667EECC  60387f88 3667f31c 6610c5e9 60387f88 ..8`..g6...f..8`
+3667EEDC  6610be67 60388480 00000001 37d22040 g..f..8`....@ .7
+3667EEEC  37b3a2e8 00000000 ffffffff 00000000 ...7............
+3667EEFC  00000000 00000000 00000000 00000000 ................
+3667EF0C  00000000 00000000 00000000 00000000 ................
+3667EF1C  00000000 00000000 00000000 00000000 ................
+3667EF2C  00000000 00000000 00000000 00000000 ................
+3667EF3C  00000000 00000000 00000000 00000000 ................
+3667EF4C  00000000 00000000 00000000 00000000 ................
+3667EF5C  00000000 00000000 00000000 00000000 ................
+3667EF6C  00000000 00000000 00000000 00000000 ................
+3667EF7C  00000000 00000000 00000000 00000000 ................
+3667EF8C  00000000 00000000 00000000 00000000 ................
+3667EF9C  00000000 00000000 00000000 00000000 ................
+3667EFAC  00000000 00000000 00000000 00000000 ................
+3667EFBC  00000000 00000000 00000000 00000000 ................
+3667EFCC  00000000 00000000 00000000 00000000 ................
+3667EFDC  00000000 00000000 00000000 00000000 ................
+3667EFEC  00000000 00000000 00000000 00000000 ................
+3667EFFC  00000000 00000000 00000000 00000000 ................
+3667F00C  00000000 00000000 00000000 00000000 ................
+3667F01C  00000000 00000000 00000000 00000000 ................
+3667F02C  00000000 00000000 00000000 00000000 ................
+3667F03C  00000000 00000000 00000000 00000000 ................
+3667F04C  00000000 00000000 00000000 00000000 ................
+3667F05C  00000000 00000000 00000000 00000000 ................
+3667F06C  00000000 00000000 00000000 00000000 ................
+3667F07C  00000000 00000000 00000000 00000000 ................
+3667F08C  00000000 00000000 00000000 00000000 ................
+3667F09C  00000000 00000000 00000000 00000000 ................
+3667F0AC  00000000 00000000 00000000 00000000 ................
+3667F0BC  00000000 00000000 00000000 00000000 ................
+3667F0CC  00000000 00000000 00000000 00000000 ................
+3667F0DC  00000000 00000000 00000000 00000000 ................
+3667F0EC  00000000 00000000 00000000 00000000 ................
+3667F0FC  00000000 00000000 00000000 00000000 ................
+3667F10C  00000000 00000000 00000000 00000000 ................
+3667F11C  00000000 00000000 00000000 00000000 ................
+3667F12C  00000000 00000000 00000000 00000000 ................
+3667F13C  00000000 00000000 00000000 00000000 ................
+3667F14C  00000000 00000000 00000000 00000000 ................
+3667F15C  00000000 00000000 00000000 00000000 ................
+3667F16C  00000000 00000000 00000000 00000000 ................
+3667F17C  00000000 00000000 00000000 00000000 ................
+3667F18C  00000000 00000000 00000000 00000000 ................
+3667F19C  00000000 00000000 00000000 00000000 ................
+3667F1AC  00000000 00000000 00000000 00000000 ................
+3667F1BC  00000000 00000000 00000000 00000000 ................
+3667F1CC  00000000 00000000 00000000 00000000 ................
+3667F1DC  00000000 00000000 00000000 00000000 ................
+3667F1EC  00000000 00000000 00000000 00000000 ................
+3667F1FC  00000000 00000000 00000000 00000000 ................
+3667F20C  00000000 00000000 00000000 00000000 ................
+3667F21C  00000000 00000000 00000000 00000000 ................
+3667F22C  00000000 00000000 00000000 00000000 ................
+3667F23C  00000000 00000000 00000000 00000000 ................
+3667F24C  00000000 00000000 00000000 00000000 ................
+3667F25C  00000000 00000000 00000000 00000000 ................
+3667F26C  00000000 00000000 00000000 00000000 ................
+3667F27C  00000000 00000000 00000000 00000000 ................
+
+*--> Error Logs <--*
+rent bone 'root', there's no bone with that name.
+Model '0x00df86': Missing anim or fallbacks: castc
+Model '0x00fac9': Can't link child '0x00ce40' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x00fac9': Can't unlink child '0x00ce40' from parent bone 'root', there's no bone with that name.
+Model '0x00eaa4': UnlinkModel called on CModel without LinkComponent
+Model '0x00f3d0': UnlinkModel called on CModel without LinkComponent
+Model '0x0071e4': UnlinkModel called on CModel without LinkComponent
+Model '0x00fac9': Can't link child '0x00df68' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x00fac9': Can't unlink child '0x00df68' from parent bone 'root', there's no bone with that name.
+Model '0x00df86': Missing anim or fallbacks: castc
+Model '0x00eaa4': Can't unlink child '0x00cf39' from parent bone 'fxtip', there's no bone with that name.
+Model '0x00dcfa': Could not find track group anim "Unlurk" Defaulting to track group 0
+Model '0x00f3d0': UnlinkModel called on CModel without LinkComponent
+Model '0x00fac9': Can't link child '0x00ce40' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x00fac9': Can't unlink child '0x00ce40' from parent bone 'root', there's no bone with that name.
+Model '0x00eaa4': UnlinkModel called on CModel without LinkComponent
+Model '0x00eaa4': Can't unlink child '0x00cf39' from parent bone 'fxtip', there's no bone with that name.
+Model '0x0066f4': Can't link child '0x00d07b' to parent bone 'aura', there's no bone with that name. Linking to root instead
+Model '0x0036a5': Missing anim or fallbacks: ugtrunfidl
+Model '0x0036a5': Missing anim or fallbacks: ugtidlerunf
+Model '0x0071e4': UnlinkModel called on CModel without LinkComponent
+Model '0x0066f4': Missing anim or fallbacks: ugtrunfidl
+Model '0x00eaa4': UnlinkModel called on CModel without LinkComponent
+Model '0x0066f4': Can't unlink child '0x00d07b' from parent bone 'aura', there's no bone with that name.
+
+*--> DirectX Device Info <--*
+VendorId    = 0x10de
+DeviceId    = 0x0e22
+Version     = 9.18.0013.1090
+Description = NVIDIA GeForce GTX 460
+Compat      = 0x00100800
+VidMem      = 4051 MB
+
+
+*--> Crash <--*
+Exception: c0000005  
+Memory at address 6ac06a2b could not be written
+App: Gw2.exe 
+Pid: 3604
+Cmdline: 
+BaseAddr: 00400000
+ProgramId: 101
+Build: 16597
+When: 2013-02-08T01:22:02Z 2013-02-07T17:22:02-08:00
+Uptime:   0 days  5:37:20
+Flags: 0
+
+*--> System <--*
+Name: QUOC-PC
+IpAddr: 192.168.1.123 169.254.146.79
+Processors: 4 [GenuineIntel:6:10:7]
+OSVersion: Windows 6.1 (64 bit)
+
+*--> System Memory <--*
+Physical:  4735MB/ 8160MB  58%
+Paged:     4620MB/ 8558MB  53%
+Virtual:   2243MB/ 4095MB  54%
+Load: 41%
+CommitTotal:   3938MB
+CommitLimit:   8558MB
+CommitPeak:    5601MB
+SystemCache:   3745MB
+HandleCount:  21442
+ProcessCount:    70
+ThreadCount:    911
+
+*--> Process Memory <--*
+Private:         1236MB
+WorkingSet:      1160MB
+PeakWorkingSet:  2443MB
+PageFaults:  31706893
+
+[DbgHelp.dll is C:\Windows\system32\dbghelp.dll]
+[DbgHelp.dll version 6.1.7601.17514 (64/32-bit compatible)]
+
+*-->  Thread 0x534 <--*
+
+*--> Trace <--*
+Pc:6ac06a2b Fr:036dee88 Rt:658506bd Arg:37721e48 036deec8 4dbc2ec0 01c0ac90 
+Pc:658506bd Fr:036deeac Rt:655d6c4e Arg:036deec8 4dbc2ec0 4dbc2ec0 5e14d840 
+Pc:655d6c4e Fr:036deed0 Rt:655dc5e9 Arg:4dbc2ec8 655dbe67 4dbc33c0 00000001 
+Pc:655dc5e9 Fr:036df31c Rt:655dbe2e Arg:036df368 00000001 00000001 00000001 
+Pc:655dbe2e Fr:036df774 Rt:655e1f5b Arg:036df7b4 00000001 00000001 00000001 
+Pc:655e1f5b Fr:036df7a8 Rt:655dcdef Arg:016c2040 4dbc33c0 5a0e2c70 00800000 
+Pc:655dcdef Fr:036df7e4 Rt:655d94a0 Arg:4dbc33c0 5a0e2c70 00800000 00440000 
+Pc:655d94a0 Fr:036df814 Rt:656c91f1 Arg:00000000 533ce900 533ce900 00000000 
+Pc:656c91f1 Fr:036df834 Rt:656c927a Arg:00000000 533ce900 00000000 655ac692 
+Pc:656c927a Fr:036df888 Rt:65772f31 Arg:00000001 61132680 00000000 586d4dc0 
+Pc:65772f31 Fr:036dff2c Rt:65770449 Arg:41a7cf00 65788459 00000000 00000000 
+Pc:65770449 Fr:036dff44 Rt:659c0ccb Arg:586d4dc0 73b3d7df 00000000 00000000 
+Pc:659c0ccb Fr:036dff7c Rt:659c0d55 Arg:00000000 036dff94 766f33aa 37d6a3b0 
+Pc:659c0d55 Fr:036dff88 Rt:766f33aa Arg:37d6a3b0 036dffd4 777b9ef2 37d6a3b0 
+Pc:766f33aa Fr:036dff94 Rt:777b9ef2 Arg:37d6a3b0 74f7e379 00000000 00000000 
+Pc:777b9ef2 Fr:036dffd4 Rt:777b9ec5 Arg:659c0cf1 37d6a3b0 00000000 00000000 
+Pc:777b9ec5 Fr:036dffec Rt:00000000 Arg:659c0cf1 37d6a3b0 00000000 00000000 
+
+*--> Thread registers <--*
+eax=5e14a800 ebx=036deec8 ecx=37721e48 edx=6ac06a2b esi=4b511000 edi=4dbc2ec0
+eip=6ac06a2b esp=036dee8c ebp=036deeac
+cs=0023 ss=002b ds=002b es=002b fs=0053 gs=002b efl=00010297
+
+eax-32 5E14A7E0  00000000 00000001 00000000 00000001 
+eax-16 5E14A7F0  00000000 0002c480 00000800 5e14a008 
+eax +0 5E14A800  00000000 00000000 2ffdffff 00000000 
+eax+16 5E14A810  2ffb0000 00000000 00050000 00000000 
+eax+32 5E14A820  59565955 32595559 32315659 3231564e 
+eax+48 5E14A830  3432564e 5343564e 38504941 46464c50 
+ebx-32 036DEEA8  00000000 036deed0 655d6c4e 036deec8 
+ebx-16 036DEEB8  4dbc2ec0 4dbc2ec0 5e14d840 5e14d840 
+ebx +0 036DEEC8  00000001 4dbc2ec8 036df31c 655dc5e9 
+ebx+16 036DEED8  4dbc2ec8 655dbe67 4dbc33c0 00000001 
+ebx+32 036DEEE8  5e14d840 01c4bf18 00000000 ffffffff 
+ebx+48 036DEEF8  00000000 00000000 00000000 00000000 
+esi-32 4B510FE0  00000000 00000000 00000000 00000000 
+esi-16 4B510FF0  00000000 000076c0 00000800 4b510870 
+esi +0 4B511000  5e14a800 58544e43 f4144147 46a35040 
+esi+16 4B511010  00000191 00000140 00000000 00000000 
+esi+32 4B511020  3f800000 3f800000 3f800000 3f800000 
+esi+48 4B511030  3f800000 00000000 00000000 00000000 
+edi-32 4DBC2EA0  0000031a 00000322 00000340 00000340 
+edi-16 4DBC2EB0  00000345 00000488 00000040 4dbc2e80 
+edi +0 4DBC2EC0  00000000 94342000 8000a800 00000000 
+edi+16 4DBC2ED0  40980000 00000000 00000000 00000000 
+edi+32 4DBC2EE0  00000000 00000000 00000000 00000000 
+edi+48 4DBC2EF0  00000000 00000000 00001000 00000040 
+
+*--> Code <--*
+
+*--> Stack <--*
+036DEE8C  658506bd 37721e48 036deec8 4dbc2ec0 ...eH.r7..m....M
+036DEE9C  01c0ac90 00000000 00000000 00000000 ................
+036DEEAC  036deed0 655d6c4e 036deec8 4dbc2ec0 ..m.Nl]e..m....M
+036DEEBC  4dbc2ec0 5e14d840 5e14d840 00000001 ...M@..^@..^....
+036DEECC  4dbc2ec8 036df31c 655dc5e9 4dbc2ec8 ...M..m...]e...M
+036DEEDC  655dbe67 4dbc33c0 00000001 5e14d840 g.]e.3.M....@..^
+036DEEEC  01c4bf18 00000000 ffffffff 00000000 ................
+036DEEFC  00000000 00000000 00000000 00000000 ................
+036DEF0C  00000000 00000000 00000000 00000000 ................
+036DEF1C  00000000 00000000 00000000 00000000 ................
+036DEF2C  00000000 00000000 00000000 00000000 ................
+036DEF3C  00000000 00000000 00000000 00000000 ................
+036DEF4C  00000000 00000000 00000000 00000000 ................
+036DEF5C  00000000 00000000 00000000 00000000 ................
+036DEF6C  00000000 00000000 00000000 00000000 ................
+036DEF7C  00000000 00000000 00000000 00000000 ................
+036DEF8C  00000000 00000000 00000000 00000000 ................
+036DEF9C  00000000 00000000 00000000 00000000 ................
+036DEFAC  00000000 00000000 00000000 00000000 ................
+036DEFBC  00000000 00000000 00000000 00000000 ................
+036DEFCC  00000000 00000000 00000000 00000000 ................
+036DEFDC  00000000 00000000 00000000 00000000 ................
+036DEFEC  00000000 00000000 00000000 00000000 ................
+036DEFFC  00000000 00000000 00000000 00000000 ................
+036DF00C  00000000 00000000 00000000 00000000 ................
+036DF01C  00000000 00000000 00000000 00000000 ................
+036DF02C  00000000 00000000 00000000 00000000 ................
+036DF03C  00000000 00000000 00000000 00000000 ................
+036DF04C  00000000 00000000 00000000 00000000 ................
+036DF05C  00000000 00000000 00000000 00000000 ................
+036DF06C  00000000 00000000 00000000 00000000 ................
+036DF07C  00000000 00000000 00000000 00000000 ................
+036DF08C  00000000 00000000 00000000 00000000 ................
+036DF09C  00000000 00000000 00000000 00000000 ................
+036DF0AC  00000000 00000000 00000000 00000000 ................
+036DF0BC  00000000 00000000 00000000 00000000 ................
+036DF0CC  00000000 00000000 00000000 00000000 ................
+036DF0DC  00000000 00000000 00000000 00000000 ................
+036DF0EC  00000000 00000000 00000000 00000000 ................
+036DF0FC  00000000 00000000 00000000 00000000 ................
+036DF10C  00000000 00000000 00000000 00000000 ................
+036DF11C  00000000 00000000 00000000 00000000 ................
+036DF12C  00000000 00000000 00000000 00000000 ................
+036DF13C  00000000 00000000 00000000 00000000 ................
+036DF14C  00000000 00000000 00000000 00000000 ................
+036DF15C  00000000 00000000 00000000 00000000 ................
+036DF16C  00000000 00000000 00000000 00000000 ................
+036DF17C  00000000 00000000 00000000 00000000 ................
+036DF18C  00000000 00000000 00000000 00000000 ................
+036DF19C  00000000 00000000 00000000 00000000 ................
+036DF1AC  00000000 00000000 00000000 00000000 ................
+036DF1BC  00000000 00000000 00000000 00000000 ................
+036DF1CC  00000000 00000000 00000000 00000000 ................
+036DF1DC  00000000 00000000 00000000 00000000 ................
+036DF1EC  00000000 00000000 00000000 00000000 ................
+036DF1FC  00000000 00000000 00000000 00000000 ................
+036DF20C  00000000 00000000 00000000 00000000 ................
+036DF21C  00000000 00000000 00000000 00000000 ................
+036DF22C  00000000 00000000 00000000 00000000 ................
+036DF23C  00000000 00000000 00000000 00000000 ................
+036DF24C  00000000 00000000 00000000 00000000 ................
+036DF25C  00000000 00000000 00000000 00000000 ................
+036DF26C  00000000 00000000 00000000 00000000 ................
+036DF27C  00000000 00000000 00000000 00000000 ................
+
+*--> Error Logs <--*
+king to root instead
+Model '0x00fac9': Can't unlink child '0x00ce40' from parent bone 'root', there's no bone with that name.
+Model '0x00fac9': Can't link child '0x00df68' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x00fac9': Can't unlink child '0x00df68' from parent bone 'root', there's no bone with that name.
+Model '0x00df86': Missing anim or fallbacks: castc
+Model '0x00fac9': Can't link child '0x00ce40' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x00fac9': Can't unlink child '0x00ce40' from parent bone 'root', there's no bone with that name.
+Model '0x00fac9': Can't link child '0x00df68' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x00fac9': Can't unlink child '0x00df68' from parent bone 'root', there's no bone with that name.
+Model '0x00df86': Missing anim or fallbacks: castc
+Model '0x00fac9': Can't link child '0x00df68' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x00fac9': Can't unlink child '0x00df68' from parent bone 'root', there's no bone with that name.
+Model '0x00df86': Missing anim or fallbacks: castc
+Model '0x00fac9': Can't link child '0x00ce40' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x00fac9': Can't unlink child '0x00ce40' from parent bone 'root', there's no bone with that name.
+Model '0x00dcfa': Could not find track group anim "Unlurk" Defaulting to track group 0
+Model '0x012a2d': Missing anim or fallbacks: zeropose
+Model '0x0131ad': Missing anim or fallbacks: zeropose
+Model '0x012bd1': Missing anim or fallbacks: zeropose
+Model '0x01269a': Missing anim or fallbacks: zeropose
+Model '0x0131c6': Missing anim or fallbacks: zeropose
+Model '0x0128a5': Missing anim or fallbacks: zeropose
+Model '0x00617e': Missing anim or fallbacks: ugtalrtrunf
+Model '0x00721d': Missing anim or fallbacks: qgtrunlalt
+Model '0x00f3d0': UnlinkModel called on CModel without LinkComponent
+
+*--> DirectX Device Info <--*
+VendorId    = 0x10de
+DeviceId    = 0x0e22
+Version     = 9.18.0013.1090
+Description = NVIDIA GeForce GTX 460
+Compat      = 0x00100800
+VidMem      = 4051 MB
+
+
+*--> Crash <--*
+Exception: c0000005  
+Memory at address 6ac06a2b could not be written
+App: Gw2.exe 
+Pid: 5840
+Cmdline: 
+BaseAddr: 00400000
+ProgramId: 101
+Build: 16597
+When: 2013-02-08T03:44:39Z 2013-02-07T19:44:39-08:00
+Uptime:   0 days  1:27:40
+Flags: 0
+
+*--> System <--*
+Name: QUOC-PC
+IpAddr: 192.168.1.123 169.254.146.79
+Processors: 4 [GenuineIntel:6:10:7]
+OSVersion: Windows 6.1 (64 bit)
+
+*--> System Memory <--*
+Physical:  4469MB/ 8160MB  54%
+Paged:     4004MB/ 8558MB  46%
+Virtual:   2197MB/ 4095MB  53%
+Load: 45%
+CommitTotal:   4553MB
+CommitLimit:   8558MB
+CommitPeak:    5749MB
+SystemCache:   3866MB
+HandleCount:  22736
+ProcessCount:    84
+ThreadCount:    945
+
+*--> Process Memory <--*
+Private:         1254MB
+WorkingSet:      1155MB
+PeakWorkingSet:  2204MB
+PageFaults:  16303014
+
+[DbgHelp.dll is C:\Windows\system32\dbghelp.dll]
+[DbgHelp.dll version 6.1.7601.17514 (64/32-bit compatible)]
+
+*-->  Thread 0x1784 <--*
+
+*--> Trace <--*
+Pc:6ac06a2b Fr:372aee88 Rt:649e06bd Arg:377a1e48 372aeec8 60a511c0 002fae88 
+Pc:649e06bd Fr:372aeeac Rt:64766c4e Arg:372aeec8 60a511c0 60a511c0 381b2040 
+Pc:64766c4e Fr:372aeed0 Rt:6476c5e9 Arg:60a511c8 6476be67 60a50cc0 00000001 
+Pc:6476c5e9 Fr:372af31c Rt:6476be2e Arg:372af368 00000001 00000001 00000001 
+Pc:6476be2e Fr:372af774 Rt:64771f5b Arg:372af7b4 00000001 00000001 00000001 
+Pc:64771f5b Fr:372af7a8 Rt:6476cdef Arg:0121c9c0 60a50cc0 42bfb330 00800000 
+Pc:6476cdef Fr:372af7e4 Rt:647694a0 Arg:60a50cc0 42bfb330 00800000 00440000 
+Pc:647694a0 Fr:372af814 Rt:648591f1 Arg:00000000 50f31d80 50f31d80 00000000 
+Pc:648591f1 Fr:372af834 Rt:6485927a Arg:00000000 50f31d80 00000000 6473c692 
+Pc:6485927a Fr:372af888 Rt:64902f31 Arg:00000001 48a9ab80 00000000 3829e1c0 
+Pc:64902f31 Fr:372aff2c Rt:64900449 Arg:38336380 64918459 00000000 00000000 
+Pc:64900449 Fr:372aff44 Rt:64b50ccb Arg:3829e1c0 d12671bc 00000000 00000000 
+Pc:64b50ccb Fr:372aff7c Rt:64b50d55 Arg:00000000 372aff94 766f33aa 38337f68 
+Pc:64b50d55 Fr:372aff88 Rt:766f33aa Arg:38337f68 372affd4 777b9ef2 38337f68 
+Pc:766f33aa Fr:372aff94 Rt:777b9ef2 Arg:38337f68 41db8259 00000000 00000000 
+Pc:777b9ef2 Fr:372affd4 Rt:777b9ec5 Arg:64b50cf1 38337f68 00000000 00000000 
+Pc:777b9ec5 Fr:372affec Rt:00000000 Arg:64b50cf1 38337f68 00000000 00000000 
+
+*--> Thread registers <--*
+eax=381af000 ebx=372aeec8 ecx=377a1e48 edx=6ac06a2b esi=381a7000 edi=60a511c0
+eip=6ac06a2b esp=372aee8c ebp=372aeeac
+cs=0023 ss=002b ds=002b es=002b fs=0053 gs=002b efl=00010297
+
+eax-32 381AEFE0  00000000 00000000 00000000 00000000 
+eax-16 381AEFF0  00000000 0002c480 00000800 381aeda0 
+eax +0 381AF000  00000000 00000000 2ffdffff 00000000 
+eax+16 381AF010  2ffb0000 00000000 00050000 00000000 
+eax+32 381AF020  59565955 32595559 32315659 3231564e 
+eax+48 381AF030  3432564e 5343564e 38504941 46464c50 
+ebx-32 372AEEA8  00000000 372aeed0 64766c4e 372aeec8 
+ebx-16 372AEEB8  60a511c0 60a511c0 381b2040 381b2040 
+ebx +0 372AEEC8  00000001 60a511c8 372af31c 6476c5e9 
+ebx+16 372AEED8  60a511c8 6476be67 60a50cc0 00000001 
+ebx+32 372AEEE8  381b2040 0034eae8 00000000 ffffffff 
+ebx+48 372AEEF8  00000000 00000000 00000000 00000000 
+esi-32 381A6FE0  00000000 00000000 00000000 00000000 
+esi-16 381A6FF0  00000000 000076c0 00000800 381a6830 
+esi +0 381A7000  381af000 58544e43 47aad066 381ae740 
+esi+16 381A7010  00000191 00000140 00000000 00000000 
+esi+32 381A7020  3f800000 3f800000 3f800000 3f4cccce 
+esi+48 381A7030  3f800000 3d2e5504 00000000 00000000 
+edi-32 60A511A0  00000000 00000000 1ba31602 b5000000 
+edi-16 60A511B0  00003c62 00000488 00000040 60a511b0 
+edi +0 60A511C0  00000000 39932000 c0000e80 00000000 
+edi+16 60A511D0  68fc0000 00000000 00000000 00000000 
+edi+32 60A511E0  00000000 00000000 00000000 00000000 
+edi+48 60A511F0  00000000 00000000 00001000 00000040 
+
+*--> Code <--*
+
+*--> Stack <--*
+372AEE8C  649e06bd 377a1e48 372aeec8 60a511c0 ...dH.z7..*7...`
+372AEE9C  002fae88 00000000 00000000 00000000 ../.............
+372AEEAC  372aeed0 64766c4e 372aeec8 60a511c0 ..*7Nlvd..*7...`
+372AEEBC  60a511c0 381b2040 381b2040 00000001 ...`@ .8@ .8....
+372AEECC  60a511c8 372af31c 6476c5e9 60a511c8 ...`..*7..vd...`
+372AEEDC  6476be67 60a50cc0 00000001 381b2040 g.vd...`....@ .8
+372AEEEC  0034eae8 00000000 ffffffff 00000000 ..4.............
+372AEEFC  00000000 00000000 00000000 00000000 ................
+372AEF0C  00000000 00000000 00000000 00000000 ................
+372AEF1C  00000000 00000000 00000000 00000000 ................
+372AEF2C  00000000 00000000 00000000 00000000 ................
+372AEF3C  00000000 00000000 00000000 00000000 ................
+372AEF4C  00000000 00000000 00000000 00000000 ................
+372AEF5C  00000000 00000000 00000000 00000000 ................
+372AEF6C  00000000 00000000 00000000 00000000 ................
+372AEF7C  00000000 00000000 00000000 00000000 ................
+372AEF8C  00000000 00000000 00000000 00000000 ................
+372AEF9C  00000000 00000000 00000000 00000000 ................
+372AEFAC  00000000 00000000 00000000 00000000 ................
+372AEFBC  00000000 00000000 00000000 00000000 ................
+372AEFCC  00000000 00000000 00000000 00000000 ................
+372AEFDC  00000000 00000000 00000000 00000000 ................
+372AEFEC  00000000 00000000 00000000 00000000 ................
+372AEFFC  00000000 00000000 00000000 00000000 ................
+372AF00C  00000000 00000000 00000000 00000000 ................
+372AF01C  00000000 00000000 00000000 00000000 ................
+372AF02C  00000000 00000000 00000000 00000000 ................
+372AF03C  00000000 00000000 00000000 00000000 ................
+372AF04C  00000000 00000000 00000000 00000000 ................
+372AF05C  00000000 00000000 00000000 00000000 ................
+372AF06C  00000000 00000000 00000000 00000000 ................
+372AF07C  00000000 00000000 00000000 00000000 ................
+372AF08C  00000000 00000000 00000000 00000000 ................
+372AF09C  00000000 00000000 00000000 00000000 ................
+372AF0AC  00000000 00000000 00000000 00000000 ................
+372AF0BC  00000000 00000000 00000000 00000000 ................
+372AF0CC  00000000 00000000 00000000 00000000 ................
+372AF0DC  00000000 00000000 00000000 00000000 ................
+372AF0EC  00000000 00000000 00000000 00000000 ................
+372AF0FC  00000000 00000000 00000000 00000000 ................
+372AF10C  00000000 00000000 00000000 00000000 ................
+372AF11C  00000000 00000000 00000000 00000000 ................
+372AF12C  00000000 00000000 00000000 00000000 ................
+372AF13C  00000000 00000000 00000000 00000000 ................
+372AF14C  00000000 00000000 00000000 00000000 ................
+372AF15C  00000000 00000000 00000000 00000000 ................
+372AF16C  00000000 00000000 00000000 00000000 ................
+372AF17C  00000000 00000000 00000000 00000000 ................
+372AF18C  00000000 00000000 00000000 00000000 ................
+372AF19C  00000000 00000000 00000000 00000000 ................
+372AF1AC  00000000 00000000 00000000 00000000 ................
+372AF1BC  00000000 00000000 00000000 00000000 ................
+372AF1CC  00000000 00000000 00000000 00000000 ................
+372AF1DC  00000000 00000000 00000000 00000000 ................
+372AF1EC  00000000 00000000 00000000 00000000 ................
+372AF1FC  00000000 00000000 00000000 00000000 ................
+372AF20C  00000000 00000000 00000000 00000000 ................
+372AF21C  00000000 00000000 00000000 00000000 ................
+372AF22C  00000000 00000000 00000000 00000000 ................
+372AF23C  00000000 00000000 00000000 00000000 ................
+372AF24C  00000000 00000000 00000000 00000000 ................
+372AF25C  00000000 00000000 00000000 00000000 ................
+372AF26C  00000000 00000000 00000000 00000000 ................
+372AF27C  00000000 00000000 00000000 00000000 ................
+
+*--> Error Logs <--*
+nt is referencing a propID that doesn't exist propId='1600457832201749003'
+Content is referencing a propID that doesn't exist propId='1600445265127440935'
+Content is referencing a propID that doesn't exist propId='1600441043174588950'
+Content is referencing a propID that doesn't exist propId='1600445505645609508'
+Content is referencing a propID that doesn't exist propId='1600443229312942633'
+Content is referencing a propID that doesn't exist propId='1600443319507255854'
+Texture missing mip chain: 0x06736d
+Texture missing mip chain: 0x06736c
+Texture missing mip chain: 0x06736e
+Model '0x00e101': Missing anim or fallbacks: zeropose
+Model '0x006e1b': Missing anim or fallbacks: aaaride
+Model '0x00e101': Missing anim or fallbacks: zeropose
+Model '0x006eda': Missing anim or fallbacks: ugcarea
+Model '0x007209': Missing anim or fallbacks: aaaride
+Model '0x006eda': Missing anim or fallbacks: ugcarea
+Model '0x006eda': Missing anim or fallbacks: ugcarea
+Model '0x006508': Missing anim or fallbacks: ugtalrtrunf
+Model '0x006e1b': Missing anim or fallbacks: aaaride
+Model '0x006502': Missing anim or fallbacks: ugtalrtrunf
+Model '0x006502': Missing anim or fallbacks: ugtalrtrunf
+Model '0x006e1b': Missing anim or fallbacks: aaaride
+Model '0x006eda': Missing anim or fallbacks: ugcarea
+Model '0x00e102': Missing anim or fallbacks: zeropose
+Model '0x007209': Missing anim or fallbacks: aaaride
+Model '0x007209': Missing anim or fallbacks: aaaride
+Model '0x007209': Missing anim or fallbacks: ugtalrtrunf
+Model '0x007209': Missing anim or fallbacks: ugtrunfalt
+Model '0x01a236': Can't link child '0x00df44' to parent bone 'aura', there's no bone with that name. Linking to root instead
+Model '0x01a236': Can't unlink child '0x00df44' from parent bone 'aura', there's no bone with that name.
+Model '0x00e101': Missing anim or fallbacks: zeropose
+Model '0x0071f7': Missing anim or fallbacks: ggtalrtrunf
+Model '0x0071f7': Missing anim or fallbacks: ggtalrtrunf
+Model '0x0071f7': Missing anim or fallbacks: ggtalrtrunf
+
+*--> DirectX Device Info <--*
+VendorId    = 0x10de
+DeviceId    = 0x0e22
+Version     = 9.18.0013.1090
+Description = NVIDIA GeForce GTX 460
+Compat      = 0x00100800
+VidMem      = 4051 MB
+
+
+*--> Crash <--*
+Exception: c0000005  
+Memory at address 69a76a2b could not be written
+App: Gw2.exe 
+Pid: 6036
+Cmdline: 
+BaseAddr: 00400000
+ProgramId: 101
+Build: 16597
+When: 2013-02-09T03:29:08Z 2013-02-08T19:29:08-08:00
+Uptime:   0 days  3:23:36
+Flags: 0
+
+*--> System <--*
+Name: QUOC-PC
+IpAddr: 192.168.1.122 169.254.146.79
+Processors: 4 [GenuineIntel:6:10:7]
+OSVersion: Windows 6.1 (64 bit)
+
+*--> System Memory <--*
+Physical:  3769MB/ 8160MB  46%
+Paged:     3695MB/ 8558MB  43%
+Virtual:   2115MB/ 4095MB  51%
+Load: 53%
+CommitTotal:   4862MB
+CommitLimit:   8558MB
+CommitPeak:    6685MB
+SystemCache:   2768MB
+HandleCount:  23406
+ProcessCount:    85
+ThreadCount:    885
+
+*--> Process Memory <--*
+Private:         1342MB
+WorkingSet:      1290MB
+PeakWorkingSet:  2790MB
+PageFaults:  40615229
+
+[DbgHelp.dll is C:\Windows\system32\dbghelp.dll]
+[DbgHelp.dll version 6.1.7601.17514 (64/32-bit compatible)]
+
+*-->  Thread 0x1598 <--*
+
+*--> Trace <--*
+Pc:69a76a2b Fr:3717f7c0 Rt:659a06bd Arg:377f1e48 3717f800 3eb5f100 01ccae88 
+Pc:659a06bd Fr:3717f7e4 Rt:65726c4e Arg:3717f800 5a1ab688 3eb5f100 00000000 
+Pc:65726c4e Fr:3717f808 Rt:65729398 Arg:37f22040 00000000 00000000 00000000 
+Pc:65729398 Fr:3717f824 Rt:6572a9fb Arg:00000000 5a1ab688 00000000 6581ce88 
+Pc:6572a9fb Fr:3717f888 Rt:658c2f31 Arg:00000001 41463d80 00000000 3800e1c0 
+Pc:658c2f31 Fr:3717ff2c Rt:658c0449 Arg:39206380 658d8459 00000000 00000000 
+Pc:658c0449 Fr:3717ff44 Rt:65b10ccb Arg:3800e1c0 c3c57796 00000000 00000000 
+Pc:65b10ccb Fr:3717ff7c Rt:65b10d55 Arg:00000000 3717ff94 759333aa 39207f68 
+Pc:65b10d55 Fr:3717ff88 Rt:759333aa Arg:39207f68 3717ffd4 77de9ef2 39207f68 
+Pc:759333aa Fr:3717ff94 Rt:77de9ef2 Arg:39207f68 41f8e3d4 00000000 00000000 
+Pc:77de9ef2 Fr:3717ffd4 Rt:77de9ec5 Arg:65b10cf1 39207f68 00000000 00000000 
+Pc:77de9ec5 Fr:3717ffec Rt:00000000 Arg:65b10cf1 39207f68 00000000 00000000 
+
+*--> Thread registers <--*
+eax=37f1f000 ebx=3717f800 ecx=377f1e48 edx=69a76a2b esi=37f17000 edi=3eb5f100
+eip=69a76a2b esp=3717f7c4 ebp=3717f7e4
+cs=0023 ss=002b ds=002b es=002b fs=0053 gs=002b efl=00010297
+
+eax-32 37F1EFE0  00000000 00000000 00000000 00000000 
+eax-16 37F1EFF0  00000000 0002c480 00000800 37f1eda0 
+eax +0 37F1F000  00000000 00000000 2ffdffff 00000000 
+eax+16 37F1F010  2ffb0000 00000000 00050000 00000000 
+eax+32 37F1F020  59565955 32595559 32315659 3231564e 
+eax+48 37F1F030  3432564e 5343564e 38504941 46464c50 
+ebx-32 3717F7E0  41461970 3717f808 65726c4e 3717f800 
+ebx-16 3717F7F0  5a1ab688 3eb5f100 00000000 00000000 
+ebx +0 3717F800  00000001 3eb5f108 3717f824 65729398 
+ebx+16 3717F810  37f22040 00000000 00000000 00000000 
+ebx+32 3717F820  37f22040 3717f888 6572a9fb 00000000 
+ebx+48 3717F830  5a1ab688 00000000 6581ce88 00000000 
+esi-32 37F16FE0  00000000 00000000 00000000 00000000 
+esi-16 37F16FF0  00000000 000076c0 00000800 37f16830 
+esi +0 37F17000  37f1f000 58544e43 922032e0 37f1e740 
+esi+16 37F17010  00000191 00000140 00000000 00000000 
+esi+32 37F17020  3f800000 3f800000 3f800000 3f169697 
+esi+48 37F17030  3f800000 3db5ba0b 00000000 00000000 
+edi-32 3EB5F0E0  1eb00207 00000000 00000043 00000000 
+edi-16 3EB5F0F0  00002000 00000488 00000040 3eb5f0c0 
+edi +0 3EB5F100  5a1ab688 8e2f0000 c0004280 00000000 
+edi+16 3EB5F110  68220000 00000002 00000000 00000000 
+edi+32 3EB5F120  00000000 00000000 00000000 00000000 
+edi+48 3EB5F130  00000000 00000000 00040000 00040000 
+
+*--> Code <--*
+
+*--> Stack <--*
+3717F7C4  659a06bd 377f1e48 3717f800 3eb5f100 ...eH..7...7...>
+3717F7D4  01ccae88 00000000 37920000 41461970 ...........7p.FA
+3717F7E4  3717f808 65726c4e 3717f800 5a1ab688 ...7Nlre...7...Z
+3717F7F4  3eb5f100 00000000 00000000 00000001 ...>............
+3717F804  3eb5f108 3717f824 65729398 37f22040 ...>$..7..re@ .7
+3717F814  00000000 00000000 00000000 37f22040 ............@ .7
+3717F824  3717f888 6572a9fb 00000000 5a1ab688 ...7..re.......Z
+3717F834  00000000 6581ce88 00000000 5a1ab640 .......e....@..Z
+3717F844  00000000 656fc692 41463d80 65998138 ......oe.=FA8..e
+3717F854  00000000 37f17000 6597d8a4 64a30de8 .....p.7...e...d
+3717F864  00000000 39206380 3717f888 6597f818 .....c 9...7...e
+3717F874  661274e0 00000000 00000560 39206380 .t.f....`....c 9
+3717F884  37f17000 3717ff2c 658c2f31 00000001 .p.7,..71/.e....
+3717F894  41463d80 00000000 3800e1c0 39207f68 .=FA.......8h. 9
+3717F8A4  00000000 64a30de8 000000d8 77db00d8 .......d.......w
+3717F8B4  64a36c80 3717f894 0017f94c 00000000 .l.d...7L.......
+3717F8C4  77e271d5 00000550 00000010 00000000 .q.wP...........
+3717F8D4  00008000 00000004 00000000 3717f962 ............b..7
+3717F8E4  77db00d8 3717f884 56bb7750 56bbdf00 ...w...7Pw.V...V
+3717F8F4  77e271d5 0132a2f0 00000000 00000001 .q.w..2.........
+3717F904  77de030a 01c331e8 3717f962 0017f958 ...w.1..b..7X...
+3717F914  3717f958 00000001 0000003e 00000000 X..7....>.......
+3717F924  00000001 00000001 41f8e5bc 3717faac ...........A...7
+3717F934  000000c3 37800080 00000000 00000001 .......7........
+3717F944  00000004 00000001 60eeb0c0 00000002 ...........`....
+3717F954  3717f960 77de9d55 00000000 00000003 `..7U..w........
+3717F964  00000015 00000010 00000004 00000000 ................
+3717F974  000000c4 00000000 3e880b40 00000000 ........@..>....
+3717F984  00000004 00000eab 000000c4 00000103 ................
+3717F994  00000012 00000001 00000004 00006804 .............h..
+3717F9A4  00000002 00000001 00000000 00001f5c ............\...
+3717F9B4  00000034 00000000 59e89100 00000000 4..........Y....
+3717F9C4  00000020 00000004 0000001c 00000000  ...............
+3717F9D4  00000004 00000360 00000002 54a312c0 ....`..........T
+3717F9E4  00000000 3eb5a580 3717fa7c 00000000 .......>|..7....
+3717F9F4  00000000 77de01bb 41f8e678 000000e8 .......wx..A....
+3717FA04  759200e8 00000000 3717f9e8 3717faa0 ...u.......7...7
+3717FA14  3717fb00 77e271d5 00110010 759e9abe ...7.q.w.......u
+3717FA24  00000000 75920000 75920000 01c331e8 .......u...u.1..
+3717FA34  759e9ab8 00000000 3717f9d8 3717fab4 ...u.......7...7
+3717FA44  3717fb00 77e271d5 0132a2f0 fffffffe ...7.q.w..2.....
+3717FA54  77de01bb 77de030a 01c335b0 00000000 ...w...w.5......
+3717FA64  0017faac 3717faac 01c58aa0 3717fb10 .......7.......7
+3717FA74  77de0382 77dde1b2 77de0358 41f8e710 ...w...wX..w...A
+3717FA84  379a74f0 37b94590 0000ffff 75920000 .t.7.E.7.......u
+3717FA94  0000a9b1 3717fb60 77dde1b2 01c331e8 ....`..7...w.1..
+3717FAA4  01c335b0 3717fab4 77de9d55 00000000 .5.....7U..w....
+3717FAB4  65440000 65646f63 6e696f50 00726574 ..DecodePointer.
+3717FAC4  01c331e8 01c335b0 3717fad8 77de9d55 .1...5.....7U..w
+3717FAD4  00000000 65440000 65646f63 6e696f50 ......DecodePoin
+3717FAE4  00726574 77de3cc3 77de3cee 00000214 ter..<.w.<.w....
+3717FAF4  41f8e710 3717fa80 392192f8 3717fb80 ...A...7..!9...7
+3717FB04  77e271d5 0132a0d8 fffffffe 77de0358 .q.w..2.....X..w
+3717FB14  77de01e2 75920000 3717fb4c 00000000 ...w...uL..7....
+3717FB24  3717fb60 00000000 3717fb54 75ad1e4b `..7....T..7K..u
+3717FB34  00000001 379b1b08 00000001 75931222 .......7...."..u
+3717FB44  37b94590 3717fb54 379975c6 379b3ee0 .E.7T..7.u.7.>.7
+3717FB54  3717fb90 37994f03 0000000c 37994eec ...7.O.7.....N.7
+3717FB64  c3c495e9 00000000 37b94590 37960000 .........E.7...7
+3717FB74  75920000 3717fb64 3717fb8c 3717fbd8 ...ud..7...7...7
+3717FB84  37997720 c349dea1 00000011 3717fc60  w.7..I.....`..7
+3717FB94  77eb2080 37b94590 37992f89 00000000 . .w.E.7./.7....
+3717FBA4  00000002 3717fbe8 3799301e 37960000 .......7.0.7...7
+3717FBB4  00000002 00000001 3717fc60 01c58aa0 ........`..7....
+
+*--> Error Logs <--*
+010c27': Can't unlink child '0x00df68' from parent bone 'root', there's no bone with that name.
+Model '0x016186': Can't unlink child '0x00dfa4' from parent bone 'aura', there's no bone with that name.
+Model '0x007209': Missing anim or fallbacks: ugtalrtwlkb
+Model '0x00e5e2': Missing anim or fallbacks: castc
+Model '0x00e8b0': Missing anim or fallbacks: zeropose
+Model '0x00dce8': Missing anim or fallbacks: areas
+Model '0x0070a3': Missing anim or fallbacks: wgtalrtwlkb
+Model '0x016186': Can't link child '0x00cf99' to parent bone 'aura', there's no bone with that name. Linking to root instead
+Model '0x016186': Can't link child '0x00df62' to parent bone 'aura', there's no bone with that name. Linking to root instead
+Model '0x01087a': Can't link child '0x00df68' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x00595f': Missing anim or fallbacks: ugtalrtrunf
+Model '0x00f38f': Can't link child '0x00df68' to parent bone 'root', there's no bone with that name. Linking to root instead
+Model '0x006a40': Can't link child '0x00d28d' to parent bone 'kneel', there's no bone with that name. Linking to root instead
+Model '0x006a40': Can't link child '0x00d28d' to parent bone 'kneer', there's no bone with that name. Linking to root instead
+Model '0x00f38f': Can't unlink child '0x00df68' from parent bone 'root', there's no bone with that name.
+Model '0x01087a': Can't unlink child '0x00df68' from parent bone 'root', there's no bone with that name.
+Model '0x016186': Can't unlink child '0x00df62' from parent bone 'aura', there's no bone with that name.
+Model '0x016186': Can't unlink child '0x00cf99' from parent bone 'aura', there's no bone with that name.
+Model '0x007209': Missing anim or fallbacks: ugtwlkbalt
+Model '0x007209': Missing anim or fallbacks: ugtalrtrunf
+Model '0x006a40': Can't unlink child '0x00d28d' from parent bone 'kneel', there's no bone with that name.
+Model '0x006a40': Can't unlink child '0x00d28d' from parent bone 'kneer', there's no bone with that name.
+
+*--> DirectX Device Info <--*
+VendorId    = 0x10de
+DeviceId    = 0x0e22
+Version     = 9.18.0013.1090
+Description = NVIDIA GeForce GTX 460
+Compat      = 0x00100800
+VidMem      = 4051 MB
+
+

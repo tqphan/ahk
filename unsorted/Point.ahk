@@ -1,0 +1,4 @@
+class MouseBindEx
+{
+    __New()
+	{
