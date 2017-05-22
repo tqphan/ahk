@@ -52,7 +52,7 @@ f11ko.AddKeysArray({keys: ["space"], mode: HotkeyOutputMode.HOM_DIRECT_REMAP})
 
 global f9lmbko := new HotkeyOutput
 f9lmbko.AddKeysArray({keys: [""], mode: HotkeyOutputMode.HOM_DO_NOTHING})
-f9lmbko.AddKeysArray({keys: ["q"], mode: HotkeyOutputMode.HOM_SINGLE_ACTIVATE})
+f9lmbko.AddKeysArray({keys: ["h"], mode: HotkeyOutputMode.HOM_SINGLE_ACTIVATE})
 
 global rmbko := new HotkeyOutput
 rmbko.AddKeysArray({keys: [""], mode: HotkeyOutputMode.HOM_DO_NOTHING})
@@ -67,8 +67,8 @@ rmbko.AddKeysArray({keys: ["w", "s"], mode: HotkeyOutputMode.HOM_CIRCULAR_SEQUEN
 
 global f9rmbko := new HotkeyOutput
 f9rmbko.AddKeysArray({keys: [""], mode: HotkeyOutputMode.HOM_DO_NOTHING})
-f9rmbko.AddKeysArray({keys: ["h"], mode: HotkeyOutputMode.HOM_SINGLE_ACTIVATE})
-f9rmbko.AddKeysArray({keys: ["h", "g"], mode: HotkeyOutputMode.HOM_CIRCULAR_SEQUENCE})
+f9rmbko.AddKeysArray({keys: ["g"], mode: HotkeyOutputMode.HOM_SINGLE_ACTIVATE})
+f9rmbko.AddKeysArray({keys: ["f", "g"], mode: HotkeyOutputMode.HOM_CIRCULAR_SEQUENCE})
 f9rmbko.AddKeysArray({keys: ["y"], mode: HotkeyOutputMode.HOM_SINGLE_ACTIVATE})
 f9rmbko.AddKeysArray({keys: ["y", "t"], mode: HotkeyOutputMode.HOM_CIRCULAR_SEQUENCE})
 
