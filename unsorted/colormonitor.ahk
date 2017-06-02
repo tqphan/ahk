@@ -4,7 +4,7 @@ SetTimer, GetColor, 100
 GetColor:
 CoordMode, Mouse, Screen
 MouseGetPos, MX, MY
-PixelGetColor, MyColor, 960, 670
+PixelGetColor, MyColor, 570, 1027
 CoordMode, ToolTip, Screen
 ToolTip, % ConvertToBGR255(MyColor, MX, MY), 0, 0
 return

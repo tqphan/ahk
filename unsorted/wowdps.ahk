@@ -77,7 +77,8 @@ F9 Up::
 {
 	ad.Deactivate()
 	lr.Deactivate()
-	SetTimer, %lastActivatedTimer%, off
+	if(lastActivatedTimer != "")
+		SetTimer, %lastActivatedTimer%, off
 }
 return
 

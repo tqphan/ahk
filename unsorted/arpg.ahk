@@ -9,7 +9,7 @@ Gui, Add, Button, x0 y20 h40 w120, Ultimate
 
 Gui, Add, Button, x0 y60 h20 w30, α
 Gui, Add, Button, x30 y60 h20 w30, β
-Gui, Add, Checkbox, x60 y60 h20 w30 0x1000 vautoHeal, γ
+Gui, Add, Checkbox, x60 y60 h20 w30 0x1000 vautoHeal gOnChange, γ
 Gui, Add, Checkbox, x90 y60 h20 w30 0x1000 vautoAttack, δ
 
 Gui, Add, Checkbox, x0 y80 h20 w30 0x1000 vepsilon gOnChange, ε
@@ -18,7 +18,7 @@ Gui, Add, Checkbox, x60 y80 h20 w30 0x1000 veta gOnChange, η
 Gui, Add, Checkbox, x90 y80 h20 w30 0x1000 vtheta gOnChange, θ
 
 Gui, Add, DropDownList, x0 y100 AltSubmit vrmbDropDownList gOnChange, |a|as|asd|asdf|asdfg|asdfgh|ad|ws|
-Gui, Add, DropDownList, x0 y120 AltSubmit vf9rmbDropDownList gOnChange, |h|gh|y|yt|
+Gui, Add, DropDownList, x0 y120 AltSubmit vf9rmbDropDownList gOnChange, |h|gh|
 Gui, Add, DropDownList, x0 y140 AltSubmit vf9lmbDropDownList gOnChange, |q|
 Gui, Add, DropDownList, x0 y160 AltSubmit vf9DropDownList gOnChange, |f8|leffalt|ad|ws|alternate scroll|
 Gui, Add, DropDownList, x0 y180 AltSubmit vf9altDropDownList gOnChange, |f8|
@@ -69,8 +69,6 @@ global f9rmbko := new HotkeyOutput
 f9rmbko.AddKeysArray({keys: [""], mode: HotkeyOutputMode.HOM_DO_NOTHING})
 f9rmbko.AddKeysArray({keys: ["g"], mode: HotkeyOutputMode.HOM_SINGLE_ACTIVATE})
 f9rmbko.AddKeysArray({keys: ["f", "g"], mode: HotkeyOutputMode.HOM_CIRCULAR_SEQUENCE})
-f9rmbko.AddKeysArray({keys: ["y"], mode: HotkeyOutputMode.HOM_SINGLE_ACTIVATE})
-f9rmbko.AddKeysArray({keys: ["y", "t"], mode: HotkeyOutputMode.HOM_CIRCULAR_SEQUENCE})
 
 SetTimer, Health, 1000
 
