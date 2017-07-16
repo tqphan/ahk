@@ -1,21 +1,22 @@
 ﻿#SingleInstance force
 #Include HotkeyOutputMode.ahk
 #Include HotkeyOutput.ahk
+#Include MouseBind.ahk
 
 Gui, +LastFound +AlwaysOnTop +ToolWindow +Border +E0x08000000
-Gui, Add, DropDownList, x0 y0 vwindowTitleDropDownList gOnChange, |Marvel Heroes 2016|Diablo III|
+Gui, Add, DropDownList, x0 y0 vwindowTitleDropDownList gOnChange, |Marvel Heroes Omega|Diablo III|Albion Online|
 
 Gui, Add, Button, x0 y20 h40 w120, Ultimate
 
 Gui, Add, Button, x0 y60 h20 w30, α
 Gui, Add, Button, x30 y60 h20 w30, β
 Gui, Add, Checkbox, x60 y60 h20 w30 0x1000 vautoHeal gOnChange, γ
-Gui, Add, Checkbox, x90 y60 h20 w30 0x1000 vautoAttack, δ
+Gui, Add, Checkbox, x90 y60 h20 w30 0x1000 vmouseMonitor gOnChange, δ
 
-Gui, Add, Checkbox, x0 y80 h20 w30 0x1000 vepsilon gOnChange, ε
-Gui, Add, Checkbox, x30 y80 h20 w30 0x1000 vzeta gOnChange, ζ
-Gui, Add, Checkbox, x60 y80 h20 w30 0x1000 veta gOnChange, η
-Gui, Add, Checkbox, x90 y80 h20 w30 0x1000 vtheta gOnChange, θ
+Gui, Add, Checkbox, x0 y80 h20 w30 0x1000 vtopEdge gOnChange, ε
+Gui, Add, Checkbox, x30 y80 h20 w30 0x1000 vleftEdge gOnChange, ζ
+Gui, Add, Checkbox, x60 y80 h20 w30 0x1000 vbottomEdge gOnChange, η
+Gui, Add, Checkbox, x90 y80 h20 w30 0x1000 vrightEdge gOnChange, θ
 
 Gui, Add, DropDownList, x0 y100 AltSubmit vrmbDropDownList gOnChange, |a|as|asd|asdf|asdfg|asdfgh|ad|ws|
 Gui, Add, DropDownList, x0 y120 AltSubmit vf9rmbDropDownList gOnChange, |h|gh|
@@ -28,6 +29,11 @@ Gui, Show, w120 h200 Center NoActivate
 global activeWindowCheckEnabled := true
 global windowTitle := ""
 
+global mb := new MouseBind
+mb.topEdgeKey := "1"
+mb.leftEdgeKey := "2"
+mb.bottomEdgeKey := "3"
+mb.rightEdgeKey := "4"
 
 global aako := new HotkeyOutput
 aako.AddKeysArray({keys: ["1", "2", "3", "4", "5", "6"], mode: HotkeyOutputMode.HOM_CONSTANT_SPAM})
@@ -191,12 +197,29 @@ return
 
 OnChange:
 Gui, Submit, nohide
+mb.topEdgeEnabled := topEdge
+mb.leftEdgeEnabled := leftEdge
+mb.bottomEdgeEnabled := bottomtEdge
+mb.rightEdgeEnabled := rightEdge
+
 if(windowTitleDropDownList = "")
 	activeWindowCheckEnabled := false
 else
 {
 	activeWindowCheckEnabled := true
 	windowTitle := windowTitleDropDownList
+}
+
+if(mouseMonitor)
+{
+	if(ActiveWindowCheck(activeWindowCheckEnabled))
+	{
+		mb.Start()
+	}
+}
+else
+{
+	mb.Stop()
 }
 return
 

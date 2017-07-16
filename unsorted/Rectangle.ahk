@@ -8,8 +8,33 @@ class Rectangle
         this.Width := awidth
         this.Height := aheight
     }
+    intersect(point)
+    {
+        if(this.withinX(point.X) and this.withinY(point.Y))
+            return true
+
+        return false
+    }
+    withinX(value)
+    {
+        if((this.Point.X <= value) and (value <= (this.point.X + this.Width)))
+            return true
+
+        return false
+    }
+    withinY(value)
+    {
+        if((this.Point.Y <= value) and (value <= (this.point.Y + this.Height)))
+            return true
+
+        return false
+    }
 }
 
-r := new Rectangle(1,3,44,66)
-MsgBox % r.Point.X "," r.Point.Y
 
+; topRect := new Rectangle(0,0,1920,2)
+; point := new Point2D(0,4)
+; if(topRect.intersect(point))
+; MsgBox, Textrrrrrrr
+; Else
+; MsgBox, Textuuuuuuuu
