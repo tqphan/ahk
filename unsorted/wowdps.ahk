@@ -39,12 +39,16 @@ Gui, Add, Checkbox, x60 y60 h20 w30 0x1000 veta gOnChange, η
 Gui, Add, Checkbox, x90 y60 h20 w30 0x1000 vtheta gOnChange, θ
 Gui, Show, w120 h140 Center NoActivate
 
-global mb = new MouseBind
+global mb := new MouseBind
+mb.topEdgeKey := "numlock"
+mb.leftEdgeKey := "0"
+mb.topEdgeEnabled := true
+mb.leftEdgeEnabled := true
 
-global ad = new HotkeyOutput
+global ad := new HotkeyOutput
 ad.AddKeysArray({keys: ["a", "d"], mode: HotkeyOutputMode.HOM_CIRCULAR_SEQUENCE})
 
-global lr = new HotkeyOutput
+global lr := new HotkeyOutput
 lr.AddKeysArray({keys: ["left", "right"], mode: HotkeyOutputMode.HOM_CIRCULAR_SEQUENCE})
 
 global activeWindowCheckEnabled := true

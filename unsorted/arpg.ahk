@@ -199,11 +199,14 @@ OnChange:
 Gui, Submit, nohide
 mb.topEdgeEnabled := topEdge
 mb.leftEdgeEnabled := leftEdge
-mb.bottomEdgeEnabled := bottomtEdge
+mb.bottomEdgeEnabled := bottomEdge
 mb.rightEdgeEnabled := rightEdge
 
+
 if(windowTitleDropDownList = "")
+{
 	activeWindowCheckEnabled := false
+}
 else
 {
 	activeWindowCheckEnabled := true
