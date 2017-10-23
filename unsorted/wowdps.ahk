@@ -3,23 +3,27 @@
 #Include HotkeyOutput.ahk
 #Include MouseBind.ahk
 
-Classes := "DeathKnight|DemonHunter|Druid|Hunter|Mage|Monk|Paladin|Priest|Rogue|Shaman|Warlock|Warrior"
-DeathKnight_Specs := "Blood|Frost|Unholy"
-DemonHunter_Specs := "Havoc|Vengeance"
-Druid_Specs := "Balance|Feral|Guardian|Restoration"
-Hunter_Specs := "BeastMastery|Marksmanship|Survival"
-Mage_Specs := "Arcane|Fire|Frost"
-Monk_Specs := "Brewmaster|Windwalker|Mistweaver"
-Paladin_Specs := "Holy|Retribution|Protection"
-Priest_Specs := "Discipline|Holy|Shadow"
-Rogue_Specs := "Assassination|Subtlety|Outlaw"
-Shaman_Specs := "Elemental|Enhancement|Restoration"
-Warlock_Specs := "Affliction|Demonology|Destruction"
-Warrior_Specs := "Arms|Fury|Protection"
+Classes := "DeathKnight|DemonHunter|Druid|Hunter||Mage|Monk|Paladin|Priest|Rogue|Shaman|Warlock|Warrior"
+DeathKnight := "Blood|Frost|Unholy"
+DemonHunter := "Havoc|Vengeance"
+Druid := "Balance|Feral|Guardian|Restoration"
+Hunter := "BeastMastery|Marksmanship|Survival"
+Mage := "Arcane|Fire|Frost"
+Monk := "Brewmaster|Windwalker|Mistweaver"
+Paladin := "Holy|Retribution|Protection"
+Priest := "Discipline|Holy|Shadow"
+Rogue := "Assassination|Subtlety|Outlaw"
+Shaman := "Elemental|Enhancement|Restoration"
+Warlock := "Affliction|Demonology|Destruction"
+Warrior := "Arms|Fury|Protection"
 
 Gui, +LastFound +AlwaysOnTop +ToolWindow +Resize +Border +E0x08000000
+
 Gui, Add, DropDownList, x0 y120 vwindowTitleDropDownList gOnChange, |World of Warcraft||
-Gui, Add, DropDownList, x0 y100 vspecDropDownList gOnChange, |Common|Jump|MageFrost|DruildBalance|WarriorFury|WarriorArms|WarriorProtection|PriestDiscipline|HunterBeastmaster|HunterMarksmanship|RogueAssassination|ShamanElemental|ShamanRestoration|WarlockAffliction|
+Gui, Add, DropDownList, x0 y100 vspecDropDownList gOnChange, |Common|Jump|PaladinProtection|MageFrost|DruildBalance|WarriorFury|WarriorArms|WarriorProtection|PriestDiscipline|HunterBeastMastery|HunterMarksmanship|RogueAssassination|ShamanElemental|ShamanRestoration|WarlockAffliction|
+;Gui, Add, DropDownList, x0 y140 vwindowTitleDropDownList gOnChange, |World of Warcraft||
+;Gui, Add, DropDownList, x0 y100 vclassDropDownList gOnChange, %Classes%
+;Gui, Add, DropDownList, x0 y120 vspecDropDownList, %Hunter%
 
 Gui, Add, Radio, x0 y80 w60 h20 vpveGameMode gOnChange Checked 0x1000, PvE
 Gui, Add, Radio, x60 y80 w60 h20 vpvpGameMode gOnChange 0x1000, PvP
@@ -37,7 +41,7 @@ Gui, Add, Checkbox, x0 y60 h20 w30 0x1000 vepsilon gOnChange, ε
 Gui, Add, Checkbox, x30 y60 h20 w30 0x1000 vzeta gOnChange, ζ
 Gui, Add, Checkbox, x60 y60 h20 w30 0x1000 veta gOnChange, η
 Gui, Add, Checkbox, x90 y60 h20 w30 0x1000 vtheta gOnChange, θ
-Gui, Show, w120 h140 Center NoActivate
+Gui, Show, w120 h160 Center NoActivate
 
 global mb := new MouseBind
 mb.topEdgeKey := "numlock"
@@ -58,6 +62,9 @@ return
 
 F9::
 {
+	;GuiControlGet, clss , 1:, classDropDownList
+	;GuiControlGet, spc , 1:, specDropDownList
+	;cs := clss . spc
 	if(ActiveWindowCheck(activeWindowCheckEnabled))
 	{
 		if(autoStrafe)
@@ -67,7 +74,9 @@ F9::
 			lr.Activate(1)
 		
 		if(specDropDownList = "")
+		{
 			return
+		}
 		else
 		{
 			lastActivatedTimer := specDropDownList
@@ -88,6 +97,7 @@ return
 
 ActiveWindowCheck(checkEnabled)
 {
+	;MsgBox, %windowTitle%
 	if(checkEnabled)
 	{
 		if WinActive(windowTitle)
@@ -114,8 +124,15 @@ return
 #Include wowwarlock.ahk
 
 OnChange:
-Gui, Submit, nohide
+;Gui, Submit, nohide
 
+	;, clss , 1:, classDropDownList	; Get the value selected
+	;making it dynamic without Loops end if's
+	; If Choise1=Red Than %red%="A|B|C||" And % %Choise1%="A|B|C||"
+	;GuiControl,1:,specDropDownList,| 		; RTM says To make the control empty, specify only a pipe character (|). 
+	;GuiControl,1:,specDropDownList,% %clss% 		; Set the assigned dropdownlist
+
+Gui, Submit, nohide
 if(mouseMonitor)
 {
 	if(ActiveWindowCheck(activeWindowCheckEnabled))

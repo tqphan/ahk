@@ -21,8 +21,8 @@ Gui, Add, Checkbox, x90 y80 h20 w30 0x1000 vrightEdge gOnChange, θ
 Gui, Add, DropDownList, x0 y100 AltSubmit vrmbDropDownList gOnChange, |a|as|asd|asdf|asdfg|asdfgh|ad|ws|
 Gui, Add, DropDownList, x0 y120 AltSubmit vf9rmbDropDownList gOnChange, |h|gh|
 Gui, Add, DropDownList, x0 y140 AltSubmit vf9lmbDropDownList gOnChange, |q|
-Gui, Add, DropDownList, x0 y160 AltSubmit vf9DropDownList gOnChange, |f8|leffalt|ad|ws|alternate scroll|
-Gui, Add, DropDownList, x0 y180 AltSubmit vf9altDropDownList gOnChange, |f8|
+Gui, Add, DropDownList, x0 y160 AltSubmit vf9DropDownList gOnChange, |f8|f23|leffalt|ad|ws|alternate scroll|middle button|
+Gui, Add, DropDownList, x0 y180 AltSubmit vf9altDropDownList gOnChange, |f8|f23|
 
 Gui, Show, w120 h200 Center NoActivate
 
@@ -41,14 +41,17 @@ aako.AddKeysArray({keys: ["1", "2", "3", "4", "5", "6"], mode: HotkeyOutputMode.
 global f9ko := new HotkeyOutput
 f9ko.AddKeysArray({keys: [""], mode: HotkeyOutputMode.HOM_DO_NOTHING})
 f9ko.AddKeysArray({keys: ["f8"], mode: HotkeyOutputMode.HOM_DIRECT_REMAP})
+f9ko.AddKeysArray({keys: ["f23"], mode: HotkeyOutputMode.HOM_DIRECT_REMAP})
 f9ko.AddKeysArray({keys: ["lalt"], mode: HotkeyOutputMode.HOM_DIRECT_REMAP})
 f9ko.AddKeysArray({keys: ["a", "d"], mode: HotkeyOutputMode.HOM_CIRCULAR_SEQUENCE})
 f9ko.AddKeysArray({keys: ["w", "s"], mode: HotkeyOutputMode.HOM_CIRCULAR_SEQUENCE})
 f9ko.AddKeysArray({keys: ["wheeldown", "wheelup"], mode: HotkeyOutputMode.HOM_SEQUENTIAL_SPAM})
+f9ko.AddKeysArray({keys: ["mbutton"], mode: HotkeyOutputMode.HOM_DIRECT_REMAP})
 
 global f9altko := new HotkeyOutput
 f9altko.AddKeysArray({keys: [""], mode: HotkeyOutputMode.HOM_DO_NOTHING})
 f9altko.AddKeysArray({keys: ["f8"], mode: HotkeyOutputMode.HOM_DIRECT_REMAP})
+f9altko.AddKeysArray({keys: ["f23"], mode: HotkeyOutputMode.HOM_DIRECT_REMAP})
 
 global f10ko := new HotkeyOutput
 f10ko.AddKeysArray({keys: ["space"], mode: HotkeyOutputMode.HOM_DIRECT_REMAP})
@@ -94,7 +97,7 @@ return
 			Send {WheelDown}
 		}
 		
-		GetKeyState, state, F8
+		GetKeyState, state, F23
 		if state = D
 		{
 			f9lmbko.Activate(f9lmbDropDownList)
@@ -123,7 +126,7 @@ return
 			Send {WheelUp}
 		}
 		
-		GetKeyState, state, F8
+		GetKeyState, state, F23
 		if state = D
 		{
 			f9rmbko.Activate(f9rmbDropDownList)
