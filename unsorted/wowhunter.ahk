@@ -191,10 +191,29 @@ if(((not singleTargetMode) and (not isVolleyUp)) or ((singleTargetMode and isVol
 	return
 }
 
-
 if(isKillCommandUp and (singleTargetMode or cleaveTargetMode))
 {
 	send 3
+	return
+}
+
+if(isDireBeastTwoChargesActive)
+{
+	send 2
+	return
+}
+
+if(isBestialWrathActive and singleTargetMode)
+{
+	if(isKillCommandUp)
+	{
+		send 3
+	}
+	else
+	{
+		send 5
+	}
+
 	return
 }
 
@@ -207,12 +226,6 @@ if(not isDireBeastActive)
 if((cleaveTargetMode or multipleTargetMode) and (not isBeastCleaveActive))
 {
 	send 7
-	return
-}
-
-if(isBestialWrathActive and singleTargetMode)
-{
-	send 5
 	return
 }
 

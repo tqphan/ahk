@@ -1,4 +1,5 @@
 WarriorArms:
+
 PixelGetColor, pc, 1919, 1079
 if(pc = 0xffffff)
 	isInMeleeRange := true
@@ -10,7 +11,7 @@ if(pc = 0xffffff)
 	isFullRage := true
 else
 	isFullRage := false
-
+	
 PixelGetColor, pc, 1919, 1016
 if(pc = 0xffffff)
 	isExecutable := true
@@ -19,61 +20,78 @@ else
 	
 PixelGetColor, pc, 1919, 984
 if(pc = 0xffffff)
-	isColossusSmashActive := true
+	isMortalStrikeUp := true
 else
-	isColossusSmashActive := false
-
-	PixelGetColor, pc, 1919, 952
+	isMortalStrikeUp := false
+	
+PixelGetColor, pc, 1919, 952
 if(pc = 0xffffff)
-	isCleaveActive := true
+	isColossusSmashUp := true
 else
-	isCleaveActive := false
-
+	isColossusSmashUp := false
+	
 PixelGetColor, pc, 1919, 920
 if(pc = 0xffffff)
 	isHamstringActive := true
 else
-	isHamstringActive := false
+	isWarbreakerUp := false
 
 PixelGetColor, pc, 1919, 888
 if(pc = 0xffffff)
-	isRendActive := true
+	isWarbreakerUp := true
 else
-	isRendActive := false
+	isWarbreakerUpisWarbreakerUp := false
 	
+if(autoFace)
+	send z
+if(autoAttack)
+	send 1
+
+if(not isInMeleeRange)
+	return
+
 if(pvpGameMode and (not isHamstringActive))
 	send 9
-	
-if(singleTargetMode)
+
+if(multipleTargetMode)
 {
-	if(not isRendActive)
+	send 67
+	return
+}
+if(isColossusSmashUp)
+{
+	send 2
+	return
+}
+if(isWarbreakerUp)
+{
+	send 8
+	return
+}
+if(isExecutable)
+{
+	send 3
+	return
+}
+
+if(isMortalStrikeUp)
+{
+	send 4
+	return
+}
+
+if(isFullRage)
+{
+	if(singleTargetMode)
 	{
-		send 0
-		return
-	}
-	if(isFullRage)
-	{
-		send 2345
+		send 5
 	}
 	else
 	{
-		send 234
+		send 7
 	}
-}
-else if(multipleTargetMode)
-{
-	if(isCleaveActive)
-	{
-		send 276
-	}
-	else
-	{
-		send 267
-	}
-}
-	
-	
-	
+	return
+}	
 	
 return
 

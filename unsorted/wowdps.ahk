@@ -45,15 +45,20 @@ Gui, Show, w120 h160 Center NoActivate
 
 global mb := new MouseBind
 mb.topEdgeKey := "numlock"
-mb.leftEdgeKey := "0"
+mb.leftEdgeKey := "f1"
+mb.rightEdgeKey := "f2"
 mb.topEdgeEnabled := true
 mb.leftEdgeEnabled := true
+mb.rightEdgeEnabled := true
 
 global ad := new HotkeyOutput
 ad.AddKeysArray({keys: ["a", "d"], mode: HotkeyOutputMode.HOM_CIRCULAR_SEQUENCE})
 
 global lr := new HotkeyOutput
 lr.AddKeysArray({keys: ["left", "right"], mode: HotkeyOutputMode.HOM_CIRCULAR_SEQUENCE})
+
+global ud := new HotkeyOutput
+ud.AddKeysArray({keys: ["wheeldown", "wheelup"], mode: HotkeyOutputMode.HOM_SEQUENTIAL_SPAM})
 
 global activeWindowCheckEnabled := true
 global windowTitle := ""
@@ -73,6 +78,9 @@ F9::
 		if(eta)
 			lr.Activate(1)
 		
+		if(epsilon)
+			ud.Activate(1)
+
 		if(specDropDownList = "")
 		{
 			return
@@ -90,6 +98,7 @@ F9 Up::
 {
 	ad.Deactivate()
 	lr.Deactivate()
+	ud.Deactivate()
 	if(lastActivatedTimer != "")
 		SetTimer, %lastActivatedTimer%, off
 }
@@ -119,6 +128,7 @@ return
 #Include wowwarrior.ahk
 #Include wowshaman.ahk
 #Include wowrogue.ahk
+#Include wowpaladin.ahk
 #Include wowpriest.ahk
 #Include wowmage.ahk
 #Include wowwarlock.ahk

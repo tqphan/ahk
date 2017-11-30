@@ -20,7 +20,7 @@ Gui, Add, Checkbox, x90 y80 h20 w30 0x1000 vrightEdge gOnChange, θ
 
 Gui, Add, DropDownList, x0 y100 AltSubmit vrmbDropDownList gOnChange, |a|as|asd|asdf|asdfg|asdfgh|ad|ws|
 Gui, Add, DropDownList, x0 y120 AltSubmit vf9rmbDropDownList gOnChange, |h|gh|
-Gui, Add, DropDownList, x0 y140 AltSubmit vf9lmbDropDownList gOnChange, |q|
+Gui, Add, DropDownList, x0 y140 AltSubmit vf9lmbDropDownList gOnChange, |g|
 Gui, Add, DropDownList, x0 y160 AltSubmit vf9DropDownList gOnChange, |f8|f23|leffalt|ad|ws|alternate scroll|middle button|
 Gui, Add, DropDownList, x0 y180 AltSubmit vf9altDropDownList gOnChange, |f8|f23|
 
