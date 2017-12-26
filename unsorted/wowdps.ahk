@@ -1,4 +1,5 @@
 ﻿#SingleInstance force
+SetTitleMatchMode, 3
 #Include HotkeyOutputMode.ahk
 #Include HotkeyOutput.ahk
 #Include MouseBind.ahk
@@ -17,10 +18,10 @@ Shaman := "Elemental|Enhancement|Restoration"
 Warlock := "Affliction|Demonology|Destruction"
 Warrior := "Arms|Fury|Protection"
 
-Gui, +LastFound +AlwaysOnTop +ToolWindow +Resize +Border +E0x08000000
+Gui, +LastFound +AlwaysOnTop +ToolWindow +Border +E0x08000000
 
 Gui, Add, DropDownList, x0 y120 vwindowTitleDropDownList gOnChange, |World of Warcraft||
-Gui, Add, DropDownList, x0 y100 vspecDropDownList gOnChange, |Common|Jump|PaladinProtection|MageFrost|DruildBalance|WarriorFury|WarriorArms|WarriorProtection|PriestDiscipline|HunterBeastMastery|HunterMarksmanship|RogueAssassination|ShamanElemental|ShamanRestoration|WarlockAffliction|
+Gui, Add, DropDownList, x0 y100 vspecDropDownList gOnChange, |Common|Jump|DemonHunterHavoc|PaladinProtection|MageFrost|DruildBalance|WarriorFury|WarriorArms|WarriorProtection|PriestDiscipline|HunterBeastMastery|HunterMarksmanship|RogueAssassination|ShamanElemental|ShamanRestoration|WarlockAffliction|
 ;Gui, Add, DropDownList, x0 y140 vwindowTitleDropDownList gOnChange, |World of Warcraft||
 ;Gui, Add, DropDownList, x0 y100 vclassDropDownList gOnChange, %Classes%
 ;Gui, Add, DropDownList, x0 y120 vspecDropDownList, %Hunter%
@@ -33,7 +34,7 @@ Gui, Add, Radio, x40 y0 w40 h40 vcleaveTargetMode gOnChange 0x1000, 2
 Gui, Add, Radio, x80 y0 w40 h40 vmultipleTargetMode gOnChange 0x1000, 3
 
 Gui, Add, Checkbox, x0 y40 h20 w30 0x1000 vmouseMonitor gOnChange, α
-Gui, Add, Checkbox, x30 y40 h20 w30 0x1000 vautoFace gOnChange, β
+Gui, Add, Checkbox, x30 y40 h20 w30 0x1000 vautoHeal gOnChange, β
 Gui, Add, Checkbox, x60 y40 h20 w30 0x1000 vautoStrafe gOnChange, γ
 Gui, Add, Checkbox, x90 y40 h20 w30 0x1000 vautoAttack gOnChange, δ
 
@@ -77,10 +78,7 @@ F9::
 		
 		if(eta)
 			lr.Activate(1)
-		
-		if(epsilon)
-			ud.Activate(1)
-
+			
 		if(specDropDownList = "")
 		{
 			return
@@ -90,6 +88,11 @@ F9::
 			lastActivatedTimer := specDropDownList
 			SetTimer, %specDropDownList%, 200
 		}
+	}
+	else
+	{
+		if(epsilon)
+			ud.Activate(1)
 	}
 }
 return
@@ -101,6 +104,20 @@ F9 Up::
 	ud.Deactivate()
 	if(lastActivatedTimer != "")
 		SetTimer, %lastActivatedTimer%, off
+}
+return
+
+~RButton up::
+{
+	if(not theta)
+		return
+	
+	elapsedTime := A_TickCount - lastTick
+	if(elapsedTime < 400)
+		SendInput, {F3}
+
+	
+	lastTick := A_TickCount
 }
 return
 
@@ -123,6 +140,7 @@ return
 
 #Include wowcommon.ahk
 #Include wowjump.ahk
+#Include wowdemonhunter.ahk
 #Include wowdruild.ahk
 #Include wowhunter.ahk
 #Include wowwarrior.ahk

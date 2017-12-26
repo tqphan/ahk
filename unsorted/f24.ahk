@@ -1,4 +1,9 @@
-Sleep 5000
-Send {F24 down}
-Sleep 3000
-Send {F24 up}
+Space::
+{
+    Send, {Space}
+    Sleep 500
+    Send, {Space}
+    Sleep 100
+    Send, {Space}
+}
+return

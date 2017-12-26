@@ -5,15 +5,7 @@ if(singleTargetMode)
 		send 1
 	if(autoFace)
 		send 2
-	send 345
-	if(epsilon)
-		send 6
-	if(zeta)
-		send 7
-	if(eta)
-		send 8
-	if(theta)
-		send 9
+	send 3456
 }
 else if(cleaveTargetMode)
 {

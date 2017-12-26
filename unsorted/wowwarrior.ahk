@@ -42,8 +42,7 @@ if(pc = 0xffffff)
 else
 	isWarbreakerUpisWarbreakerUp := false
 	
-if(autoFace)
-	send z
+
 if(autoAttack)
 	send 1
 
@@ -139,8 +138,6 @@ if(pc = 0xffffff)
 else
 	isPiercingHowlActive := false
 	
-if(autoFace)
-	send z
 if(autoAttack)
 	send 1
 	
@@ -246,8 +243,6 @@ if(pc = 0xffffff)
 else
 	isThunderClapActive := false
 	
-if(autoFace)
-	send z
 if(autoAttack)
 	send 1
 	

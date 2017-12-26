@@ -1,6 +1,6 @@
-F23::
+F2::
 ; MouseGetPos, MouseX, MouseY
-PixelGetColor, color, 473, 1032
+PixelGetColor, color, 2, 0
 ; MsgBox %color%.
 if (ConvertToBGR255(color)) {
 MsgBox %color%.
