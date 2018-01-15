@@ -90,6 +90,12 @@ if(pc = 0xffffff)
 else
 	metamorphosisActive := false
 
+PixelGetColor, pc, 0, 1079
+if(pc = 0xffffff)
+	xylemCasting := true
+else
+	xylemCasting := false
+
 if(targetRange = 1 or targetRange = 2)
 {
 	eyeBeamInRange := true
@@ -101,6 +107,16 @@ else
 	eyeBeamInRange := false
 	bladeDanceInRange := false
 	furyOfTheIllidaryInRange := false
+}
+
+if(xylemCasting and eta)
+{
+	send {F1}
+}
+
+if(zeta and playerHealth = 0)
+{
+	send {F4}
 }
 
 if(targetRange = 0)

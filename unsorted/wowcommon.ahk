@@ -1,19 +1,15 @@
 Common:
 if(singleTargetMode)
 {
-	if(autoAttack)
-		send 1
-	if(autoFace)
-		send 2
-	send 3456
+	send 1234
 }
 else if(cleaveTargetMode)
 {
-	send f
+	send 12345
 }
 else
 {
-	send r
+	send 123456
 }
 
 	

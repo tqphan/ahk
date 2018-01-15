@@ -10,11 +10,12 @@ return
 		MouseGetPos,,,,ctrl
 		if(ctrl="Button1")
 		{
+			;Send {NumLock}
 			Send {Space}
             Sleep, 200
 			Send {Space}
             Sleep, 200
-			Send {F2}
+			Send {F3}
             Sleep, 200
 			Send {Space}
 		}
@@ -32,7 +33,7 @@ return
             Sleep, 200
 			Send {Space}
             Sleep, 200
-			Send {F3}
+			Send {F2}
             Sleep, 200
 			Send {Space}
 		}

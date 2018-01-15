@@ -44,6 +44,8 @@ Gui, Add, Checkbox, x60 y60 h20 w30 0x1000 veta gOnChange, η
 Gui, Add, Checkbox, x90 y60 h20 w30 0x1000 vtheta gOnChange, θ
 Gui, Show, w120 h160 Center NoActivate
 
+global rmbCaptured := false
+
 global mb := new MouseBind
 mb.topEdgeKey := "numlock"
 mb.leftEdgeKey := "f1"
@@ -107,17 +109,47 @@ F9 Up::
 }
 return
 
+~RButton::
+{
+	MouseGetPos mouseX, mouseY
+	WinGetPos, GuiX, GuiY, GuiWidth, GuiHeight, wowdps.ahk
+	SearchAreaX := GuiX + GuiWidth
+	SearchAreaY := GuiY + GuiHeight
+	If (mouseX >= GuiX AND mouseX <= SearchAreaX AND mouseY >= GuiY AND mouseY <= SearchAreaY )
+	{
+		rmbCaptured := true
+	}
+}
+return
+
 ~RButton up::
 {
-	if(not theta)
-		return
-	
-	elapsedTime := A_TickCount - lastTick
-	if(elapsedTime < 400)
-		SendInput, {F3}
+	if(theta)
+	{
+		elapsedTime := A_TickCount - lastTick
+		if(elapsedTime < 400)
+			SendInput, {F3}
+		
+		lastTick := A_TickCount
+	}
+	MouseGetPos mouseX, mouseY
+	WinGetPos, GuiX, GuiY, GuiWidth, GuiHeight, wowdps.ahk
+	SearchAreaX := GuiX + GuiWidth
+	SearchAreaY := GuiY + GuiHeight
 
-	
-	lastTick := A_TickCount
+	if(rmbCaptured)
+	{
+		If (mouseX >= GuiX AND mouseX <= SearchAreaX AND mouseY >= GuiY AND mouseY <= SearchAreaY )
+		{
+			SetTimer, rclick1, -1
+		}
+		else
+		{
+			SetTimer, rclick2, -1
+		}
+		rmbCaptured := false
+	}
+
 }
 return
 
@@ -125,7 +157,7 @@ ActiveWindowCheck(checkEnabled)
 {
 	;MsgBox, %windowTitle%
 	if(checkEnabled)
-	{
+	{ 
 		if WinActive(windowTitle)
 			return true
 		else
@@ -182,6 +214,25 @@ else
 	activeWindowCheckEnabled := true
 	windowTitle := windowTitleDropDownList
 }
+return
+
+rclick1:
+	Send {Space}
+	Sleep, 200
+	Send {Space}
+	Sleep, 200
+	Send {F3}
+	Sleep, 200
+	Send {Space}
+return
+
+rclick2:
+	Send p
+	Send {Space}
+	Sleep, 500
+	Send {Space}
+	Sleep, 500
+	Send {F2}
 return
 
 GuiClose:

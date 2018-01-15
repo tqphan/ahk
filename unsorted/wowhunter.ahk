@@ -185,11 +185,11 @@ if(autoAttack)
 if(pvpGameMode)
 	send 9
 
-if(((not singleTargetMode) and (not isVolleyUp)) or ((singleTargetMode and isVolleyUp)))
-{
-	send 6
-	return
-}
+;if(((not singleTargetMode) and (not isVolleyUp)) or ((singleTargetMode and isVolleyUp)))
+;{
+	;send 6
+	;return
+;}
 
 if(isKillCommandUp and (singleTargetMode or cleaveTargetMode))
 {
