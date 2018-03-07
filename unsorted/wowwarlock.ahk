@@ -99,6 +99,7 @@ else
 				return
 			}
 		}		
+		send 6
 	}
 	else
 	{

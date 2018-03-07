@@ -22,7 +22,31 @@ if(pc = 0xffffff)
 	isHighIciclesPower := true
 else
 	isHighAstralPower := false
-	
+
+PixelGetColor, pc, 1919, 952
+if(pc = 0xffffff)
+	isEbonboltUsable := true
+else
+	isEbonboltUsable := false
+
+PixelGetColor, pc, 1919, 920
+if(pc = 0xffffff)
+	isAoEUsable := true
+else
+	isAoEUsable := false
+
+if((not singleTargetMode) and isAoEUsable)
+{
+	send 765
+	return
+}
+
+if(isEbonboltUsable and (not isBrainFreezeActive))
+{
+	send 4
+	return
+}
+
 if(isBrainFreezeActive)
 {
 	send 3
@@ -36,6 +60,7 @@ if(isFingersOfFrostActive)
 else
 {
 	send 1
-}
+}	
+
 
 return

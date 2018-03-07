@@ -1,7 +1,7 @@
 Common:
 if(singleTargetMode)
 {
-	send 1234
+	send {LButton}
 }
 else if(cleaveTargetMode)
 {

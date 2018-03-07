@@ -21,7 +21,7 @@ Warrior := "Arms|Fury|Protection"
 Gui, +LastFound +AlwaysOnTop +ToolWindow +Border +E0x08000000
 
 Gui, Add, DropDownList, x0 y120 vwindowTitleDropDownList gOnChange, |World of Warcraft||
-Gui, Add, DropDownList, x0 y100 vspecDropDownList gOnChange, |Common|Jump|DemonHunterHavoc|PaladinProtection|MageFrost|DruildBalance|WarriorFury|WarriorArms|WarriorProtection|PriestDiscipline|HunterBeastMastery|HunterMarksmanship|RogueAssassination|ShamanElemental|ShamanRestoration|WarlockAffliction|
+Gui, Add, DropDownList, x0 y100 vspecDropDownList gOnChange, |Common|Jump|DemonHunterHavoc|DemonHunterVengeance|PaladinProtection|MageFrost|DruildBalance|WarriorFury|WarriorArms|WarriorProtection|PriestDiscipline|HunterBeastMastery|HunterMarksmanship|RogueAssassination|RogueSubtlety|ShamanElemental|ShamanRestoration|WarlockAffliction|
 ;Gui, Add, DropDownList, x0 y140 vwindowTitleDropDownList gOnChange, |World of Warcraft||
 ;Gui, Add, DropDownList, x0 y100 vclassDropDownList gOnChange, %Classes%
 ;Gui, Add, DropDownList, x0 y120 vspecDropDownList, %Hunter%
@@ -204,7 +204,6 @@ else
 {
 	mb.Stop()
 }
-
 if(windowTitleDropDownList = "")
 {
 	activeWindowCheckEnabled := false

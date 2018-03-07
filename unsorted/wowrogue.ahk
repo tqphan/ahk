@@ -103,3 +103,117 @@ else if(multipleTargetMode)
 	send {backspace}
 }
 return
+
+RogueSubtlety:
+;BGR
+PixelGetColor, pc, 0, 0
+if(pc = 0x000000)
+	targetRange := 0
+else if(pc = 0x00ff00)
+	targetRange := 1
+else if(pc = 0xff0000)
+	targetRange := 2
+else if(pc = 0x0000ff)
+	targetRange := 3
+else
+	targetRange := 4
+
+PixelGetColor, pc, 1, 0
+if(pc = 0x000000)
+	playerCombo := 1
+else if(pc = 0x0000ff)
+	playerCombo := 2
+else if(pc = 0xff0000)
+	playerCombo := 3
+else if(pc = 0x00ff00)
+	playerCombo := 4
+else if(pc = 0xffffff)
+	playerCombo := 5
+
+PixelGetColor, pc, 2, 0
+if(pc = 0x000000)
+	playerPower := 0
+else if(pc = 0x0000ff)
+	playerPower := 1
+else if(pc = 0xff0000)
+	playerPower := 2
+else if(pc = 0x00ff00)
+	playerPower := 3
+else
+	playerPower := 4
+
+PixelGetColor, pc, 3, 0
+if(pc = 0x000000)
+	playerHealth := 0
+else if(pc = 0x0000ff)
+	playerHealth := 1
+else if(pc = 0xff0000)
+	playerHealth := 2
+else if(pc = 0x00ff00)
+	playerHealth := 3
+else
+	playerHealth := 4
+
+PixelGetColor, pc, 3, 0
+if(pc = 0xffffff)
+	interruptable := true
+else
+	interruptable := false
+
+PixelGetColor, pc, 4, 0
+if(pc = 0xffffff)
+	stealthUsable := true
+else
+	stealthUsable := false
+
+PixelGetColor, pc, 5, 0
+if(pc = 0xffffff)
+	nightbladeActive := true
+else
+	nightbladeActive := false
+
+PixelGetColor, pc, 6, 0
+if(pc = 0xffffff)
+	shadowstepUsable := true
+else
+	shadowstepUsable := false
+
+PixelGetColor, pc, 7, 0
+if(pc = 0xffffff)
+	shadowstrikeUsable := true
+else
+	shadowstrikeUsable := false
+if(stealthUsable)
+{
+	send {f2}
+	return
+}
+
+if(targetRange = 0)
+{
+	send 1
+	return
+}
+
+if(shadowstrikeUsable)
+{
+	send 2
+	return
+}
+
+if((not nightbladeActive) and (playerCombo > 1))
+{
+	send 5
+	return
+}
+
+if(playerCombo = 5)
+{
+	send 4
+	return
+}
+else
+{
+	send 3
+}
+return
