@@ -9,7 +9,7 @@ else if(cleaveTargetMode)
 }
 else
 {
-	send 123456
+	send r123
 }
 
 	

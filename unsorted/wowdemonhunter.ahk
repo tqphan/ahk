@@ -250,7 +250,47 @@ if(pc = 0xffffff)
 else
 	throwGlaiveUsable := false
 
-if(interruptable and eta)
+PixelGetColor, pc, 10, 0
+if(pc = 0xffffff)
+	demonSpikesUsable := true
+else
+	demonSpikesUsable := false
+
+PixelGetColor, pc, 11, 0
+if(pc = 0xffffff)
+	deadlyCasting := true
+else
+	deadlyCasting := false
+
+PixelGetColor, pc, 12, 0
+if(pc = 0xffffff)
+	anni1Casting := true
+else
+	anni1Casting := false
+
+PixelGetColor, pc, 12, 0
+if(pc = 0xffffff)
+	anni2Casting := true
+else
+	anni2Casting := false
+if(demonSpikesUsable)
+{
+	send y	
+}
+
+if(anni1Casting)
+{
+	send o
+	return
+}
+
+if(anni2Casting)
+{
+	send o
+	return
+}
+
+if((interruptable and eta) or deadlyCasting)
 {
 	send {F1}
 }
