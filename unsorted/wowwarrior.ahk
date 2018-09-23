@@ -1,250 +1,343 @@
 WarriorArms:
-
-PixelGetColor, pc, 1919, 1079
+PixelGetColor, pc, 0, 0
 if(pc = 0xffffff)
-	isInMeleeRange := true
+	rend := true
 else
-	isInMeleeRange := false
-
-PixelGetColor, pc, 1919, 1048
+	rend := false
+PixelGetColor, pc, 1, 0
 if(pc = 0xffffff)
-	isFullRage := true
+	skullsplitter := true
 else
-	isFullRage := false
-	
-PixelGetColor, pc, 1919, 1016
+	skullsplitter := false
+PixelGetColor, pc, 2, 0
 if(pc = 0xffffff)
-	isExecutable := true
+	csmash := true
 else
-	isExecutable := false
-	
-PixelGetColor, pc, 1919, 984
+	csmash := false
+PixelGetColor, pc, 3, 0
 if(pc = 0xffffff)
-	isMortalStrikeUp := true
+	sdexecute := true
 else
-	isMortalStrikeUp := false
-	
-PixelGetColor, pc, 1919, 952
+	sdexecute := false
+PixelGetColor, pc, 4, 0
 if(pc = 0xffffff)
-	isColossusSmashUp := true
+	mstrike := true
 else
-	isColossusSmashUp := false
-	
-PixelGetColor, pc, 1919, 920
+	mstrike := false
+PixelGetColor, pc, 5, 0
 if(pc = 0xffffff)
-	isHamstringActive := true
+	bladestorm := true
 else
-	isHamstringActive := false
-
-PixelGetColor, pc, 1919, 888
+	bladestorm := false
+PixelGetColor, pc, 6, 0
 if(pc = 0xffffff)
-	isWarbreakerUp := true
+	overpower := true
 else
-	isWarbreakerUp := false
-	
-PixelGetColor, pc, 1919, 856
+	overpower := false
+PixelGetColor, pc, 7, 0
 if(pc = 0xffffff)
-	interruptable := true
+	stwhirlwind := true
 else
-	interruptable := false
-
-PixelGetColor, pc, 1919, 824
+	stwhirlwind := false
+PixelGetColor, pc, 8, 0
 if(pc = 0xffffff)
-	hp := true
+	slam := true
 else
-	hp := false
-
-PixelGetColor, pc, 1919, 792
+	slam := false
+PixelGetColor, pc, 9, 0
 if(pc = 0xffffff)
-	shouldAE := true
+	stexecute := true
 else
-	shouldAE := false
-
-PixelGetColor, pc, 1919, 760
+	stexecute := false
+PixelGetColor, pc, 10, 0
 if(pc = 0xffffff)
-	tdw := true
+	swstrike := true
 else
-	tdw := false
-
-PixelGetColor, pc, 1919, 728
+	swstrike := false
+PixelGetColor, pc, 11, 0
 if(pc = 0xffffff)
-	tri := true
+	cleave := true
 else
-	tri := false
-
-send o
-if(tri)
+	cleave := false
+PixelGetColor, pc, 12, 0
+if(pc = 0xffffff)
+	warbreaker := true
+else
+	warbreaker := false
+PixelGetColor, pc, 13, 0
+if(pc = 0xffffff)
+	mtwhirlwind := true
+else
+	mtwhirlwind := false
+PixelGetColor, pc, 14, 0
+if(pc = 0xffffff)
+	mtcsmash := true
+else
+	mtcsmash := false
+PixelGetColor, pc, 13, 0
+if(pc = 0xffffff)
+	hamstring := true
+else
+	hamstring := false
+PixelGetColor, pc, 14, 0
+if(pc = 0xffffff)
+	charge := true
+else
+	charge := false
+if(autoAttack and charge)
 {
-	send 7
-	return
-}
-
-if(interruptable)
-{
-	send {f1}
-	return
-}
-
-if(autoAttack)
 	send 1
-
-if(not isInMeleeRange)
-	return
-
-if(shouldAE)
-{
-	send 136t7
 	return
 }
-
-if(isWarbreakerUp)
+if(pvpGameMode and hamstring)
 {
-	send 8
+	send {f2}
 	return
 }
-if(pvpGameMode and (not isHamstringActive))
-	send 9
-
 if(multipleTargetMode)
 {
-	send 67
+	if(swstrike)
+	{
+		send o
+		return
+	}
+	if(mtcsmash)
+	{
+		send 2
+		return
+	}
+	if(cleave)
+	{
+		send 7
+		return
+	}
+	if(mtwhirlwind)
+	{
+		send 8
+		return
+	}
+	if(overpower)
+	{
+		send p
+		return
+	}
 	return
 }
-if(isColossusSmashUp)
+
+
+if(rend)
+{
+	send 9
+	return
+}
+if(skullsplitter)
+{
+	send 5
+	return
+}
+if(zeta and cleaveTargetMode and swstrike)
+{
+	send o
+	return
+}
+if(csmash)
 {
 	send 2
 	return
 }
-if(isExecutable)
+if(sdexecute)
 {
 	send 3
 	return
 }
+if(mstrike)
+{
+	send 4
+	return
+}
+if(overpower)
+{
+	send p
+	return
+}
+if(stexecute)
+{
+	send 3
+	return
+}
+if(stwhirlwind)
+{
+	send 8
+	return
+}
+else if(slam)
+{
+	send 6
+	return
+}
+	
+return
 
-if(isMortalStrikeUp)
+WarriorFury:
+PixelGetColor, pc, 0, 0
+if(pc = 0xffffff)
+	fslash := true
+else
+	fslash := false
+PixelGetColor, pc, 1, 0
+if(pc = 0xffffff)
+	siegebreaker := true
+else
+	siegebreaker := false
+PixelGetColor, pc, 2, 0
+if(pc = 0xffffff)
+	recklessness := true
+else
+	recklessness := false
+PixelGetColor, pc, 3, 0
+if(pc = 0xffffff)
+	rampage := true
+else
+	rampage := false
+PixelGetColor, pc, 4, 0
+if(pc = 0xffffff)
+	execute := true
+else
+	execute := false
+PixelGetColor, pc, 5, 0
+if(pc = 0xffffff)
+	bloodthirst1 := true
+else
+	bloodthirst1 := false
+PixelGetColor, pc, 6, 0
+if(pc = 0xffffff)
+	rblow1 := true
+else
+	rblow1 := false
+PixelGetColor, pc, 7, 0
+if(pc = 0xffffff)
+	bloodthirst2 := true
+else
+	bloodthirst2 := false
+PixelGetColor, pc, 8, 0
+if(pc = 0xffffff)
+	droar := true
+else
+	droar := false
+PixelGetColor, pc, 9, 0
+if(pc = 0xffffff)
+	bladestorm := true
+else
+	bladestorm := false
+PixelGetColor, pc, 10, 0
+if(pc = 0xffffff)
+	rblow2 := true
+else
+	rblow2 := false
+
+PixelGetColor, pc, 11, 0
+if(pc = 0xffffff)
+	whirlwind_mt := true
+else
+	whirlwind_mt := false
+
+PixelGetColor, pc, 12, 0
+if(pc = 0xffffff)
+	howl := true
+else
+	howl := false
+
+PixelGetColor, pc, 13, 0
+if(pc = 0xffffff)
+	chargefury := true
+else
+	chargefury := false
+
+PixelGetColor, pc, 14, 0
+if(pc = 0xffffff)
+	vrushfury := true
+else
+	vrushfury := false
+if(pvpGameMode and howl)
+{
+	send 9
+	return
+}
+
+if(autoAttack and chargefury)
+{
+	send 1
+	return
+}
+
+if(not singleTargetMode and whirlwind_mt)
+{
+	send 7
+	return
+}
+if(fslash)
+{
+	send 6
+	return
+}
+if(vrushfury)
+{
+	send {f2}
+	return
+}
+if(siegebreaker)
+{
+	send 8
+	return
+}
+if(recklessness)
+{
+	send p
+	return
+}
+if(rampage)
+{
+	send 3
+	return
+}
+if(execute)
+{
+	send 2
+	return
+}
+if(bloodthirst1)
+{
+	send 5
+	return
+}
+if(rblow1)
+{
+	send 4
+	return
+}
+if(bloodthirst2)
+{
+	send 5
+	return
+}
+if(droar)
+{
+	send i
+	return
+}
+if(bladestorm)
+{
+	send o
+	return
+}
+if(rblow2)
 {
 	send 4
 	return
 }
 
-if(isFullRage)
-{
-	if(singleTargetMode)
-	{
-		send 5
-	}
-	else
-	{
-		send 7
-	}
-	return
-}	
-	
-return
+send 6
 
-WarriorFury:
-
-PixelGetColor, pc, 1919, 1079
-if(pc = 0xffffff)
-	isInMeleeRange := true
-else
-	isInMeleeRange := false
-
-PixelGetColor, pc, 1919, 1048
-if(pc = 0xffffff)
-	isFullRage := true
-else
-	isFullRage := false
-	
-PixelGetColor, pc, 1919, 1016
-if(pc = 0xffffff)
-	isExecutable := true
-else
-	isExecutable := false
-	
-PixelGetColor, pc, 1919, 984
-if(pc = 0xffffff)
-	isEnrage := true
-else
-	isEnrage := false
-	
-PixelGetColor, pc, 1919, 952
-if(pc = 0xffffff)
-	isMeatCleaverActive := true
-else
-	isMeatCleaverActive := false
-	
-PixelGetColor, pc, 1919, 920
-if(pc = 0xffffff)
-	isInPiercingHowlRange := true
-else
-	isInPiercingHowlRange := false
-
-PixelGetColor, pc, 1919, 888
-if(pc = 0xffffff)
-	isPiercingHowlActive := true
-else
-	isPiercingHowlActive := false
-	
-if(autoAttack)
-	send 1
-	
-if(pvpGameMode and isInPiercingHowlRange and (not isPiercingHowlActive))
-	send 9
-
-if(singleTargetMode)
-{
-	if(isFullRage)
-	{
-		if(isEnrage and isExecutable)
-			send 2
-		else
-			send 3
-	}
-	else
-	{
-		if(isInMeleeRange)
-			send 8
-		if(isEnrage)
-		{
-			if(isExecutable)
-				send 2546
-			else
-				send 456
-		}
-		else
-		{
-			if(isExecutable)
-				send 546
-			else
-				send 3456
-		}
-	}
-}
-else if(cleaveTargetMode)
-{
-	if(isMeatCleaverActive)
-	{
-		send 3546
-	}
-	else
-	{
-		if(isInMeleeRange)
-			send i87
-	}
-}
-else if(multipleTargetMode)
-{
-	if(isMeatCleaverActive)
-	{
-		send 35
-	}
-	else
-	{
-		if(isInMeleeRange)
-			send i87
-	}
-}
 return
 
 WarriorProtection:
@@ -300,10 +393,20 @@ else
 	sblock := false
 PixelGetColor, pc, 10, 0
 if(pc = 0xffffff)
-	chan := true
+	devastate := true
 else
-	chan := false
+	devastate := false
 
+if(ipain)
+{
+	send y
+	return
+}
+if(ivic)
+{
+	send 3
+	return
+}
 if(sblock)
 {
 	send 7
@@ -341,14 +444,9 @@ if(tclap)
 	send 5
 	return
 }
-if(ivic)
+if(devastate)
 {
-	send 3
-	return
-}
-if(ipain)
-{
-	send v
+	send 6
 	return
 }
 return

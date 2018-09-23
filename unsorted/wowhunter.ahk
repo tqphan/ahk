@@ -1,386 +1,251 @@
 HunterMarksmanship:
+PixelGetColor, pc, 0, 0
+if(pc = 0xffffff)
+	moving := true
+else
+	moving := false
 
-PixelGetColor, pc, 1919, 1079
+PixelGetColor, pc, 1, 0
 if(pc = 0xffffff)
-	isMarkingTargetActive := true
+	casting := true
 else
-	isMarkingTargetActive := false
+	casting := false
 
-PixelGetColor, pc, 1919, 1048
+PixelGetColor, pc, 2, 0
 if(pc = 0xffffff)
-	isHuntersMarkActive := true
+	ssting := true
 else
-	isHuntersMarkActive := false
-	
-PixelGetColor, pc, 1919, 1016
-if(pc = 0xffffff)
-	isVulnerableActive := true
-else
-	isVulnerableActive := false
-	
-PixelGetColor, pc, 1919, 984
-if(pc = 0xffffff)
-	isSideWindersTwoChargesActive := true
-else
-	isSideWindersTwoChargesActive := false
-	
-PixelGetColor, pc, 1919, 952
-if(pc = 0xffffff)
-	isSideWindersOneChargeActive := true
-else
-	isSideWindersOneChargeActive := false
-	
-PixelGetColor, pc, 1919, 920
-if(pc = 0xffffff)
-	isLockAndLoadActive := true
-else
-	isLockAndLoadActive := false
+	ssting := false
 
-PixelGetColor, pc, 1919, 888
+PixelGetColor, pc, 3, 0
 if(pc = 0xffffff)
-	isChannelingBarage := true
+	amoc := true
 else
-	isChannelingBarage := false
+	amoc := false
 
-PixelGetColor, pc, 1919, 856
+PixelGetColor, pc, 4, 0
 if(pc = 0xffffff)
-	isHighFocus := true
+	rfire := true
 else
-	isHighFocus := false
+	rfire := false
 
-PixelGetColor, pc, 1919, 824
+PixelGetColor, pc, 5, 0
 if(pc = 0xffffff)
-	isWindbustUp := true
+	ashot := true
 else
-	isWindbustUp := false
-	
+	ashot := false
 
-PixelGetColor, pc, 1919, 792
+PixelGetColor, pc, 6, 0
 if(pc = 0xffffff)
-	isBarrageUp := true
+	pshot := true
 else
-	isBarrageUp := false
+	pshot := false
 
-PixelGetColor, pc, 1919, 760
+PixelGetColor, pc, 7, 0
 if(pc = 0xffffff)
-	isPiercingShotUp := true
+	lnload := true
 else
-	isPiercingShotUp := false
+	lnload := false
 
-PixelGetColor, pc, 1919, 728
+PixelGetColor, pc, 8, 0
 if(pc = 0xffffff)
-	isAMOCUp := true
+	tshot := true
 else
-	isAMOCUp := false
+	tshot := false
 
-PixelGetColor, pc, 1919, 696
+PixelGetColor, pc, 9, 0
 if(pc = 0xffffff)
-	isTrueShotUp := true
+	steadyshot := true
 else
-	isTrueShotUp := false
+	steadyshot := false
 
-PixelGetColor, pc, 1919, 664
+PixelGetColor, pc, 10, 0
 if(pc = 0xffffff)
-	isTargetCasting := true
+	ashot2 := true
 else
-	isTargetCasting := false
+	ashot2 := false
 
-PixelGetColor, pc, 1919, 632
+PixelGetColor, pc, 11, 0
 if(pc = 0xffffff)
-	shouldHeal := true
+	hmark := true
 else
-	shouldHeal := false
+	hmark := false
 
-PixelGetColor, pc, 1919, 600
+PixelGetColor, pc, 11, 0
 if(pc = 0xffffff)
-	cs := true
+	dtap := true
 else
-	cs := false
+	dtap := false
 
-if(isChannelingBarage)
+if(casting)
+{
 	return
-
-if(autoAttack)
+}
+if(hmark)
+{
 	send 1
-	
-if(pvpGameMode)
-	send 9
-if(cs)
-{
-	send 9
 	return
 }
-
-if(isTargetCasting)
+if(ssting)
 {
-	send {f1}
-}
-
-if(shouldHeal)
-{
-	send t
-}
-
-if(isTargetCasting)
-{
-	send {f1}
-}
-
-if((not singleTargetMode) and (isBarrageUp))
-{
-	send 3
+	send 4
 	return
 }
-	
-if(isHuntersMarkActive)
-{
-	send 2
-	return
-}
-
-if(isAMOCUp)
+if(amoc)
 {
 	send {f2}
 	return
 }
-
-if(isVulnerableActive and isLockAndLoadActive)
+if(dtap)
 {
-	send 4
+	send p
 	return
 }
-
-if(isTrueShotUp)
+if(ashot2 and (not moving or lnload))
 {
-	if(isLockAndLoadActive and isVulnerableActive)
-	{
-		send 4
-		return	
-	}
-	else
-	{
-		if(singleTargetMode)
-		{
-			send 5
-		}
-		else
-		{
-			send 8
-		}
-		return
-	}
-}
-
-if(isPiercingShotUp)
-{
-	send u
+	send 3
 	return
 }
-
-if(isMarkingTargetActive and (not isHuntersMarkActive))
+if(rfire)
 {
-	if(singleTargetMode)
-	{
-		send 5		
-	}
-	else
-	{
-		send 8
-	}
-
-}
-
-if(isVulnerableActive or isLockAndLoadActive)
-{
-	send 4
+	send 2
 	return
 }
-
-if(isWindbustUp and (not isVulnerableActive))
+if(steadyshot)
 {
 	send 6
 	return
 }
-
-if(isHighFocus)
+if(pshot)
 {
-	send 45
-}
-
-	
-return
-
-HunterBeastMastery:
-
-PixelGetColor, pc, 1919, 1079
-if(pc = 0xffffff)
-	isHighFocus := true
-else
-	isHighFocus := false
-
-PixelGetColor, pc, 1919, 1048
-if(pc = 0xffffff)
-	isBeastCleaveActive := true
-else
-	isBeastCleaveActive := false
-	
-PixelGetColor, pc, 1919, 1016
-if(pc = 0xffffff)
-	isDireBeastActive := true
-else
-	isDireBeastActive := false
-	
-PixelGetColor, pc, 1919, 984
-if(pc = 0xffffff)
-	isDireBeastTwoChargesActive := true
-else
-	isDireBeastTwoChargesActive := false
-	
-PixelGetColor, pc, 1919, 952
-if(pc = 0xffffff)
-	isBestialWrathActive := true
-else
-	isBestialWrathActive := false
-	
-PixelGetColor, pc, 1919, 920
-if(pc = 0xffffff)
-	isLockAndLoadActive := true
-else
-	isLockAndLoadActive := false
-
-PixelGetColor, pc, 1919, 888
-if(pc = 0xffffff)
-	isChannelingBarage := true
-else
-	isChannelingBarage := false
-
-PixelGetColor, pc, 1919, 856
-if(pc = 0xffffff)
-	isKillCommandUp := true
-else
-	isKillCommandUp := false
-
-PixelGetColor, pc, 1919, 824
-if(pc = 0xffffff)
-	isVolleyUp := true
-else
-	isVolleyUp := false
-	
-
-PixelGetColor, pc, 1919, 792
-if(pc = 0xffffff)
-	isIntimidationUp := true
-else
-	isIntimidationUp := false
-
-PixelGetColor, pc, 1919, 760
-if(pc = 0xffffff)
-	isCounterSpellUp := true
-else
-	isIntimidationUp := false
-
-PixelGetColor, pc, 1919, 728
-if(pc = 0xffffff)
-	isAMOCUp := true
-else
-	isAMOCUp := false
-
-PixelGetColor, pc, 1919, 696
-if(pc = 0xffffff)
-	isShellShieldUp := true
-else
-	isShellShieldUp := false
-
-PixelGetColor, pc, 1919, 664
-if(pc = 0xffffff)
-	isFocusCasting := true
-else
-	isFocusCasting := false
-
-if(isChannelingBarage)
+	send 5
 	return
-
-if(autoAttack)
-	send 1
-	
-if(pvpGameMode)
-	send 9
-
-;if(((not singleTargetMode) and (not isVolleyUp)) or ((singleTargetMode and isVolleyUp)))
-;{
-	;send 6
-	;return
-;}
-
-if(isFocusCasting)
-{
-	if(isIntimidationUp)
-	{
-		send {f2}
-		return
-	}
-	else if(isCounterSpellUp)
-	{
-		send {f1}
-		return
-	}
-	else if(isShellShieldUp)
-	{
-		send 9
-		return
-	}
 }
-
-if(isKillCommandUp and (singleTargetMode or cleaveTargetMode))
+if(ashot and (not moving or lnload))
 {
 	send 3
 	return
 }
 
-if(isDireBeastTwoChargesActive)
+send 6
+return
+
+HunterBeastMastery:
+PixelGetColor, pc, 0, 0
+if(pc = 0xffffff)
+	barbed_shot := true
+else
+	barbed_shot := false
+
+PixelGetColor, pc, 1, 0
+if(pc = 0xffffff)
+	amoc := true
+else
+	amoc := false
+
+PixelGetColor, pc, 2, 0
+if(pc = 0xffffff)
+	aotw := true
+else
+	aotw := false
+
+PixelGetColor, pc, 3, 0
+if(pc = 0xffffff)
+	bestialw := true
+else
+	bestialw := false
+
+PixelGetColor, pc, 4, 0
+if(pc = 0xffffff)
+	stampede := true
+else
+	stampede := false
+
+PixelGetColor, pc, 5, 0
+if(pc = 0xffffff)
+	kill_command := true
+else
+	kill_command := false
+
+PixelGetColor, pc, 6, 0
+if(pc = 0xffffff)
+	chimaera_shot := true
+else
+	chimaera_shot := false
+
+PixelGetColor, pc, 7, 0
+if(pc = 0xffffff)
+	cobra_shot := true
+else
+	cobra_shot := false
+
+PixelGetColor, pc, 8, 0
+if(pc = 0xffffff)
+	barbed_shot_2 := true
+else
+	barbed_shot_2 := false
+
+PixelGetColor, pc, 9, 0
+if(pc = 0xffffff)
+	multishot := true
+else
+	multishot := false
+
+PixelGetColor, pc, 10, 0
+if(pc = 0xffffff)
+	loh := true
+else
+	loh := false
+
+if(barbed_shot)
 {
 	send 2
 	return
 }
-
-if(isAMOCUp)
+if(amoc)
 {
-	send u
+	send 1
 	return
 }
-
-if(isBestialWrathActive and singleTargetMode)
+if(aotw)
 {
-	if(isKillCommandUp)
-	{
-		send 3
-	}
-	else
-	{
-		send 5
-	}
-
+	send i
 	return
 }
-
-if(not isDireBeastActive)
+if(bestialw)
+{
+	send 8
+	return
+}
+if(stampede)
+{
+	;send u
+	return
+}
+if(kill_command)
+{
+	send 3
+	return
+}
+if(chimaera_shot)
+{
+	send 4
+	return
+}
+if(barbed_shot_2)
 {
 	send 2
 	return
 }
-
-if((cleaveTargetMode or multipleTargetMode) and (not isBeastCleaveActive))
+if(multishot and not singleTargetMode)
 {
 	send 7
 	return
 }
-
-if(isHighFocus)
+if(cobra_shot)
 {
-	if(singleTargetMode or cleaveTargetMode)
-		send 5
-	else
-		send 7
+	send 5
+	return
 }
 
 	
@@ -389,19 +254,19 @@ return
 HunterSurvival:
 PixelGetColor, pc, 0, 0
 if(pc = 0xffffff)
-	mbt := true
+	ssting := true
 else
-	mbt := false
+	ssting := false
 PixelGetColor, pc, 1, 0
 if(pc = 0xffffff)
-	sh := true
+	kcommand := true
 else
-	sh := false
+	kcommand := false
 PixelGetColor, pc, 2, 0
 if(pc = 0xffffff)
-	lac := true
+	rstrike := true
 else
-	lac := false
+	rstrike := false
 PixelGetColor, pc, 3, 0
 if(pc = 0xffffff)
 	fs := true
@@ -454,67 +319,20 @@ if(pc = 0xffffff)
 	healme := true
 else
 	healme := false
-if(chan)
-{
-	return
-}
-if(healpet)
-{
-	send o
-	return
-}
-if(healme)
-{
-	send t
-}
-if(taradd)
-{
-	send 7[68yp
-	return
-}
-if(tarri)
-{
-	send 8
-	return
-}
 
-if(intcast)
-{
-	send {f1}
-}
-if(hp)
-{
-	send 2
-	return
-}
-if(lac)
-{
-	send 4
-	return
-}
-if(mbt)
+if(ssting)
 {
 	send 3
 	return
 }
-if(fs)
+if(kcommand)
+{
+	send 4
+	return
+}
+if(rstrike)
 {
 	send 5
-	return
-}
-if(sh)
-{
-	send i
-	return
-}
-if(cal and not taradd)
-{
-	send 7
-	return
-}
-if(et)
-{
-	send 6
 	return
 }
 return

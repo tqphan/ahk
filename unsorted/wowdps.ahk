@@ -52,7 +52,7 @@ mb.topEdgeKey := "numlock"
 mb.leftEdgeKey := "f1"
 mb.rightEdgeKey := "f2"
 mb.topEdgeEnabled := true
-;mb.leftEdgeEnabled := true
+mb.leftEdgeEnabled := true
 mb.rightEdgeEnabled := true
 
 global ad := new HotkeyOutput
@@ -113,13 +113,16 @@ return
 
 ~RButton::
 {
-	MouseGetPos mouseX, mouseY
-	WinGetPos, GuiX, GuiY, GuiWidth, GuiHeight, wowdps.ahk
-	SearchAreaX := GuiX + GuiWidth
-	SearchAreaY := GuiY + GuiHeight
-	If (mouseX >= GuiX AND mouseX <= SearchAreaX AND mouseY >= GuiY AND mouseY <= SearchAreaY )
+	if(ActiveWindowCheck(activeWindowCheckEnabled))
 	{
-		rmbCaptured := true
+		MouseGetPos mouseX, mouseY
+		WinGetPos, GuiX, GuiY, GuiWidth, GuiHeight, wowdps.ahk
+		SearchAreaX := GuiX + GuiWidth
+		SearchAreaY := GuiY + GuiHeight
+		If (mouseX >= GuiX AND mouseX <= SearchAreaX AND mouseY >= GuiY AND mouseY <= SearchAreaY )
+		{
+			rmbCaptured := true
+		}
 	}
 }
 return

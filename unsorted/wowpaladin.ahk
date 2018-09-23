@@ -168,14 +168,14 @@ else
 	hoj := false
 PixelGetColor, pc, 7, 0
 if(pc = 0xffffff)
+	jven := true
+else
+	jven := false
+PixelGetColor, pc, 8, 0
+if(pc = 0xffffff)
 	rebuke := true
 else
 	rebuke := false
-PixelGetColor, pc, 8, 0
-if(pc = 0xffffff)
-	ipain := true
-else
-	ipain := false
 PixelGetColor, pc, 9, 0
 if(pc = 0xffffff)
 	sblock := true
@@ -189,7 +189,7 @@ else
 
 if(rebuke)
 {
-	send 8
+	send {f1}
 }
 if(hoj)
 {
@@ -199,6 +199,11 @@ if(hoj)
 if(jmt)
 {
 	send 3
+	return
+}
+if(jven)
+{
+	send 8
 	return
 }
 if(singleTargetMode and tverdict)

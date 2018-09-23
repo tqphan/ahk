@@ -107,28 +107,16 @@ return
 RogueSubtlety:
 ;BGR
 PixelGetColor, pc, 0, 0
-if(pc = 0x000000)
-	targetRange := 0
-else if(pc = 0x00ff00)
-	targetRange := 1
-else if(pc = 0xff0000)
-	targetRange := 2
-else if(pc = 0x0000ff)
-	targetRange := 3
+if(pc = 0xffffff)
+	backstab := true
 else
-	targetRange := 4
+	backstab := false
 
 PixelGetColor, pc, 1, 0
-if(pc = 0x000000)
-	playerCombo := 1
-else if(pc = 0x0000ff)
-	playerCombo := 2
-else if(pc = 0xff0000)
-	playerCombo := 3
-else if(pc = 0x00ff00)
-	playerCombo := 4
-else if(pc = 0xffffff)
-	playerCombo := 5
+if(pc = 0xffffff)
+	eviserate := true
+else
+	eviserate := false
 
 PixelGetColor, pc, 2, 0
 if(pc = 0x000000)
@@ -183,6 +171,13 @@ if(pc = 0xffffff)
 	shadowstrikeUsable := true
 else
 	shadowstrikeUsable := false
+
+if(cleaveTargetMode)
+{
+	send 8
+	return
+}
+
 if(stealthUsable)
 {
 	send {f2}
@@ -201,19 +196,22 @@ if(shadowstrikeUsable)
 	return
 }
 
-if((not nightbladeActive) and (playerCombo > 1))
+if(nightbladeActive)
 {
 	send 5
 	return
 }
 
-if(playerCombo = 5)
+if(eviserate)
 {
 	send 4
 	return
 }
-else
+
+if(backstab)
 {
 	send 3
+	return
 }
+
 return
