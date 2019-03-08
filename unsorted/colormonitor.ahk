@@ -1,10 +1,11 @@
 #Persistent
 SetTimer, GetColor, 100
-
+xMidScrn :=  A_ScreenWidth //2
+yMidScrn :=  A_ScreenHeight //2
 GetColor:
 CoordMode, Mouse, Screen
 MouseGetPos, MX, MY
-PixelGetColor, MyColor, 1, 0
+PixelGetColor, MyColor, xMidScrn, yMidScrn
 CoordMode, ToolTip, Mouse
 ToolTip, % ConvertToBGR255(MyColor, MX, MY), 0, 0
 return

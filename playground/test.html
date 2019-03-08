@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-full {
+  display: flex;
+  flex-direction: column;
+  background-color: #777;
+  justify-content: center;
+  height:100%
+}
+
+.inner-flex {
+  display: flex;
+  background-color: #f1f1f1;
+  justify-content: center;
+  flex: 1
+}
+
+.inner-flex > div {
+  display: flex;
+  background-color: DodgerBlue;
+  color: white;
+  font-size: calc(3vw + 3vh);
+  width: 100%;
+  margin: 0.25%;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}
+</style>
+</head>
+<body>
+  <div class="bg-full">
+    <div class="inner-flex">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div> 
+      <div>4</div>
+    </div>
+    <div class="inner-flex">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div> 
+      <div>4</div>
+    </div>
+    <div class="inner-flex">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div> 
+      <div>4</div>
+    </div>
+  </div>
+</body>
+</html>

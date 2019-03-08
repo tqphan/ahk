@@ -5,61 +5,49 @@ if(pc = 0xffffff)
 else
 	as := false
 
-PixelGetColor, pc, 1, 0
+PixelGetColor, pc, 2, 0
 if(pc = 0xffffff)
 	sotr := true
 else
 	sotr := false
 
-PixelGetColor, pc, 2, 0
+PixelGetColor, pc, 4, 0
 if(pc = 0xffffff)
 	con := true
 else
 	con := false
 
-PixelGetColor, pc, 3, 0
+PixelGetColor, pc, 6, 0
 if(pc = 0xffffff)
 	hotp := true
 else
 	hotp := false
 
-PixelGetColor, pc, 4, 0
+PixelGetColor, pc, 8, 0
 if(pc = 0xffffff)
 	rebuke := true
 else
 	rebuke := false
 
-PixelGetColor, pc, 5, 0
-if(pc = 0xffffff)
-	bl := true
-else
-	bl := false
-
-PixelGetColor, pc, 6, 0
+PixelGetColor, pc, 10, 0
 if(pc = 0xffffff)
 	jud := true
 else
 	jud := false
 
-PixelGetColor, pc, 7, 0
-if(pc = 0xffffff)
-	yot := true
-else
-	yot := false
-
-PixelGetColor, pc, 8, 0
+PixelGetColor, pc, 12, 0
 if(pc = 0xffffff)
 	hoj := true
 else
 	hoj := false
 
-PixelGetColor, pc, 9, 0
+PixelGetColor, pc, 14, 0
 if(pc = 0xffffff)
 	adp := true
 else
 	adp := false
 
-PixelGetColor, pc, 10, 0
+PixelGetColor, pc, 16, 0
 if(pc = 0xffffff)
 	loh := true
 else

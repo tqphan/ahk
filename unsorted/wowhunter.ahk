@@ -137,61 +137,61 @@ if(pc = 0xffffff)
 else
 	barbed_shot := false
 
-PixelGetColor, pc, 1, 0
+PixelGetColor, pc, 2, 0
 if(pc = 0xffffff)
 	amoc := true
 else
 	amoc := false
 
-PixelGetColor, pc, 2, 0
+PixelGetColor, pc, 4, 0
 if(pc = 0xffffff)
 	aotw := true
 else
 	aotw := false
 
-PixelGetColor, pc, 3, 0
+PixelGetColor, pc, 6, 0
 if(pc = 0xffffff)
 	bestialw := true
 else
 	bestialw := false
 
-PixelGetColor, pc, 4, 0
+PixelGetColor, pc, 8, 0
 if(pc = 0xffffff)
 	stampede := true
 else
 	stampede := false
 
-PixelGetColor, pc, 5, 0
+PixelGetColor, pc, 10, 0
 if(pc = 0xffffff)
 	kill_command := true
 else
 	kill_command := false
 
-PixelGetColor, pc, 6, 0
+PixelGetColor, pc, 12, 0
 if(pc = 0xffffff)
 	chimaera_shot := true
 else
 	chimaera_shot := false
 
-PixelGetColor, pc, 7, 0
+PixelGetColor, pc, 14, 0
 if(pc = 0xffffff)
 	cobra_shot := true
 else
 	cobra_shot := false
 
-PixelGetColor, pc, 8, 0
+PixelGetColor, pc, 16, 0
 if(pc = 0xffffff)
 	barbed_shot_2 := true
 else
 	barbed_shot_2 := false
 
-PixelGetColor, pc, 9, 0
+PixelGetColor, pc, 18, 0
 if(pc = 0xffffff)
 	multishot := true
 else
 	multishot := false
 
-PixelGetColor, pc, 10, 0
+PixelGetColor, pc, 20, 0
 if(pc = 0xffffff)
 	loh := true
 else

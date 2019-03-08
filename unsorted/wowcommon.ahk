@@ -9,7 +9,7 @@ else if(cleaveTargetMode)
 }
 else
 {
-	send r123
+	send {esc}
 }
 
 	

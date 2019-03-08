@@ -12,7 +12,7 @@ else if(pc = 0x0000ff)
 else
 	targetRange := 4
 
-PixelGetColor, pc, 1, 0
+PixelGetColor, pc, 2, 0
 if(pc = 0x000000)
 	playerHealth := 0
 else if(pc = 0x0000ff)
@@ -24,7 +24,7 @@ else if(pc = 0x00ff00)
 else
 	playerHealth := 4
 
-PixelGetColor, pc, 2, 0
+PixelGetColor, pc, 4, 0
 if(pc = 0x000000)
 	playerPower := 0
 else if(pc = 0x0000ff)
@@ -36,55 +36,55 @@ else if(pc = 0x00ff00)
 else
 	playerPower := 4
 
-PixelGetColor, pc, 3, 0
+PixelGetColor, pc, 6, 0
 if(pc = 0xffffff)
 	interruptable := true
 else
 	interruptable := false
 
-PixelGetColor, pc, 4, 0
+PixelGetColor, pc, 8, 0
 if(pc = 0xffffff)
 	felbladeUsable := true
 else
 	felbladeUsable := false
 
-PixelGetColor, pc, 5, 0
+PixelGetColor, pc, 10, 0
 if(pc = 0xffffff)
 	bladeDanceUsable := true
 else
 	bladeDanceUsable := false
 
-PixelGetColor, pc, 6, 0
+PixelGetColor, pc, 12, 0
 if(pc = 0xffffff)
 	throwGlaiveUsable := true
 else
 	throwGlaiveUsable := false
 
-PixelGetColor, pc, 7, 0
+PixelGetColor, pc, 14, 0
 if(pc = 0xffffff)
 	furyOfTheIllidaryUsable := true
 else
 	furyOfTheIllidaryUsable := false
 
-PixelGetColor, pc, 8, 0
+PixelGetColor, pc, 16, 0
 if(pc = 0xffffff)
 	eyeBeamUsable := true
 else
 	eyeBeamUsable := false
 
-PixelGetColor, pc, 9, 0
+PixelGetColor, pc, 18, 0
 if(pc = 0xffffff)
 	felEruptionUsable := true
 else
 	felEruptionUsable := false
 
-PixelGetColor, pc, 10, 0
+PixelGetColor, pc, 20, 0
 if(pc = 0xffffff)
 	metamorphosisUsable := true
 else
 	metamorphosisUsable := false
 
-PixelGetColor, pc, 11, 0
+PixelGetColor, pc, 22, 0
 if(pc = 0xffffff)
 	metamorphosisActive := true
 else

@@ -112,13 +112,13 @@ if(pc = 0xffffff)
 else
 	backstab := false
 
-PixelGetColor, pc, 1, 0
+PixelGetColor, pc, 2, 0
 if(pc = 0xffffff)
 	eviserate := true
 else
 	eviserate := false
 
-PixelGetColor, pc, 2, 0
+PixelGetColor, pc, 4, 0
 if(pc = 0x000000)
 	playerPower := 0
 else if(pc = 0x0000ff)
@@ -130,7 +130,7 @@ else if(pc = 0x00ff00)
 else
 	playerPower := 4
 
-PixelGetColor, pc, 3, 0
+PixelGetColor, pc, 6, 0
 if(pc = 0x000000)
 	playerHealth := 0
 else if(pc = 0x0000ff)
@@ -142,31 +142,31 @@ else if(pc = 0x00ff00)
 else
 	playerHealth := 4
 
-PixelGetColor, pc, 3, 0
+PixelGetColor, pc, 6, 0
 if(pc = 0xffffff)
 	interruptable := true
 else
 	interruptable := false
 
-PixelGetColor, pc, 4, 0
+PixelGetColor, pc, 8, 0
 if(pc = 0xffffff)
 	stealthUsable := true
 else
 	stealthUsable := false
 
-PixelGetColor, pc, 5, 0
+PixelGetColor, pc, 10, 0
 if(pc = 0xffffff)
 	nightbladeActive := true
 else
 	nightbladeActive := false
 
-PixelGetColor, pc, 6, 0
+PixelGetColor, pc, 12, 0
 if(pc = 0xffffff)
 	shadowstepUsable := true
 else
 	shadowstepUsable := false
 
-PixelGetColor, pc, 7, 0
+PixelGetColor, pc, 14, 0
 if(pc = 0xffffff)
 	shadowstrikeUsable := true
 else
@@ -184,11 +184,11 @@ if(stealthUsable)
 	return
 }
 
-if(targetRange = 0)
-{
-	send 1
-	return
-}
+; if(targetRange = 0)
+; {
+; 	send 1
+; 	return
+; }
 
 if(shadowstrikeUsable)
 {

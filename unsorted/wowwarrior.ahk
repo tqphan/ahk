@@ -184,76 +184,76 @@ if(pc = 0xffffff)
 	fslash := true
 else
 	fslash := false
-PixelGetColor, pc, 1, 0
+PixelGetColor, pc, 2, 0
 if(pc = 0xffffff)
 	siegebreaker := true
 else
 	siegebreaker := false
-PixelGetColor, pc, 2, 0
+PixelGetColor, pc, 4, 0
 if(pc = 0xffffff)
 	recklessness := true
 else
 	recklessness := false
-PixelGetColor, pc, 3, 0
+PixelGetColor, pc, 6, 0
 if(pc = 0xffffff)
 	rampage := true
 else
 	rampage := false
-PixelGetColor, pc, 4, 0
+PixelGetColor, pc, 8, 0
 if(pc = 0xffffff)
 	execute := true
 else
 	execute := false
-PixelGetColor, pc, 5, 0
+PixelGetColor, pc, 10, 0
 if(pc = 0xffffff)
 	bloodthirst1 := true
 else
 	bloodthirst1 := false
-PixelGetColor, pc, 6, 0
+PixelGetColor, pc, 12, 0
 if(pc = 0xffffff)
 	rblow1 := true
 else
 	rblow1 := false
-PixelGetColor, pc, 7, 0
+PixelGetColor, pc, 14, 0
 if(pc = 0xffffff)
 	bloodthirst2 := true
 else
 	bloodthirst2 := false
-PixelGetColor, pc, 8, 0
+PixelGetColor, pc, 16, 0
 if(pc = 0xffffff)
 	droar := true
 else
 	droar := false
-PixelGetColor, pc, 9, 0
+PixelGetColor, pc, 18, 0
 if(pc = 0xffffff)
 	bladestorm := true
 else
 	bladestorm := false
-PixelGetColor, pc, 10, 0
+PixelGetColor, pc, 20, 0
 if(pc = 0xffffff)
 	rblow2 := true
 else
 	rblow2 := false
 
-PixelGetColor, pc, 11, 0
+PixelGetColor, pc, 22, 0
 if(pc = 0xffffff)
 	whirlwind_mt := true
 else
 	whirlwind_mt := false
 
-PixelGetColor, pc, 12, 0
+PixelGetColor, pc, 24, 0
 if(pc = 0xffffff)
 	howl := true
 else
 	howl := false
 
-PixelGetColor, pc, 13, 0
+PixelGetColor, pc, 26, 0
 if(pc = 0xffffff)
 	chargefury := true
 else
 	chargefury := false
 
-PixelGetColor, pc, 14, 0
+PixelGetColor, pc, 28, 0
 if(pc = 0xffffff)
 	vrushfury := true
 else
