@@ -104,6 +104,131 @@ else if(multipleTargetMode)
 }
 return
 
+RogueOutlaw:
+PixelGetColor, pc, 0, 0
+if(pc = 0xffffff)
+	ambush := true
+else
+	ambush := false
+
+PixelGetColor, pc, 2, 0
+if(pc = 0x0000ff)
+	combo := 1
+else if(pc = 0xff0000)
+	combo := 2
+else if(pc = 0x00ff00)
+	combo := 3
+else if(pc = 0xffffff)
+	combo := 4
+else
+	combo := 0
+
+PixelGetColor, pc, 4, 0
+if(pc = 0x000000)
+	playerPower := 0
+else if(pc = 0x0000ff)
+	playerPower := 1
+else if(pc = 0xff0000)
+	playerPower := 2
+else if(pc = 0x00ff00)
+	playerPower := 3
+else
+	playerPower := 4
+
+PixelGetColor, pc, 6, 0
+if(pc = 0x000000)
+	playerHealth := 0
+else if(pc = 0x0000ff)
+	playerHealth := 1
+else if(pc = 0xff0000)
+	playerHealth := 2
+else if(pc = 0x00ff00)
+	playerHealth := 3
+else
+	playerHealth := 4
+
+PixelGetColor, pc, 8, 0
+if(pc = 0xffffff)
+	stealthUsable := true
+else
+	stealthUsable := false
+
+PixelGetColor, pc, 10, 0
+if(pc = 0xffffff)
+	rtb := true
+else
+	rtb := false
+
+PixelGetColor, pc, 12, 0
+if(pc = 0xffffff)
+	bte := true
+else
+	bte := false
+
+PixelGetColor, pc, 14, 0
+if(pc = 0xffffff)
+	ps := true
+else
+	ps := false
+
+PixelGetColor, pc, 16, 0
+if(pc = 0xffffff)
+	dispatch := true
+else
+	dispatch := false
+
+PixelGetColor, pc, 18, 0
+if(pc = 0xffffff)
+	bf := true
+else
+	bf := false
+
+if(stealthUsable)
+{
+	send {f2}
+	return
+}
+if(ambush)
+{
+	send 2
+	return
+}
+
+if(not singleTargetMode and bf)
+{
+	send 8
+	return
+}
+
+
+if(rtb and combo = 4)
+{
+	send 5
+	return
+}
+
+if(bte)
+{
+	send 4
+	return
+}
+
+if(dispatch)
+{
+	send 6
+	return
+}
+
+if(ps)
+{
+	send 3
+	return
+}
+
+send 2
+
+return
+
 RogueSubtlety:
 ;BGR
 PixelGetColor, pc, 0, 0

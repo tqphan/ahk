@@ -1,124 +1,235 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+    <meta charset="UTF-8"> 
+    <title>kbd</title>
+    <base href="A:\ahk\playground">
+    <link rel="stylesheet" href="test.css">
 <style>
-body, html {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.outer-flex {
-  display: flex;
-  flex-direction: column;
-  background-color: #777;
-  justify-content: center;
-  height:100%
-}
-
-.inner-flex {
-  display: flex;
-  background-color: #f1f1f1;
-  justify-content: center;
-  flex: 1
-}
-
-.inner-flex > div {
-  display: flex;
-  background-color: rgb(64, 105, 146);
-  color: white;
-  font-size: calc(3vw + 3vh);
-  width: 100%;
-  margin: 0.25%;
-  justify-content: center; /* align horizontal */
-  align-items: center; /* align vertical */
-}
+  body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .out-outer-flex {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(22, 55, 55);
+    justify-content: center;
+    height:100%;
+  /*   width: 100%; */
+  /*   flex: 1; */
+  }
+  
+  .outer-flex {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(56, 55, 55);
+    justify-content: center;
+    height:100%;
+  /*   flex: 1; */
+  }
+  
+  .inner-flex {
+    display: flex;
+    background-color: #474747;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .inner-flex > div, button {
+    display: flex;
+    background-color: rgb(64, 105, 146);
+    color: white;
+    font-size: calc(2vw + 2vh);
+    width: 100%;
+    margin: 0.05em;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 0;
+    border: none;
+  }
+  
+  .inner-flex > div:hover {
+    background-color:cadetblue
+  }
+  
+  .inner-flex > div:active {
+    background-color:chartreuse
+  }
+  
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
 </style>
 </head>
 <body>
-  <div class="outer-flex" id="foo">
-    <div class="inner-flex">
-      <div class="foo" id="bar">*</div>
-      <div>e</div>
-      <div>t</div>
-      <div>a</div>
-      <div style="width:50%;">i</div>
+  <div class="out-outer-flex noselect">
+    <div class="outer-flex" style="width:150%">
+      <div class="inner-flex">
+          <div>esc</div>
+          <div style="visibility:hidden;"></div>
+          <div id="f1" class="abc def" data-vk="cdd">f1</div>
+          <div>f2</div>
+          <div>f3</div>
+          <div>f4</div>
+          <div style="visibility:hidden;width:50%"></div>
+          <div>f5</div>
+          <div>f6</div>
+          <div>f7</div>
+          <div>f8</div>
+          <div style="visibility:hidden;width:50%"></div>
+          <div>f9</div>
+          <div>f10</div>
+          <div>f11</div>
+          <div>f12</div>
+      </div>
+      <div class="inner-flex">
+          <div>`</div>
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>0</div>
+          <div>-</div>
+          <div>=</div>
+          <div style="width:200%">bs</div>
+      </div>
+      <div class="inner-flex">
+          <div style="width:150%">tab</div>
+          <div>q</div>
+          <div>w</div>
+          <div>e</div>
+          <div>r</div>
+          <div>t</div>
+          <div>y</div>
+          <div>u</div>
+          <div>i</div>
+          <div>o</div>
+          <div>p</div>
+          <div>[</div>
+          <div>]</div>
+          <div style="width:150%">\</div>
+      </div>
+      <div class="inner-flex">
+          <div style="width:175%">caps</div>
+          <div>a</div>
+          <div>s</div>
+          <div>d</div>
+          <div>f</div>
+          <div>g</div>
+          <div>h</div>
+          <div>j</div>
+          <div>k</div>
+          <div>l</div>
+          <div>;</div>
+          <div>'</div>
+          <div style="width:225%">enter</div>
+      </div>
+      <div class="inner-flex">
+          <div style="width:250%">lshift</div>
+          <div>z</div>
+          <div>x</div>
+          <div>c</div>
+          <div>v</div>
+          <div>b</div>
+          <div>n</div>
+          <div>m</div>
+          <div>,</div>
+          <div>.</div>
+          <div>/</div>
+          <div style="width:250%">rshift</div>
+      </div>
+      <div class="inner-flex">
+          <div style="width:150%">ctrl</div>
+          <div>win</div>
+          <div style="width:150%">alt</div>
+          <div style="width:600%"></div>
+          <div style="width:150%">alt</div>
+          <div>win</div>
+          <div style="visibility:hidden;"></div>
+          <div style="width:150%">ctrl</div>
+      </div>
     </div>
-    <div class="inner-flex">
-      <div class="foo" id="bar">*</div>
-      <div>e</div>
-      <div>t</div>
-      <div>a</div>
-      <div>o</div>
-      <div>i</div>
-      <div>n</div>
-      <div>s</div>
-      <div>h</div>
+    <div class="outer-flex" style="width:30%">
+      <div class="inner-flex">
+          <div>prt</div>
+          <div>scrl</div>
+          <div>pse</div>
+      </div>
+      <div class="inner-flex">
+          <div>ins</div>
+          <div>hm</div>
+          <div>pp</div>
+      </div>
+      <div class="inner-flex">
+          <div>tab</div>
+          <div>end</div>
+          <div>pn</div>
+      </div>
+      <div class="inner-flex">
+          <div style="visibility:hidden;"></div>
+      </div>
+      <div class="inner-flex">
+          <div style="visibility:hidden;"></div>
+          <div>↑</div>
+          <div style="visibility:hidden;"></div>
+      </div>
+      <div class="inner-flex">
+          <div>←</div>
+          <div>↓</div>
+          <div>→</div>
+      </div>
     </div>
-    <div class="inner-flex">
-      <div>r</div>
-      <div>d</div>
-      <div>l</div>
-      <div>c</div>
-      <div>u</div>
-      <div>m</div>
-      <div>w</div>
-      <div>f</div>
-      <div>g</div>
-    </div>
-    <div class="inner-flex">
-      <div>y</div>
-      <div>p</div>
-      <div>b</div>
-      <div>v</div>
-      <div>k</div>
-      <div>j</div>
-      <div>x</div>
-      <div>q</div>
-      <div>z</div>
-    </div>
-    <div class="inner-flex">
-      <div> </div>
-      <div>Ctrl</div>
-      <div>Alt</div>
-      <div>Win</div>
-      <div>k</div>
-      <div>j</div>
-      <div>x</div>
-      <div>q</div>
-      <div>z</div>
+    <div class="outer-flex" style="width:40%">
+      <div class="inner-flex">
+          <div style="visibility:hidden;"></div>
+      </div>
+      <div class="inner-flex">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+      <div class="inner-flex">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div style="height:200%"></div>
+      </div>
+      <div class="inner-flex">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div style="visibility:hidden;"></div>
+      </div>
+      <div class="inner-flex">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+      <div class="inner-flex">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div style="visibility:hidden;"></div>
+      </div>
     </div>
   </div>
-  <div class="outer-flex" id="foo">
-    <div class="inner-flex">
-      <div>0</div>
-      <div>2</div>
-      <div>3</div> 
-      <div>4</div>
-    </div>
-    <div class="inner-flex">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div> 
-      <div>4</div>
-    </div>
-    <div class="inner-flex">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div> 
-      <div>4</div>
-    </div>
-  </div>
-  <script>
-    function toggle(eid) {
-      var x = document.getElementById(eid);
-      if (x.style.display === "none") {
-        x.style.display = "flex";
-      } else {
-        x.style.display = "none";
-      }
-    }
-    </script>
 </body>
 </html>
