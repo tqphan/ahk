@@ -12,7 +12,7 @@ OnMessage(0x0231, "WM_ENTERSIZEMOVE")
 OnMessage(0x0232, "WM_EXITSIZEMOVE")
 OnMessage(0x0215, "WM_CAPTURECHANGED")
 OnMessage(0x0046, "WM_WINDOWPOSCHANGING")
-Gui, show, w400 h400 Center
+Gui, show, w400 h400 NoActivate Center
 Return
 
 WM_MOUSEMOVE( wparam, lparam, msg, hwnd )

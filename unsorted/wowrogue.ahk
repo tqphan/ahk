@@ -183,6 +183,12 @@ if(pc = 0xffffff)
 else
 	bf := false
 
+PixelGetColor, pc, 20, 0
+if(pc = 0xffffff)
+	rb := true
+else
+	rb := false
+
 if(stealthUsable)
 {
 	send {f2}
@@ -200,6 +206,11 @@ if(not singleTargetMode and bf)
 	return
 }
 
+if(rb)
+{
+	send 7
+	return
+}
 
 if(rtb and combo = 4)
 {

@@ -21,7 +21,7 @@ Warrior := "Arms|Fury|Protection"
 
 Gui, +LastFound +AlwaysOnTop +ToolWindow +Border +E0x08000000
 
-Gui, Add, DropDownList, x0 y120 vwindowTitleDropDownList gOnChange, |World of Warcraft||
+Gui, Add, DropDownList, x0 y120 vwindowTitleDropDownList gOnChange, |ARPG|World of Warcraft||
 Gui, Add, DropDownList, x0 y100 vspecDropDownList gOnChange, |Common|Jump|DemonHunterHavoc|DemonHunterVengeance|PaladinProtection|PaladinRetribution|MageFrost|DruidGuardian|DruidBalance|WarriorFury|WarriorArms|WarriorProtection|PriestDiscipline|HunterBeastMastery|HunterMarksmanship|HunterSurvival|RogueAssassination|RogueOutlaw|RogueSubtlety|ShamanEnhancement|ShamanElemental|ShamanRestoration|WarlockAffliction|
 ;Gui, Add, DropDownList, x0 y140 vwindowTitleDropDownList gOnChange, |World of Warcraft||
 ;Gui, Add, DropDownList, x0 y100 vclassDropDownList gOnChange, %Classes%
@@ -64,6 +64,9 @@ lr.AddKeysArray({keys: ["left", "right"], mode: HotkeyOutputMode.HOM_CIRCULAR_SE
 global ud := new HotkeyOutput
 ud.AddKeysArray({keys: ["wheeldown", "wheelup"], mode: HotkeyOutputMode.HOM_SEQUENTIAL_SPAM})
 
+global altk := new HotkeyOutput
+altk.AddKeysArray({keys: ["lalt"], mode: HotkeyOutputMode.HOM_DIRECT_REMAP})
+
 global activeWindowCheckEnabled := true
 global windowTitle := ""
 global lastActivatedTimer := ""
@@ -71,6 +74,7 @@ return
 
 F9::
 {
+
 	;GuiControlGet, clss , 1:, classDropDownList
 	;GuiControlGet, spc , 1:, specDropDownList
 	;cs := clss . spc
