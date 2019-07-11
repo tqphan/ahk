@@ -45,6 +45,8 @@ Gui, Add, Checkbox, x60 y60 h20 w30 0x1000 veta gOnChange, η
 Gui, Add, Checkbox, x90 y60 h20 w30 0x1000 vtheta gOnChange, θ
 Gui, Show, w120 h160 Center NoActivate
 
+global doTimer := true
+
 global rmbCaptured := false
 
 global mb := new MouseBind
@@ -74,7 +76,8 @@ return
 
 F9::
 {
-
+	if(!doTimer)
+		return
 	;GuiControlGet, clss , 1:, classDropDownList
 	;GuiControlGet, spc , 1:, specDropDownList
 	;cs := clss . spc
@@ -102,6 +105,7 @@ F9::
 		if(epsilon)
 			ud.Activate(1)
 	}
+	doTimer := false
 }
 return
 
@@ -112,6 +116,8 @@ F9 Up::
 	ud.Deactivate()
 	if(lastActivatedTimer != "")
 		SetTimer, %lastActivatedTimer%, off
+
+	doTimer := true
 }
 return
 
