@@ -82,6 +82,16 @@ Class doc_events
 		doc.parentWindow.event.preventDefault()
 	}
 
+    OnMouseDown(doc) {
+        bt := doc.parentWindow.event.button
+        id := doc.parentWindow.event.target.id
+        cn := doc.parentWindow.event.target.className
+        c := "def"
+        abc := doc.parentWindow.event.target.classList.contains(c)
+        at := doc.parentWindow.event.target.getAttribute("data-vk")
+        tn := doc.parentWindow.event.target.tagName
+        ToolTip, bt: %bt%`n id: %id%`ncn: %cn%`nvk: %at%`ntn: %tn%`nabc: %abc%`nh: %MyGuiHwnd%, 0, 0
+    }
     ; OnMouseUp(doc) {
     ;     tn := doc.parentWindow.event.target.tagName
     ;     ToolTip, tn: %tn%, 0, 0
@@ -89,13 +99,13 @@ Class doc_events
     ; }
 
 	OnClick(doc) {
-        id := doc.parentWindow.event.target.id
-        cn := doc.parentWindow.event.target.className
-        c := "def"
-        abc := doc.parentWindow.event.target.classList.contains(c)
-        at := doc.parentWindow.event.target.getAttribute("data-vk")
-        tn := doc.parentWindow.event.target.tagName
-        ToolTip, id: %id%`ncn: %cn%`nvk: %at%`ntn: %tn%`nabc: %abc%`nh: %MyGuiHwnd%, 0, 0
+        ; id := doc.parentWindow.event.target.id
+        ; cn := doc.parentWindow.event.target.className
+        ; c := "def"
+        ; abc := doc.parentWindow.event.target.classList.contains(c)
+        ; at := doc.parentWindow.event.target.getAttribute("data-vk")
+        ; tn := doc.parentWindow.event.target.tagName
+        ; ToolTip, id: %id%`ncn: %cn%`nvk: %at%`ntn: %tn%`nabc: %abc%`nh: %MyGuiHwnd%, 0, 0
         ;MsgBox, Right click disabled.
 	    ; if doc.parentWindow.event.srcElement.name in username,password
 	    ; 	doc.parentWindow.event.srcElement.value := doc.parentWindow.event.srcElement.name
