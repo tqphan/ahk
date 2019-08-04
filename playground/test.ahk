@@ -3,7 +3,7 @@ SetWorkingDir %A_ScriptDir%
 #Include %A_ScriptDir%
 #Include AutoXYWH.ahk
 FileEncoding, UTF-8
-FileRead, OutputVar, test.html
+FileRead, OutputVar, scanner.html
 
 if ErrorLevel
 {
@@ -74,26 +74,28 @@ WM_WINDOWPOSCHANGING(wParam, lParam, msg, hwnd)
 
 Class doc_events
 {
-	; ondblclick(doc) {
-	; 	doc.parentWindow.event.preventDefault()
-    ;     ToolTip, tn, 0, 0
-	; }
+	ondblclick(doc) {
+		doc.parentWindow.event.preventDefault()
+        ToolTip, tn, 0, 0
+	}
+    
 	oncontextmenu(doc) {
 		doc.parentWindow.event.preventDefault()
 	}
 
-    OnMouseDown(doc) {
-        bt := doc.parentWindow.event.button
-        id := doc.parentWindow.event.target.id
-        cn := doc.parentWindow.event.target.className
-        c := "def"
-        abc := doc.parentWindow.event.target.classList.contains(c)
-        at := doc.parentWindow.event.target.getAttribute("data-vk")
-        tn := doc.parentWindow.event.target.tagName
-        ToolTip, bt: %bt%`n id: %id%`ncn: %cn%`nvk: %at%`ntn: %tn%`nabc: %abc%`nh: %MyGuiHwnd%, 0, 0
-    }
-    ; OnMouseUp(doc) {
+    ; OnMouseDown(doc) {
+    ;     bt := doc.parentWindow.event.button
+    ;     id := doc.parentWindow.event.target.id
+    ;     cn := doc.parentWindow.event.target.className
+    ;     c := "def"
+    ;     abc := doc.parentWindow.event.target.classList.contains(c)
+    ;     at := doc.parentWindow.event.target.getAttribute("data-vk")
     ;     tn := doc.parentWindow.event.target.tagName
+    ;     ToolTip, bt: %bt%`n id: %id%`ncn: %cn%`nvk: %at%`ntn: %tn%`nabc: %abc%`nh: %MyGuiHwnd%, 0, 0
+    ; }
+
+    ; OnMouseUp(doc) {
+    ;     tn := doc.parentWindow.event.target.id
     ;     ToolTip, tn: %tn%, 0, 0
 
     ; }
@@ -110,27 +112,6 @@ Class doc_events
 	    ; if doc.parentWindow.event.srcElement.name in username,password
 	    ; 	doc.parentWindow.event.srcElement.value := doc.parentWindow.event.srcElement.name
 	}
-}
-
-Doc_OnMouseUp(doc) {
-    ;MsgBox, % doc.parentWindow.event.target.className
-}
-
-Doc_OnMouseDown(doc) {
-    ;PostMessage, 0xA1, 2,,,A
-    ;MsgBox % doc.getElementById("foo").getAttribute("data-vk")
-}
-Test(bb)
-{
-    v := 4
-    hw := "toggle('foo')"
-    WB.document.parentwindow.execScript(hw)
-}
-
-F3::
-{
-    Test(twb)
-
 }
 
 GuiSize:

@@ -57,13 +57,20 @@
     background-color:cadetblue
   }
   
-  /* .inner-flex > div:active {
+  .inner-flex > div:active {
     background-color:chartreuse
   }
-   */
-  .inner-flex > div:focus {
+  
+  .inner-flex > div.pressed {
+    background-color:rgb(218, 35, 163)
+  }
+
+  .inner-flex > div:released {
     background-color:chartreuse
   }
+  /* .inner-flex > div:focus {
+    background-color:rgb(199, 30, 157)
+  } */
   
   .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
@@ -80,10 +87,10 @@
   <div class="out-outer-flex noselect">
     <div class="outer-flex" style="width:150%">
       <div class="inner-flex">
-          <div>e</div>
+          <div>esc</div>
           <div style="visibility:hidden;"></div>
-          <div id="f1" class="abc def" data-vk="cdd">f1</div>
-          <div>f2</div>
+          <div id="f1" class="abc def pressed" data-vk="cdd">f1</div>
+          <div id="f2" >f2</div>
           <div>f3</div>
           <div>f4</div>
           <div style="visibility:hidden;width:50%"></div>
