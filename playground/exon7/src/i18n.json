@@ -1,0 +1,11 @@
+{
+    "venue_id": "C001",
+    "venue_location": {
+      "en": "Baker St.",
+      "he": "רחוב האופה"
+    },
+    "venue_name": {
+      "en": "Aroma Coffee",
+      "he": "קפה ארומה"
+    }
+  }

@@ -10,10 +10,10 @@ if ErrorLevel
     MsgBox, 444444
     ExitApp
 }
-global WB
+
 global insizemove := False
 global inhibitsizemove := False
-Gui, +HwndMyGuiHwnd +LastFound +AlwaysOnTop +Border +Resize +E0x08000000
+Gui, +HwndMyGuiHwnd +LastFound +AlwaysOnTop +Border +Resize -MaximizeBox +E0x08000000
 Gui, Margin , 0, 0
 ;Gui, Add, ActiveX, vWB x0 y0 w780 h580, Shell.Explorer
 Gui Add, ActiveX, vWB hwndATLWinHWND w900 h300, about:<!DOCTYPE html><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -24,7 +24,7 @@ WM_CAPTURECHANGED := 0x0215
 OnMessage(0x0231, "WM_ENTERSIZEMOVE")
 OnMessage(0x0232, "WM_EXITSIZEMOVE")
 OnMessage(0x0215, "WM_CAPTURECHANGED")
-;OnMessage(0x0046, "WM_WINDOWPOSCHANGING")
+OnMessage(0x0046, "WM_WINDOWPOSCHANGING")
 Gui, show, NoActivate Center
 WB.silent := true
 document := WB.Document
@@ -36,9 +36,7 @@ document.close()
 While WB.readystate != 4 or WB.busy
     Sleep 10
 ComObjConnect(document, doc_events)
-;WB.Navigate("file:///A:/ahk/playground/test.html")
-;WB.Document.Write(OutputVar)
-;WB.Refresh()
+
 return
 
 WM_ENTERSIZEMOVE(wParam, lParam)
@@ -74,16 +72,25 @@ WM_WINDOWPOSCHANGING(wParam, lParam, msg, hwnd)
 
 Class doc_events
 {
-	ondblclick(doc) {
-		doc.parentWindow.event.preventDefault()
-        ToolTip, tn, 0, 0
-	}
+	; ondblclick(doc) {
+	; 	doc.parentWindow.event.target.classList.add("pressed")
+	; }
     
 	oncontextmenu(doc) {
 		doc.parentWindow.event.preventDefault()
 	}
 
-    ; OnMouseDown(doc) {
+    OnMouseEnter(doc) {
+        ToolTip, jjj
+        ; doc.parentWindow.event.target.classList.add("enter")
+    }
+    OnMouseLeave(doc) {
+        ; doc.parentWindow.event.target.classList.remove("enter")
+    }
+
+    OnMouseDown(doc) {
+        doc.parentWindow.event.target.setCapture()
+		doc.parentWindow.event.target.classList.add("pressed")
     ;     bt := doc.parentWindow.event.button
     ;     id := doc.parentWindow.event.target.id
     ;     cn := doc.parentWindow.event.target.className
@@ -92,13 +99,12 @@ Class doc_events
     ;     at := doc.parentWindow.event.target.getAttribute("data-vk")
     ;     tn := doc.parentWindow.event.target.tagName
     ;     ToolTip, bt: %bt%`n id: %id%`ncn: %cn%`nvk: %at%`ntn: %tn%`nabc: %abc%`nh: %MyGuiHwnd%, 0, 0
-    ; }
+    }
 
-    ; OnMouseUp(doc) {
-    ;     tn := doc.parentWindow.event.target.id
-    ;     ToolTip, tn: %tn%, 0, 0
-
-    ; }
+    OnMouseUp(doc) {
+		doc.parentWindow.event.target.classList.remove("pressed")
+        doc.parentWindow.event.target.releaseCapture()
+    }
 
 	OnClick(doc) {
         ; id := doc.parentWindow.event.target.id
@@ -118,8 +124,6 @@ GuiSize:
 	If (A_EventInfo = 1) ; The window has been minimized.
 		Return
 
-   ;// if there is a resize event lets resize the browser
-;    WinMove, % "ahk_id " . ATLWinHWND, , 0,0, A_GuiWidth, A_GuiHeight
 	AutoXYWH("wh", "WB")
 return
 

@@ -1,108 +1,53 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-    <meta charset="UTF-8"> 
-    <title>kbd</title>
-    <base href="A:\ahk\playground">
-    <link rel="stylesheet" href="test.css">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  padding: 10px;
-  background: #f2f2f2;
-}
-.tabs {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 700px;
-  background: #efefef;
-  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
-}
-
-.input {
-  position: absolute;
-  opacity: 0;
-}
-
-.label {
-  width: 100%;
-  padding: 20px 30px;
-  background: #e5e5e5;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 18px;
-  color: #7f7f7f;
-  /* transition: background 0.1s, color 0.1s; */
-}
-
-.label:hover {
-  background: #d8d8d8;
-}
-
-.label:active {
-  background: #ccc;
-}
-
-.input:focus + .label {
-  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
-  z-index: 1;
-}
-
-.input:checked + .label {
-  background: #fff;
-  color: #000;
-}
-
-@media (min-width: 600px) {
-  .label {
-    width: auto;
-  }
-}
-
-.panel {
-  display: none;
-  padding: 20px 30px 30px;
-  background: #fff;
-}
-
-@media (min-width: 600px) {
-  .panel {
-    order: 99;
-  }
-}
-
-.input:checked + .label + .panel {
-  display: block;
-}
-</style>
-</head>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
-    <div class="tabs">
-        <input name="tabs" type="radio" id="tab-1" checked="checked" class="input"/>
-        <label for="tab-1" class="label">Orange</label>
-        <div class="panel">
-          <h1>Orange</h1>
-          <p>The orange (specifically, the sweet orange) is the fruit of the citrus species Citrus × sinensis in the family Rutaceae</p>
-          <p>The fruit of the Citrus × sinensis is considered a sweet orange, whereas the fruit of the Citrus × aurantium is considered a bitter orange. The sweet orange reproduces asexually (apomixis through nucellar embryony); varieties of sweet orange arise through mutations.</p>
-        </div>
-      
-        <input name="tabs" type="radio" id="tab-2" class="input"/>
-        <label for="tab-2" class="label">Tangerine</label>
-        <div class="panel">
-          <h1>Tangerine</h1>
-          <p>The tangerine (Citrus tangerina) is an orange-colored citrus fruit that is closely related to, or possibly a type of, mandarin orange (Citrus reticulata).</p>
-          <p>The name was first used for fruit coming from Tangier, Morocco, described as a mandarin variety. Under the Tanaka classification system, Citrus tangerina is considered a separate species.</p>
-        </div>
-      
-        <input name="tabs" type="radio" id="tab-3" class="input"/>
-        <label for="tab-3" class="label">Clemantine</label>
-        <div class="panel">
-          <h1>Clemantine</h1>
-          <p>A clementine (Citrus ×clementina) is a hybrid between a mandarin orange and a sweet orange, so named in 1902. The exterior is a deep orange colour with a smooth, glossy appearance. Clementines can be separated into 7 to 14 segments. Similarly to tangerines, they tend to be easy to peel.</p>
-        </div>
-      </div>
+
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:130px">
+  <button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event, 'London')">London</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<div style="margin-left:130px">
+
+  <div id="London" class="w3-container city" style="display:block">
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+    <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+  </div>
+
+  <div id="Paris" class="w3-container city" style="display:none">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p> 
+    <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+  </div>
+
+  <div id="Tokyo" class="w3-container city" style="display:none">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+  </div>
+
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", ""); 
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+
 </body>
 </html>

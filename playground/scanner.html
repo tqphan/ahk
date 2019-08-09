@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>kbd</title>
     <base href="A:\ahk\playground">
     <link rel="stylesheet" href="test.css">
@@ -54,14 +55,19 @@
     border: none;
   }
   
-  .inner-flex > div:hover {
+  /* .inner-flex > div:hover {
     background-color:cadetblue
-  }
-  
-  .inner-flex > div:active {
+  } */
+  .inner-flex > div.enter {
     background-color:chartreuse
   }
-  
+  .inner-flex > div.pressed {
+    background-color:rgb(218, 35, 163)
+  }
+
+  .inner-flex > div.released {
+    background-color:rgb(51, 65, 78);
+  }
   /* .inner-flex > div:focus {
     background-color:rgb(199, 30, 157)
   } */
@@ -81,12 +87,12 @@
   <div class="out-outer-flex noselect">
     <div class="outer-flex" style="width:100%">
       <div class="inner-flex">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div id="wp0"></div>
+        <div id="wp1"></div>
+        <div id="wp2"></div>
+        <div id="wp3"></div>
+        <div id="wp4"></div>
+        <div id="wp5"></div>
     </div>
       <div class="inner-flex">
           <div> </div>
@@ -124,7 +130,7 @@
           <div>⮨</div>
           <div>,</div>
           <div>.</div>
-          <div>i</div>
+          <div>⭲</div>
           <div>⮭</div>
           <div>⎈</div>
           <div>⎇</div>
@@ -145,7 +151,6 @@
           <div>Ⅲ</div>
       </div>
     </div>
-
   </div>
 </body>
 </html>
