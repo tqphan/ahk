@@ -28,7 +28,7 @@ OnMessage(0x0046, "WM_WINDOWPOSCHANGING")
 Gui, show, NoActivate Center
 WB.silent := true
 document := WB.Document
-doc := WB.doc
+; doc := WB.doc
 document.open()
 document.write(OutputVar)
 document.close()

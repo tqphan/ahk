@@ -1,14 +1,42 @@
 {
     "general":
     {
-
+        "access_method": 0
     },
-    "scanner":
+    "mouse_access_method":
     {
-        "speed": 750
+        "id": 0,
+        "primary_button": 0
+    },
+    "scan_access_method":
+    {
+        "id": 1,
+        "speed": 750,
+        "cycle": 2
+    },
+    "dwell_access_method":
+    {
+        "id": 2,
+        "dwell_delay": 500,
+        "pixel_threshold": 0
+    },
+    "gaze_access_method":
+    {
+        "id": 2,
+        "dwell_delay": 500,
+        "pixel_threshold": 0
     },
     "prediction":
     {
+        "enabled": true
+    },
+    "keyboard":
+    {
+        "resizable": true,
+        "reserve_aspect_ratio": true,
+        "title_bar": true,
+        "maximize_enabled": false,
+        "minimize_enabled": false,
 
     }
 }

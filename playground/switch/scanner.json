@@ -1,0 +1,79 @@
+{
+    "apps": 
+    [
+        {
+            "exe" : "osk.exe",
+            "path" : "C:/Windows/system32/",
+            "title" : "On-Screen Keyboard",
+            "caption": false,
+            "border": false,
+            "res": 
+            {
+                "default": 
+                {
+
+                },
+                "1080x1920":
+                {
+
+                }
+            },
+            "x": 960,
+            "y": 760,
+            "width": 960,
+            "height": 320
+        },
+
+        {
+            "exe" : "vlc.exe",
+            "path" : "C:/Program Files/VideoLAN/VLC/",
+            "title" : "VLC media player",
+            "caption": false,
+            "border": false,
+            "x": 0,
+            "y": 40,
+            "width": 1280,
+            "height": 720
+        },
+
+        {
+            "exe" : "SumatraPDF.exe",
+            "path" : "C:/Program Files/SumatraPDF/",
+            "title" : "SumatraPDF",
+            "caption": false,
+            "border": false,
+            "x": 0,
+            "y": 40,
+            "width": 1280,
+            "height": 720
+        },
+
+        {
+            "exe" : "WindowsTerminal.exe",
+            "path" : "shell:AppsFolder\\Microsoft.WindowsTerminal_8wekyb3d8bbwe!App",
+            "title" : "Windows Terminal",
+            "caption": true,
+            "border": true,
+            "x": 0,
+            "y": 760,
+            "width": 960,
+            "height": 320
+        },
+
+        {
+            "exe" : "firefox.exe",
+            "path" : "C:/Program Files/Mozilla Firefox/",
+            "title" : "Mozilla Firefox",
+            "caption": true,
+            "border": true,
+            "x": 0,
+            "y": 40,
+            "width": 1900,
+            "height": 720
+        }
+    ],
+    "settings":
+    {
+        
+    }
+}
